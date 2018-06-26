@@ -31,5 +31,9 @@ Run the execute file ”\Output\IS3-Desktop.exe”, then you need a username and
 The password:”iS3Guest”.
 
 ![image](https://github.com/iS3-Project/iS3-Desktop-Standalone/blob/master/images/Login.jpg)
+
+#### 4.Some Problem during Install and Using
+Read the file"Read Me For Installation.pdf"
+
 ## Simple use manual
 ----------------
