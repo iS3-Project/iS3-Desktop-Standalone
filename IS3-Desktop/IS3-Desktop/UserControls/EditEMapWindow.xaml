@@ -1,0 +1,222 @@
+﻿<Window x:Class="IS3.Desktop.UserControls.EditEMapWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStartupLocation="CenterOwner"
+        Title="Engineering map" Height="400" Width="500">
+    <Grid x:Name="Root">
+        <TabControl Height="320"
+                    Margin="5,5,5,5"
+                    VerticalAlignment="Top">
+            <TabItem Header="General">
+                <Grid Margin="0,5,5,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="10" />
+                        <ColumnDefinition Width="300" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="Map name"
+                       HorizontalAlignment="Right"
+                       VerticalAlignment="Center"/>
+                    <TextBlock Text="Map type" Grid.Row="1"
+                       HorizontalAlignment="Right"
+                       VerticalAlignment="Center"/>
+                    <TextBlock Text="Local tile file #1" Grid.Row="2"
+                       HorizontalAlignment="Right"
+                       VerticalAlignment="Center"/>
+                    <TextBlock Text="Local tile file #2" Grid.Row="3"
+                       HorizontalAlignment="Right"
+                       VerticalAlignment="Center"/>
+                    <TextBlock Text="Local map file" Grid.Row="4"
+                       HorizontalAlignment="Right"
+                       VerticalAlignment="Center"/>
+
+                    <TextBox x:Name="MapName" Grid.Column="2"
+                             Width="300"
+                             Text="{Binding Path=MapID, Mode=TwoWay}"
+                             HorizontalAlignment="Left"
+                             VerticalAlignment="Center"/>
+                    <ComboBox x:Name="MapType"
+                              Grid.Row="1" Grid.Column="2"
+                              Width="300"
+                              SelectedIndex="0"
+                              HorizontalAlignment="Left"
+                              VerticalAlignment="Center">
+                        <ComboBoxItem Content="Plan map"
+                                      HorizontalAlignment="Left"
+                                      Width="298"/>
+                        <ComboBoxItem Content="Profile map"
+                                      HorizontalAlignment="Left"
+                                      Width="298"/>
+                    </ComboBox>
+                    <TextBox x:Name="LocalTileFile1"
+                             Grid.Row="2" Grid.Column="2"
+                             Width="300"
+                             Text="{Binding Path=LocalTileFileName1, Mode=TwoWay}"
+                             HorizontalAlignment="Left"
+                             VerticalAlignment="Center"/>
+                    <TextBox x:Name="LocalTileFile2"
+                             Grid.Row="3" Grid.Column="2"
+                             Width="300"
+                             Text="{Binding Path=LocalTileFileName2, Mode=TwoWay}"
+                             HorizontalAlignment="Left"
+                             VerticalAlignment="Center"/>
+                    <TextBox x:Name="LocalMapFile"
+                             Grid.Row="4" Grid.Column="2"
+                             Width="300"
+                             Text="{Binding Path=LocalMapFileName, Mode=TwoWay}"
+                             HorizontalAlignment="Left"
+                             VerticalAlignment="Center"/>
+                    
+                    <Button x:Name="BtnLocalTileFile1"
+                            Grid.Row="2" Grid.Column="3"
+                            Width="30" Height="20"
+                            Click="BtnLocalTileFile_Click"
+                            Content="..."/>
+                    <Button x:Name="BtnLocalTileFile2"
+                            Grid.Row="3" Grid.Column="3"
+                            Width="30" Height="20"
+                            Click="BtnLocalTileFile_Click"
+                            Content="..."/>
+                    <Button x:Name="BtnLocalMapFile"
+                            Grid.Row="4" Grid.Column="3"
+                            Width="30" Height="20"
+                            Click="BtnLocalMapFile_Click"
+                            Content="..."/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Extent">
+                <Grid Margin="0,5,5,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="130" />
+                        <ColumnDefinition Width="100" />
+                        <ColumnDefinition Width="80" />
+                        <ColumnDefinition Width="100" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="XMin"
+                               Margin="0,0,10,0"
+                               HorizontalAlignment="Right"
+                               VerticalAlignment="Center"/>
+                    <TextBlock Text="XMax"
+                               Grid.Column="2"
+                               Margin="0,0,10,0"
+                               HorizontalAlignment="Right"
+                               VerticalAlignment="Center"/>
+                    <TextBlock Text="YMin"
+                               Grid.Row="1"
+                               Margin="0,0,10,0"
+                               HorizontalAlignment="Right"
+                               VerticalAlignment="Center"/>
+                    <TextBlock Text="YMax"
+                               Grid.Row="1" Grid.Column="2"
+                               Margin="0,0,10,0"
+                               HorizontalAlignment="Right"
+                               VerticalAlignment="Center"/>
+                    <TextBlock Text="Minimum Resolution"
+                               Grid.Row="2"
+                               Margin="0,0,5,0"
+                               HorizontalAlignment="Right"
+                               VerticalAlignment="Center"/>
+
+                    <TextBox x:Name="XMin"
+                             Grid.Column="1"
+                             Width="100"
+                             Text="{Binding Path=XMin, Mode=TwoWay}"
+                             HorizontalAlignment="Right"
+                             VerticalAlignment="Center"/>
+                    <TextBox x:Name="XMax"
+                             Grid.Column="3"
+                             Width="100"
+                             Text="{Binding Path=XMax, Mode=TwoWay}"
+                             HorizontalAlignment="Right"
+                             VerticalAlignment="Center"/>
+                    <TextBox x:Name="YMin"
+                             Grid.Row="1" Grid.Column="1"
+                             Width="100"
+                             Text="{Binding Path=YMin, Mode=TwoWay}"
+                             HorizontalAlignment="Right"
+                             VerticalAlignment="Center"/>
+                    <TextBox x:Name="YMax"
+                             Grid.Row="1" Grid.Column="3"
+                             Width="100"
+                             Text="{Binding Path=YMax, Mode=TwoWay}"
+                             HorizontalAlignment="Right"
+                             VerticalAlignment="Center"/>
+                    <TextBox x:Name="MinRes"
+                             Grid.Row="2" Grid.Column="1"
+                             Width="100"
+                             Text="{Binding Path=MinimumResolution, Mode=TwoWay}"
+                             HorizontalAlignment="Left"
+                             VerticalAlignment="Center"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Layers">
+                <Grid Margin="0,5,5,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="300" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <ListBox x:Name="LBLayers"
+                             ItemsSource="{Binding Path=ELayers}"
+                             DisplayMemberPath="Name"
+                             Grid.RowSpan="4"/>
+                    <Button x:Name="BtnAddLayer"
+                            Grid.Column="1"
+                            Width="100" Height="25"
+                            Content="Add..."
+                            Click="BtnAddLayer_Click"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"/>
+                    <Button x:Name="BtnEditLayer"
+                            Grid.Row="1" Grid.Column="1"
+                            Width="100" Height="25"
+                            Content="Edit..."
+                            Click="BtnEditLayer_Click"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"/>
+                    <Button x:Name="BtnRemoveLayer"
+                            Grid.Row="2" Grid.Column="1"
+                            Width="100" Height="25"
+                            Content="Remove"
+                            Click="BtnRemoveLayer_Click"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Bottom"
+                    Margin="0,0,10,10">
+            <Button Content="OK"
+                    Click="OK_Click"
+                    Width="100"/>
+            <Button Content="Cancel"
+                    Click="Cancel_Click"
+                    Width="100"
+                    Margin="20,0,0,0"/>
+        </StackPanel>
+    </Grid>
+</Window>

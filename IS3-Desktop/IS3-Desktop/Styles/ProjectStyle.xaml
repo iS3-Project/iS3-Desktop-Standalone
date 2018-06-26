@@ -1,0 +1,427 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+    xmlns:esri="http://schemas.esri.com/arcgis/client/2009"
+>
+
+    <Style x:Key="tableviewImage" TargetType="Image" >
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/Windows-Table-icon.png" />
+    </Style>
+
+    <Style x:Key="chartviewImage" TargetType="Image" >
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/chart-curve-icon.png" />
+    </Style>
+
+    <Style x:Key="categoryImage" TargetType="Image">
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/category.png" />
+    </Style>
+
+    <Style x:Key="objectsImage" TargetType="Image">
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/Objects.png" />
+    </Style>
+
+    <Style x:Key="subCategoryImage" TargetType="Image">
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/Subcategory.png" />
+    </Style>
+
+    <Style x:Key="attachmentImage" TargetType="Image">
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/attachment.png" />
+    </Style>
+
+    <Style x:Key="pinImage" TargetType="Image" >
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/pin_red.png" />
+    </Style>
+
+    <Style x:Key="getInfoImage" TargetType="Image">
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/get_info.png" />
+    </Style>
+    
+    <Style x:Key="selectionImage" TargetType="Image">
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/selection.png" />
+    </Style>
+
+    <Style x:Key="hProjImage" TargetType="Image">
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/HorizontalProjection.png" />
+    </Style>
+
+    <Style x:Key="vProjImage" TargetType="Image">
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/VerticalProjection.png" />
+    </Style>
+
+    <Style x:Key="exportImage" TargetType="Image" >
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/export-excel-icon.png" />
+    </Style>
+    
+    <Style x:Key="tunnelImage" TargetType="Image">
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/Tunnel-32.png"/>
+    </Style>
+
+    <Style x:Key="tunnelAxisImage" TargetType="Image">
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/TunnelAxis-32.png"/>
+    </Style>
+
+    <Style x:Key="tunnelCrossLineImage" TargetType="Image">
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/TunnelCrossLine-32.png"/>
+    </Style>
+
+    <Style x:Key="TBMImage" TargetType="Image">
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/TBM.png"/>
+    </Style>
+
+    <Style x:Key="tunnelProfileImage" TargetType="Image">
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/TunnelProfile-32.png"/>
+    </Style>
+
+    <Style x:Key="tunnelCrossSectionImage" TargetType="Image">
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/TunnelCrossSection-32.png"/>
+    </Style>
+
+    <Style x:Key="geologyProfileImage" TargetType="Image">
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/GeologyProfile.png"/>
+    </Style>
+
+    <Style x:Key="tunnelAnalysisImage" TargetType="Image">
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/TunnelAnalysis-32.png"/>
+    </Style>
+
+    <Style x:Key="geologyAnalysisImage" TargetType="Image">
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/GeologyAnalysis-32.png"/>
+    </Style>
+
+    <Style x:Key="tunnelGeologyImage" TargetType="Image">
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/TunnelGeology.png"/>
+    </Style>
+
+    <Style x:Key="tunnelGeologyImage1" TargetType="Image">
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/TunnelGeology1.png"/>
+    </Style>
+
+    <Style x:Key="tunnelLoad1Image" TargetType="Image">
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/TunnelLoad1.png"/>
+    </Style>
+
+    <Style x:Key="tunnelLoad2Image" TargetType="Image">
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/TunnelLoad2.png"/>
+    </Style>
+
+    <Style x:Key="tunnelDepthImage" TargetType="Image">
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/TunnelDepth.png"/>
+    </Style>
+
+    <Style x:Key="tunnelOverlyingStrataThicknessImage" TargetType="Image">
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/TunnelSoilDepth.png"/>
+    </Style>
+
+    <Style x:Key="tunnelDistToStImage" TargetType="Image">
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/TunnelDistToSt.png"/>
+    </Style>
+    
+    <Style x:Key="tunnelLongProfImage" TargetType="Image">
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/TunnelLongProf.png"/>
+    </Style>
+
+    <Style x:Key="tunnelFaceStabImage" TargetType="Image">
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/TunnelFaceStab.png"/>
+    </Style>
+
+    <Style x:Key="tunnelConstructionImage" TargetType="Image">
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/TunnelConstruction.png"/>
+    </Style>
+
+    <sdk:HierarchicalDataTemplate x:Key="TreeTemplate" 
+                                      ItemsSource="{Binding Path=Children}">
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="{Binding DisplayName}" />
+        </StackPanel>
+    </sdk:HierarchicalDataTemplate>
+    
+    <esri:SimpleMarkerSymbol x:Key="DefaultMarkerSymbol" Color="Red" Size="12" Style="Circle" />
+    <esri:SimpleLineSymbol x:Key="DefaultLineSymbol" Color="Red" Width="3" />
+    <esri:SimpleFillSymbol x:Key="DefaultFillSymbol" BorderThickness="1" BorderBrush="Red" Fill="#77FF0000" />
+    
+    <esri:MarkerSymbol x:Key="DrawingMarkerSymbol" OffsetX="6" OffsetY="6">
+        <esri:MarkerSymbol.ControlTemplate>
+            <ControlTemplate>
+                <Canvas>
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal" />
+                            <VisualState x:Name="MouseOver">
+                                <Storyboard>
+                                    <ColorAnimation Storyboard.TargetName="Element" 
+                                                    Storyboard.TargetProperty="(Ellipse.Stroke).(SolidColorBrush.Color)"
+                                                    To="Cyan" Duration="00:00:00"/>
+                                </Storyboard>
+                            </VisualState>
+                        </VisualStateGroup>
+                        <VisualStateGroup x:Name="SeletionStates">
+                            <VisualState x:Name="Unselected" />
+                            <VisualState x:Name="Selected">
+                                <Storyboard>
+                                    <ColorAnimation Storyboard.TargetName="Element" 
+                                                    Storyboard.TargetProperty="(Ellipse.Fill).(SolidColorBrush.Color)"
+                                                    To="Cyan" Duration="00:00:00"/>
+                                </Storyboard>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                    <Ellipse x:Name="Element" Width="12" Height="12"
+                             Fill="Blue" Stroke="Black" />
+                </Canvas>
+            </ControlTemplate>
+        </esri:MarkerSymbol.ControlTemplate>
+    </esri:MarkerSymbol>
+    <esri:LineSymbol x:Key="DrawingLineSymbol">
+        <esri:LineSymbol.ControlTemplate>
+            <ControlTemplate>
+                <Canvas>
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal" />
+                            <VisualState x:Name="MouseOver" />
+                        </VisualStateGroup>
+                        <VisualStateGroup x:Name="SelectionStates">
+                            <!--By specifying an empty Unselected state,
+									unselecting the graphic will instantly set the
+									values back to their original value without any animation.
+									Set a storyboard if you want a smooth transition 
+									back (see SelectFillSymbol template) -->
+                            <VisualState x:Name="Unselected" />
+                            <VisualState x:Name="Selected">
+                                <Storyboard>
+                                    <ColorAnimation Storyboard.TargetName="Element" 
+                                                    Storyboard.TargetProperty="(Path.Stroke).(SolidColorBrush.Color)"
+                                                    To="Cyan"  Duration="00:00:00" />
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Element"
+                                                                   Storyboard.TargetProperty="StrokeDashArray">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <DoubleCollection>2,1</DoubleCollection>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                    <Path x:Name="Element"
+                      Stroke="Blue"
+                      StrokeStartLineCap="Round"
+                      StrokeThickness="3"
+                      StrokeLineJoin="Round"
+                      StrokeEndLineCap="Round"
+                      Cursor="Hand">
+                    </Path>
+                </Canvas>
+            </ControlTemplate>
+        </esri:LineSymbol.ControlTemplate>
+    </esri:LineSymbol>
+    <esri:FillSymbol x:Key="DrawingFillSymbol">
+        <esri:FillSymbol.ControlTemplate>
+            <ControlTemplate>
+                <Canvas>
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal" />
+                            <VisualState x:Name="MouseOver">
+                                <Storyboard>
+                                    <ColorAnimation Storyboard.TargetName="Element" 
+                                                    Storyboard.TargetProperty="(Ellipse.Stroke).(SolidColorBrush.Color)"
+                                                    To="Cyan" Duration="00:00:00"/>
+                                </Storyboard>
+                            </VisualState>
+                        </VisualStateGroup>
+                        <VisualStateGroup x:Name="SelectionStates">
+                            <VisualState x:Name="Unselected" >
+                                <Storyboard>
+                                    <ColorAnimation Storyboard.TargetName="Element"
+                                                    Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)"
+                                                    To="Blue"  Duration="00:00:00"/>
+                                </Storyboard>
+                            </VisualState>
+                            <VisualState x:Name="Selected">
+                                <Storyboard>
+                                    <ColorAnimation Storyboard.TargetName="Element"
+                                                    Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)"
+                                                    To="Cyan" Duration="00:00:00"/>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Element"
+                                                                   Storyboard.TargetProperty="StrokeDashArray">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <DoubleCollection>2,1</DoubleCollection>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                    <Path x:Name="Element"
+                      Stroke="Black"
+                      StrokeStartLineCap="Round"
+                      StrokeThickness="2"
+                      StrokeLineJoin="Round"
+                      StrokeEndLineCap="Round"
+                      Fill="Blue" />
+                </Canvas>
+            </ControlTemplate>
+        </esri:FillSymbol.ControlTemplate>
+    </esri:FillSymbol>
+
+    <esri:LineSymbol x:Key="ProjectionLineSymbol">
+        <esri:LineSymbol.ControlTemplate>
+            <ControlTemplate>
+                <Canvas>
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal" />
+                            <VisualState x:Name="MouseOver" />
+                        </VisualStateGroup>
+                        <VisualStateGroup x:Name="SelectionStates">
+                            <!--By specifying an empty Unselected state,
+									unselecting the graphic will instantly set the
+									values back to their original value without any animation.
+									Set a storyboard if you want a smooth transition 
+									back (see SelectFillSymbol template) -->
+                            <VisualState x:Name="Unselected"/>
+                            <VisualState x:Name="Selected">
+                                <Storyboard>
+                                    <ColorAnimation Storyboard.TargetName="Element" 
+                                                    Storyboard.TargetProperty="(Path.Stroke).(SolidColorBrush.Color)"
+                                                    To="Cyan"  Duration="00:00:00" />
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Element"
+                                                                   Storyboard.TargetProperty="StrokeDashArray">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <DoubleCollection>2,1</DoubleCollection>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                    <Path x:Name="Element"
+                      Stroke="Blue"
+                      StrokeStartLineCap="Round"
+                      StrokeThickness="2"
+                      StrokeLineJoin="Round"
+                      StrokeEndLineCap="Round"
+                      Cursor="Hand">
+                    </Path>
+                </Canvas>
+            </ControlTemplate>
+        </esri:LineSymbol.ControlTemplate>
+    </esri:LineSymbol>
+    <!--<esri:FillSymbol x:Key="ProjectionFillSymbol">
+        <esri:FillSymbol.ControlTemplate>
+            <ControlTemplate>
+                <Canvas>
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal" />
+                            <VisualState x:Name="MouseOver">
+                                <Storyboard>
+                                    <ColorAnimation Storyboard.TargetName="Element" 
+                                                    Storyboard.TargetProperty="(Ellipse.Stroke).(SolidColorBrush.Color)"
+                                                    To="Cyan" Duration="00:00:00"/>
+                                </Storyboard>
+                            </VisualState>
+                        </VisualStateGroup>
+                        <VisualStateGroup x:Name="SelectionStates">
+                            <VisualState x:Name="Unselected" >
+                                <Storyboard>
+                                    <ColorAnimation Storyboard.TargetName="Element"
+                                                    Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)"
+                                                    To="Transparent"  Duration="00:00:00"/>
+                                </Storyboard>
+                            </VisualState>
+                            <VisualState x:Name="Selected">
+                                <Storyboard>
+                                    <ColorAnimation Storyboard.TargetName="Element"
+                                                    Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)"
+                                                    To="Cyan" Duration="00:00:00"/>
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Element"
+                                                                   Storyboard.TargetProperty="StrokeDashArray">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <DoubleCollection>2,1</DoubleCollection>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                    <Path x:Name="Element"
+                      Stroke="Blue"
+                      StrokeStartLineCap="Round"
+                      StrokeThickness="1"
+                      StrokeLineJoin="Round"
+                      StrokeEndLineCap="Round"
+                      Fill="Transparent" />
+                </Canvas>
+            </ControlTemplate>
+        </esri:FillSymbol.ControlTemplate>
+    </esri:FillSymbol>-->
+    <esri:FillSymbol x:Name="ProjectionFillSymbol">
+        <esri:FillSymbol.ControlTemplate>
+            <ControlTemplate>
+                <Canvas>
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Normal" />
+                            <VisualState x:Name="MouseOver">
+                                <Storyboard>
+                                    <ColorAnimation Storyboard.TargetName="Element" 
+                                                    Storyboard.TargetProperty="(Ellipse.Stroke).(SolidColorBrush.Color)"
+                                                    To="Cyan" Duration="00:00:00"/>
+                                </Storyboard>
+                            </VisualState>
+                        </VisualStateGroup>
+                        <VisualStateGroup x:Name="SelectionStates">
+                            <VisualState x:Name="Unselected" >
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="Element"
+                                                     Storyboard.TargetProperty="(Shape.Opacity)"
+                                                     To="0.5" Duration="00:00:00" />
+                                    <DoubleAnimation 
+                                        Storyboard.TargetName="Element"
+                                        Storyboard.TargetProperty="StrokeThickness"
+                                        To="1.0" Duration="00:00:00" />
+                                </Storyboard>
+                            </VisualState>
+                            <VisualState x:Name="Selected">
+                                <Storyboard>
+                                    <DoubleAnimation 
+                                        Storyboard.TargetName="Element"
+                                        Storyboard.TargetProperty="(Shape.Opacity)"
+                                        To="1.0" Duration="00:00:00" />
+                                    <DoubleAnimation 
+                                        Storyboard.TargetName="Element"
+                                        Storyboard.TargetProperty="StrokeThickness"
+                                        To="2.0" Duration="00:00:00" />
+                                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Element"
+                                                                   Storyboard.TargetProperty="StrokeDashArray">
+                                        <DiscreteObjectKeyFrame KeyTime="0:0:0">
+                                            <DiscreteObjectKeyFrame.Value>
+                                                <DoubleCollection>2,1</DoubleCollection>
+                                            </DiscreteObjectKeyFrame.Value>
+                                        </DiscreteObjectKeyFrame>
+                                    </ObjectAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                    <Path x:Name="Element"
+                      Stroke="Black"
+                      StrokeThickness="1"
+                      Fill="#FFFF00FF" />
+                </Canvas>
+            </ControlTemplate>
+        </esri:FillSymbol.ControlTemplate>
+    </esri:FillSymbol>
+    <esri:SimpleFillSymbol x:Key="WhiteFillSymbol" BorderThickness="1" BorderBrush="Black" Fill="#99FFFFFF" />
+
+</ResourceDictionary>

@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IS3-Desktop", "IS3-Desktop\IS3-Desktop.csproj", "{27E8435C-B314-434A-BB39-57CB53AC3A09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IS3-Core", "..\IS3-Core\IS3-Core\IS3-Core.csproj", "{4B8B162C-3658-4FCC-AB41-C0C85A7DB281}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IS3-ArcGIS", "..\IS3-ArcGIS\IS3-ArcGIS.csproj", "{3E9A8DED-38B8-4050-849C-08957AEB5FBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "U3DPlayerAxLib", "..\U3DPlayerAxLib\U3DPlayerAxLib\U3DPlayerAxLib.csproj", "{A13C6A7F-E975-409F-A611-FCC107289F32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IS3-Python", "..\IS3-Python\IS3-Python\IS3-Python.csproj", "{E6F7F4AD-0E87-45D7-BD80-D66C99379692}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICSharpCode.AvalonEdit", "..\IS3-Python\ICSharpCode.AvalonEdit\ICSharpCode.AvalonEdit.csproj", "{6C55B776-26D4-4DB3-A6AB-87E783B2F3D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PythonConsoleControl", "..\IS3-Python\PythonConsoleControl\PythonConsoleControl.csproj", "{F1152D68-346B-4F48-8DB7-BE67B5CB1F49}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{27E8435C-B314-434A-BB39-57CB53AC3A09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27E8435C-B314-434A-BB39-57CB53AC3A09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27E8435C-B314-434A-BB39-57CB53AC3A09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27E8435C-B314-434A-BB39-57CB53AC3A09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B8B162C-3658-4FCC-AB41-C0C85A7DB281}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B8B162C-3658-4FCC-AB41-C0C85A7DB281}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B8B162C-3658-4FCC-AB41-C0C85A7DB281}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B8B162C-3658-4FCC-AB41-C0C85A7DB281}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E9A8DED-38B8-4050-849C-08957AEB5FBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E9A8DED-38B8-4050-849C-08957AEB5FBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E9A8DED-38B8-4050-849C-08957AEB5FBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E9A8DED-38B8-4050-849C-08957AEB5FBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A13C6A7F-E975-409F-A611-FCC107289F32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A13C6A7F-E975-409F-A611-FCC107289F32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A13C6A7F-E975-409F-A611-FCC107289F32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A13C6A7F-E975-409F-A611-FCC107289F32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6F7F4AD-0E87-45D7-BD80-D66C99379692}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6F7F4AD-0E87-45D7-BD80-D66C99379692}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6F7F4AD-0E87-45D7-BD80-D66C99379692}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6F7F4AD-0E87-45D7-BD80-D66C99379692}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C55B776-26D4-4DB3-A6AB-87E783B2F3D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C55B776-26D4-4DB3-A6AB-87E783B2F3D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C55B776-26D4-4DB3-A6AB-87E783B2F3D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C55B776-26D4-4DB3-A6AB-87E783B2F3D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1152D68-346B-4F48-8DB7-BE67B5CB1F49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1152D68-346B-4F48-8DB7-BE67B5CB1F49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1152D68-346B-4F48-8DB7-BE67B5CB1F49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1152D68-346B-4F48-8DB7-BE67B5CB1F49}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5301B071-6145-444B-BDF2-FC60F0378BBC}
+	EndGlobalSection
+EndGlobal

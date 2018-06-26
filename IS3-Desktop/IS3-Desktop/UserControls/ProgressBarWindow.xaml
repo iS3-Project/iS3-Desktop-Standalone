@@ -1,0 +1,11 @@
+﻿<Window x:Class="IS3.Desktop.ProgressBarWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ProgressBarWindow" Height="60" Width="300" WindowStartupLocation="CenterOwner" WindowStyle="None">
+    <Grid Height="60">
+        <StackPanel Orientation="Vertical">
+            <TextBlock Name="Message" Text="Message" HorizontalAlignment="Center" Margin="5,5,5,5"/>
+            <ProgressBar Height="20" HorizontalAlignment="Left" Name="progressBar1" VerticalAlignment="Top" Width="290" IsIndeterminate="True" />
+        </StackPanel>
+    </Grid>
+    </Window>

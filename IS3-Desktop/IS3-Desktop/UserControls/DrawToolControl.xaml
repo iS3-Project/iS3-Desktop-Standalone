@@ -1,0 +1,159 @@
+﻿<UserControl x:Class="IS3.Desktop.UserControls.DrawToolControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="340">
+    <UserControl.Resources>
+        <Style x:Key="PointImage" TargetType="Image" >
+            <Setter Property="Source" 
+                    Value="/IS3.Desktop;component/Images/DrawPoint.png" />
+        </Style>
+        <Style x:Key="PolylineImage" TargetType="Image" >
+            <Setter Property="Source" 
+                    Value="/IS3.Desktop;component/Images/DrawPolyline.png" />
+        </Style>
+        <Style x:Key="PolygonImage" TargetType="Image" >
+            <Setter Property="Source" 
+                    Value="/IS3.Desktop;component/Images/DrawPolygon.png" />
+        </Style>
+        <Style x:Key="RectangleImage" TargetType="Image" >
+            <Setter Property="Source" 
+                    Value="/IS3.Desktop;component/Images/DrawRectangle.png" />
+        </Style>
+        <Style x:Key="CircleImage" TargetType="Image" >
+            <Setter Property="Source" 
+                    Value="/IS3.Desktop;component/Images/DrawCircle.png" />
+        </Style>
+        <Style x:Key="EllipseImage" TargetType="Image" >
+            <Setter Property="Source" 
+                    Value="/IS3.Desktop;component/Images/DrawEllipse.png" />
+        </Style>
+        <Style x:Key="FreehandImage" TargetType="Image" >
+            <Setter Property="Source" 
+                    Value="/IS3.Desktop;component/Images/DrawFreehand.png" />
+        </Style>
+        <Style x:Key="ArrowImage" TargetType="Image" >
+            <Setter Property="Source" 
+                    Value="/IS3.Desktop;component/Images/DrawArrow.png" />
+        </Style>
+        <Style x:Key="StopImage" TargetType="Image" >
+            <Setter Property="Source" 
+                    Value="/IS3.Desktop;component/Images/StopDraw.png" />
+        </Style>
+        <Style x:Key="ClearImage" TargetType="Image" >
+            <Setter Property="Source" 
+                    Value="/IS3.Desktop;component/Images/Clear_selection.png" />
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <StackPanel  x:Name="EditorToolStrip" Margin="0,5,5,0" >
+            <Border Background="White" 
+                    BorderBrush="Black" BorderThickness="1"
+                    HorizontalAlignment="Center"  VerticalAlignment="Top"
+                    Padding="5" >
+                <Border.Effect>
+                    <DropShadowEffect Color="Black" Direction="-45"
+                                      BlurRadius="20" Opacity=".75" />
+                </Border.Effect>
+                <StackPanel x:Name="ButtonsHolder"
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Top"
+                                Margin="0,5,5,0">
+                    <Button x:Name="Btn_Point"
+                            Style="{StaticResource MenuToolbarButton}"
+                            Height="32" Width="32" Margin="0,0,4,0"
+                            HorizontalContentAlignment="Left" 
+                            Padding="0"
+                            Click="Button_Click"
+                            ToolTipService.ToolTip="Point">
+                        <Image Style="{StaticResource PointImage}"
+                           Margin="2" />
+                    </Button>
+                    <Button x:Name="Btn_Polyline"
+                            Style="{StaticResource MenuToolbarButton}"
+                            Height="32" Width="32" Margin="0,0,4,0"
+                            HorizontalContentAlignment="Left" 
+                            Padding="0"
+                            Click="Button_Click"
+                            ToolTipService.ToolTip="Polyline">
+                        <Image Style="{StaticResource PolylineImage}"
+                           Margin="2" />
+                    </Button>
+                    <Button x:Name="Btn_Polygon"
+                            Style="{StaticResource MenuToolbarButton}"
+                            Height="32" Width="32" Margin="0,0,4,0"
+                            HorizontalContentAlignment="Left" 
+                            Padding="0"
+                            Click="Button_Click"
+                            ToolTipService.ToolTip="Polygon">
+                        <Image Style="{StaticResource PolygonImage}"
+                           Margin="2" />
+                    </Button>
+                    <Button x:Name="Btn_Rectangle"
+                            Style="{StaticResource MenuToolbarButton}"
+                            Height="32" Width="32" Margin="0,0,4,0"
+                            HorizontalContentAlignment="Left" 
+                            Padding="0"
+                            Click="Button_Click"
+                            ToolTipService.ToolTip="Rectangle">
+                        <Image Style="{StaticResource RectangleImage}"
+                           Margin="2" />
+                    </Button>
+                    <Button x:Name="Btn_Circle"
+                            Style="{StaticResource MenuToolbarButton}"
+                            Height="32" Width="32" Margin="0,0,4,0"
+                            HorizontalContentAlignment="Left" 
+                            Padding="0"
+                            Click="Button_Click"
+                            ToolTipService.ToolTip="Circle">
+                        <Image Style="{StaticResource CircleImage}"
+                           Margin="2" />
+                    </Button>
+                    <Button x:Name="Btn_Ellipse"
+                            Style="{StaticResource MenuToolbarButton}"
+                            Height="32" Width="32" Margin="0,0,4,0"
+                            HorizontalContentAlignment="Left" 
+                            Padding="0"
+                            Click="Button_Click"
+                            ToolTipService.ToolTip="Ellipse">
+                        <Image Style="{StaticResource EllipseImage}"
+                           Margin="2" />
+                    </Button>
+                    <Button x:Name="Btn_Freehand"
+                            Style="{StaticResource MenuToolbarButton}"
+                            Height="32" Width="32" Margin="0,0,4,0"
+                            HorizontalContentAlignment="Left" 
+                            Padding="0"
+                            Click="Button_Click"
+                            ToolTipService.ToolTip="Freehand">
+                        <Image Style="{StaticResource FreehandImage}"
+                           Margin="2" />
+                    </Button>
+                    <Button x:Name="Btn_Arrow"
+                            Style="{StaticResource MenuToolbarButton}"
+                            Height="32" Width="32" Margin="0,0,4,0"
+                            HorizontalContentAlignment="Left" 
+                            Padding="0"
+                            Click="Button_Click"
+                            ToolTipService.ToolTip="Arrow">
+                        <Image Style="{StaticResource ArrowImage}"
+                           Margin="2" />
+                    </Button>
+                    <Button x:Name="Btn_Stop"
+                            Style="{StaticResource MenuToolbarButton}"
+                            Height="32" Width="32" Margin="0,0,4,0"
+                            HorizontalContentAlignment="Left" 
+                            Padding="0"
+                            Click="Button_Click"
+                            ToolTipService.ToolTip="Cancel drawing">
+                        <Image Style="{StaticResource StopImage}"
+                           Margin="2" />
+                    </Button>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </Grid>
+</UserControl>

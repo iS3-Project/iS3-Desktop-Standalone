@@ -1,0 +1,488 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style x:Key="optionImage" TargetType="Image" >
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/i_options.png" />
+    </Style>
+
+    <Style x:Key="MLayerOptionImage" TargetType="Image" >
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/i_widget.png" />
+    </Style>
+
+    <Style x:Key="timeSliderImage" TargetType="Image" >
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/clock_red.png" />
+    </Style>
+
+    <Style x:Key="settlementImage" TargetType="Image" >
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/Settlement.png" />
+    </Style>
+
+    <Style x:Key="chartCurveControlImage" TargetType="Image" >
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/char-curve-control-icon.png" />
+    </Style>
+
+    <Style x:Key="addChartImage" TargetType="Image" >
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/chart-curve-add-icon.png" />
+    </Style>
+
+    <Style x:Key="largeWindowImage" TargetType="Image" >
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/window-full-screen-icon.png" />
+    </Style>
+
+    <Style x:Key="smallWindowImage" TargetType="Image" >
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/window-no-full-screen-icon.png" />
+    </Style>
+
+
+    <Style x:Key="DataPointStyle0" TargetType="toolkit:LineDataPoint">
+        <Setter Property="Background" Value="SteelBlue"/>
+        <Setter Property="BorderBrush" Value="SteelBlue"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="toolkit:LineDataPoint">
+                    <Canvas Width="8" Height="8">
+                        <Ellipse Fill="{TemplateBinding Background}"
+                                     Stroke="{TemplateBinding BorderBrush}"
+                                     StrokeThickness="{TemplateBinding BorderThickness}"
+                                     Width="8" Height="8">
+                            <ToolTipService.ToolTip>
+                                <StackPanel>
+                                    <ContentControl Content="{TemplateBinding FormattedDependentValue}" />
+                                    <ContentControl Content="{TemplateBinding FormattedIndependentValue}" />
+                                </StackPanel>
+                            </ToolTipService.ToolTip>
+                        </Ellipse>
+                    </Canvas>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="LegendItemStyle0" TargetType="toolkit:LegendItem">
+        <Setter Property="Background" Value="SteelBlue"/>
+        <Setter Property="BorderBrush" Value="SteelBlue"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="IsTabStop" Value="False"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="toolkit:LegendItem">
+                    <Border>
+                        <StackPanel Orientation="Horizontal">
+                            <Canvas Width="8" Height="8" Margin="0,0,3,0">
+                                <Ellipse Fill="{Binding Background}"
+                                     Stroke="{Binding BorderBrush}"
+                                     StrokeThickness="{Binding BorderThickness}"
+                                     Width="8" Height="8">
+                                </Ellipse>
+                            </Canvas>
+                            <toolkit:Title Content="{TemplateBinding Content}"/>
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="DataPointStyle1" TargetType="toolkit:LineDataPoint">
+        <Setter Property="Background" Value="Blue"/>
+        <Setter Property="BorderBrush" Value="Blue"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="toolkit:LineDataPoint">
+                    <Canvas Width="8" Height="8">
+                        <Rectangle Fill="{TemplateBinding Background}"
+                                       Stroke="{TemplateBinding BorderBrush}"
+                                       StrokeThickness="{TemplateBinding BorderThickness}"
+                                       Width="8" Height="8">
+                            <ToolTipService.ToolTip>
+                                <StackPanel>
+                                    <ContentControl Content="{TemplateBinding FormattedDependentValue}" />
+                                    <ContentControl Content="{TemplateBinding FormattedIndependentValue}" />
+                                </StackPanel>
+                            </ToolTipService.ToolTip>
+                        </Rectangle>
+                    </Canvas>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="LegendItemStyle1" TargetType="toolkit:LegendItem">
+        <Setter Property="Background" Value="Blue"/>
+        <Setter Property="BorderBrush" Value="Blue"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="IsTabStop" Value="False"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="toolkit:LegendItem">
+                    <Border>
+                        <StackPanel Orientation="Horizontal">
+                            <Canvas Width="8" Height="8" Margin="0,0,3,0">
+                                <Rectangle Fill="{Binding Background}"
+                                     Stroke="{Binding BorderBrush}"
+                                     StrokeThickness="{Binding BorderThickness}"
+                                     Width="8" Height="8">
+                                </Rectangle>
+                            </Canvas>
+                            <toolkit:Title Content="{TemplateBinding Content}"/>
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="DataPointStyle2" TargetType="toolkit:LineDataPoint">
+        <Setter Property="Background" Value="Green"/>
+        <Setter Property="BorderBrush" Value="Green"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="toolkit:LineDataPoint">
+                    <Canvas Width="8" Height="8">
+                        <Polygon Fill="{TemplateBinding Background}"
+                                     Stroke="{TemplateBinding BorderBrush}"
+                                     StrokeThickness="{TemplateBinding BorderThickness}"
+                                     Points="4,0 8,8 0,8">
+                            <ToolTipService.ToolTip>
+                                <StackPanel>
+                                    <ContentControl Content="{TemplateBinding FormattedDependentValue}" />
+                                    <ContentControl Content="{TemplateBinding FormattedIndependentValue}" />
+                                </StackPanel>
+                            </ToolTipService.ToolTip>
+                        </Polygon>
+                    </Canvas>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="LegendItemStyle2" TargetType="toolkit:LegendItem">
+        <Setter Property="Background" Value="Green"/>
+        <Setter Property="BorderBrush" Value="Green"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="IsTabStop" Value="False"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="toolkit:LegendItem">
+                    <Border>
+                        <StackPanel Orientation="Horizontal">
+                            <Canvas Width="8" Height="8" Margin="0,0,3,0">
+                                <Polygon Fill="{Binding Background}"
+                                     Stroke="{Binding BorderBrush}"
+                                     StrokeThickness="{Binding BorderThickness}"
+                                     Points="4,0 8,8 0,8">
+                                </Polygon>
+                            </Canvas>
+                            <toolkit:Title Content="{TemplateBinding Content}"/>
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="DataPointStyle3" TargetType="toolkit:LineDataPoint">
+        <Setter Property="Background" Value="BlueViolet"/>
+        <Setter Property="BorderBrush" Value="BlueViolet"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="toolkit:LineDataPoint">
+                    <Canvas Width="8" Height="8">
+                        <Polygon Fill="{TemplateBinding Background}"
+                                     Stroke="{TemplateBinding BorderBrush}"
+                                     StrokeThickness="{TemplateBinding BorderThickness}"
+                                     Points="0,0 8,0 4,8">
+                            <ToolTipService.ToolTip>
+                                <StackPanel>
+                                    <ContentControl Content="{TemplateBinding FormattedDependentValue}" />
+                                    <ContentControl Content="{TemplateBinding FormattedIndependentValue}" />
+                                </StackPanel>
+                            </ToolTipService.ToolTip>
+                        </Polygon>
+                    </Canvas>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="LegendItemStyle3" TargetType="toolkit:LegendItem">
+        <Setter Property="Background" Value="BlueViolet"/>
+        <Setter Property="BorderBrush" Value="BlueViolet"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="IsTabStop" Value="False"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="toolkit:LegendItem">
+                    <Border>
+                        <StackPanel Orientation="Horizontal">
+                            <Canvas Width="8" Height="8" Margin="0,0,3,0">
+                                <Polygon Fill="{Binding Background}"
+                                     Stroke="{Binding BorderBrush}"
+                                     StrokeThickness="{Binding BorderThickness}"
+                                     Points="0,0 8,0 4,8">
+                                </Polygon>
+                            </Canvas>
+                            <toolkit:Title Content="{TemplateBinding Content}"/>
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="DataPointStyle4" TargetType="toolkit:LineDataPoint">
+        <Setter Property="Background" Value="Brown"/>
+        <Setter Property="BorderBrush" Value="Brown"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="toolkit:LineDataPoint">
+                    <Canvas Width="8" Height="8">
+                        <Polygon Fill="{TemplateBinding Background}"
+                                     Stroke="{TemplateBinding BorderBrush}"
+                                     StrokeThickness="{TemplateBinding BorderThickness}"
+                                     Points="4,0 8,4 4,8 0,4">
+                            <ToolTipService.ToolTip>
+                                <StackPanel>
+                                    <ContentControl Content="{TemplateBinding FormattedDependentValue}" />
+                                    <ContentControl Content="{TemplateBinding FormattedIndependentValue}" />
+                                </StackPanel>
+                            </ToolTipService.ToolTip>
+                        </Polygon>
+                    </Canvas>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="LegendItemStyle4" TargetType="toolkit:LegendItem">
+        <Setter Property="Background" Value="Brown"/>
+        <Setter Property="BorderBrush" Value="Brown"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="IsTabStop" Value="False"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="toolkit:LegendItem">
+                    <Border>
+                        <StackPanel Orientation="Horizontal">
+                            <Canvas Width="8" Height="8" Margin="0,0,3,0">
+                                <Polygon Fill="{Binding Background}"
+                                     Stroke="{Binding BorderBrush}"
+                                     StrokeThickness="{Binding BorderThickness}"
+                                     Points="4,0 8,4 4,8 0,4">
+                                </Polygon>
+                            </Canvas>
+                            <toolkit:Title Content="{TemplateBinding Content}"/>
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="DataPointStyle5" TargetType="toolkit:LineDataPoint">
+        <Setter Property="Background" Value="CadetBlue"/>
+        <Setter Property="BorderBrush" Value="CadetBlue"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="toolkit:LineDataPoint">
+                    <Canvas Width="8" Height="8">
+                        <Polygon Fill="{TemplateBinding Background}"
+                                     Stroke="{TemplateBinding BorderBrush}"
+                                     StrokeThickness="{TemplateBinding BorderThickness}"
+                                     Points="0,0 8,4 0,8">
+                            <ToolTipService.ToolTip>
+                                <StackPanel>
+                                    <ContentControl Content="{TemplateBinding FormattedDependentValue}" />
+                                    <ContentControl Content="{TemplateBinding FormattedIndependentValue}" />
+                                </StackPanel>
+                            </ToolTipService.ToolTip>
+                        </Polygon>
+                    </Canvas>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="LegendItemStyle5" TargetType="toolkit:LegendItem">
+        <Setter Property="Background" Value="CadetBlue"/>
+        <Setter Property="BorderBrush" Value="CadetBlue"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="IsTabStop" Value="False"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="toolkit:LegendItem">
+                    <Border>
+                        <StackPanel Orientation="Horizontal">
+                            <Canvas Width="8" Height="8" Margin="0,0,3,0">
+                                <Polygon Fill="{Binding Background}"
+                                     Stroke="{Binding BorderBrush}"
+                                     StrokeThickness="{Binding BorderThickness}"
+                                     Points="0,0 8,4 0,8">
+                                </Polygon>
+                            </Canvas>
+                            <toolkit:Title Content="{TemplateBinding Content}"/>
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="DataPointStyle6" TargetType="toolkit:LineDataPoint">
+        <Setter Property="Background" Value="Coral"/>
+        <Setter Property="BorderBrush" Value="Coral"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="toolkit:LineDataPoint">
+                    <Canvas Width="8" Height="8">
+                        <Polygon Fill="{TemplateBinding Background}"
+                                     Stroke="{TemplateBinding BorderBrush}"
+                                     StrokeThickness="{TemplateBinding BorderThickness}"
+                                     Points="8,0 8,8 0,4">
+                            <ToolTipService.ToolTip>
+                                <StackPanel>
+                                    <ContentControl Content="{TemplateBinding FormattedDependentValue}" />
+                                    <ContentControl Content="{TemplateBinding FormattedIndependentValue}" />
+                                </StackPanel>
+                            </ToolTipService.ToolTip>
+                        </Polygon>
+                    </Canvas>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="LegendItemStyle6" TargetType="toolkit:LegendItem">
+        <Setter Property="Background" Value="Coral"/>
+        <Setter Property="BorderBrush" Value="Coral"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="IsTabStop" Value="False"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="toolkit:LegendItem">
+                    <Border>
+                        <StackPanel Orientation="Horizontal">
+                            <Canvas Width="8" Height="8" Margin="0,0,3,0">
+                                <Polygon Fill="{Binding Background}"
+                                     Stroke="{Binding BorderBrush}"
+                                     StrokeThickness="{Binding BorderThickness}"
+                                     Points="8,0 8,8 0,4">
+                                </Polygon>
+                            </Canvas>
+                            <toolkit:Title Content="{TemplateBinding Content}"/>
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="DataPointStyle7" TargetType="toolkit:LineDataPoint">
+        <Setter Property="Background" Value="DarkCyan"/>
+        <Setter Property="BorderBrush" Value="DarkCyan"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="toolkit:LineDataPoint">
+                    <Canvas Width="8" Height="8">
+                        <Ellipse Stroke="{TemplateBinding BorderBrush}"
+                                     StrokeThickness="{TemplateBinding BorderThickness}"
+                                     Width="8" Height="8">
+                            <ToolTipService.ToolTip>
+                                <StackPanel>
+                                    <ContentControl Content="{TemplateBinding FormattedDependentValue}" />
+                                    <ContentControl Content="{TemplateBinding FormattedIndependentValue}" />
+                                </StackPanel>
+                            </ToolTipService.ToolTip>
+                        </Ellipse>
+                    </Canvas>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="LegendItemStyle7" TargetType="toolkit:LegendItem">
+        <Setter Property="Background" Value="DarkCyan"/>
+        <Setter Property="BorderBrush" Value="DarkCyan"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="IsTabStop" Value="False"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="toolkit:LegendItem">
+                    <Border>
+                        <StackPanel Orientation="Horizontal">
+                            <Canvas Width="8" Height="8" Margin="0,0,3,0">
+                                <Ellipse Stroke="{TemplateBinding BorderBrush}"
+                                             StrokeThickness="{TemplateBinding BorderThickness}"
+                                             Width="8" Height="8">
+                                </Ellipse>
+                            </Canvas>
+                            <toolkit:Title Content="{TemplateBinding Content}"/>
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="LineStyle0" TargetType="Polyline">
+        <Setter Property="StrokeThickness" Value="2"/>
+        <Setter Property="StrokeMiterLimit" Value="1"/>
+        <Setter Property="Stroke" Value="SteelBlue"/>
+    </Style>
+
+    <Style x:Key="LineStyle1" TargetType="Polyline">
+        <Setter Property="StrokeThickness" Value="2"/>
+        <Setter Property="StrokeMiterLimit" Value="1"/>
+        <Setter Property="Stroke" Value="Blue"/>
+    </Style>
+
+    <Style x:Key="LineStyle2" TargetType="Polyline">
+        <Setter Property="StrokeThickness" Value="2"/>
+        <Setter Property="StrokeMiterLimit" Value="1"/>
+        <Setter Property="Stroke" Value="Green"/>
+    </Style>
+
+    <Style x:Key="LineStyle3" TargetType="Polyline">
+        <Setter Property="StrokeThickness" Value="2"/>
+        <Setter Property="StrokeMiterLimit" Value="1"/>
+        <Setter Property="Stroke" Value="BlueViolet"/>
+    </Style>
+
+    <Style x:Key="LineStyle4" TargetType="Polyline">
+        <Setter Property="StrokeThickness" Value="2"/>
+        <Setter Property="StrokeMiterLimit" Value="1"/>
+        <Setter Property="Stroke" Value="Brown"/>
+    </Style>
+
+    <Style x:Key="LineStyle5" TargetType="Polyline">
+        <Setter Property="StrokeThickness" Value="2"/>
+        <Setter Property="StrokeMiterLimit" Value="1"/>
+        <Setter Property="Stroke" Value="CadetBlue"/>
+    </Style>
+
+    <Style x:Key="LineStyle6" TargetType="Polyline">
+        <Setter Property="StrokeThickness" Value="2"/>
+        <Setter Property="StrokeMiterLimit" Value="1"/>
+        <Setter Property="Stroke" Value="Coral"/>
+    </Style>
+
+    <Style x:Key="LineStyle7" TargetType="Polyline">
+        <Setter Property="StrokeThickness" Value="2"/>
+        <Setter Property="StrokeMiterLimit" Value="1"/>
+        <Setter Property="Stroke" Value="DarkCyan"/>
+    </Style>
+
+
+
+</ResourceDictionary>

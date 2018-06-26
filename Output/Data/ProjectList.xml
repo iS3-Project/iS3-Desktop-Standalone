@@ -1,0 +1,19 @@
+﻿<p:ProjectList xmlns="http://schemas.microsoft.com/client/2007"
+               xmlns:p="clr-namespace:IS3.Core;assembly=IS3.Core"
+               XMin="13500000" XMax="13560000"
+               YMin="3640000" YMax="3690000"
+               UseGeographicMap="True">
+    <p:ProjectList.Locations>
+      <p:ProjectLocation ID="iS3DemoTest"
+                         DefinitionFile="iS3DemoTest.xml"
+                         X="13524400" Y="3665000"
+                         Description="iS3测试案例"
+                         Default="false">
+      </p:ProjectLocation>
+      <p:ProjectLocation ID="IS3"
+                         X="10517500" Y="3660000"
+                         Description="IS3"
+                         Default ="false">
+      </p:ProjectLocation>
+    </p:ProjectList.Locations>
+</p:ProjectList>

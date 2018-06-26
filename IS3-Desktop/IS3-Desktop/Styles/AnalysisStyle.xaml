@@ -1,0 +1,40 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:esri="http://schemas.esri.com/arcgis/client/2009">
+
+    <Style x:Key="nodeImage" TargetType="Image" >
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/Node.png" />
+    </Style>
+
+    <Style x:Key="elementImage" TargetType="Image" >
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/Element.png" />
+    </Style>
+
+    <Style x:Key="legendImage" TargetType="Image" >
+        <Setter Property="Source" Value="/DigitalGeotec;component/Images/i_legend.png" />
+    </Style>
+    
+    <esri:SimpleFillSymbol x:Key="ElementFillSymbol" Fill="Cyan" BorderBrush="Black" BorderThickness="1" />
+
+    <esri:SimpleFillSymbol x:Key="TransparentFillSymbol" Fill="#00FFFFFF" BorderBrush="#00FFFFFF" BorderThickness="1"/>
+
+    <esri:SimpleFillSymbol x:Key="ContourFillSymbol1" Fill="Blue" BorderBrush="Blue" BorderThickness="1" />
+    <esri:SimpleFillSymbol x:Key="ContourFillSymbol2" Fill="MediumBlue" BorderBrush="MediumBlue" BorderThickness="1" />
+    <esri:SimpleFillSymbol x:Key="ContourFillSymbol3" Fill="LightBlue" BorderBrush="LightBlue" BorderThickness="1"/>
+    <esri:SimpleFillSymbol x:Key="ContourFillSymbol4" Fill="SkyBlue" BorderBrush="SkyBlue" BorderThickness="1"/>
+    <esri:SimpleFillSymbol x:Key="ContourFillSymbol5" Fill="Green" BorderBrush="Green" BorderThickness="1"/>
+    <esri:SimpleFillSymbol x:Key="ContourFillSymbol6" Fill="MediumSeaGreen" BorderBrush="MediumSeaGreen" BorderThickness="1"/>
+    <esri:SimpleFillSymbol x:Key="ContourFillSymbol7" Fill="LightGreen" BorderBrush="LightGreen" BorderThickness="1"/>
+    <esri:SimpleFillSymbol x:Key="ContourFillSymbol8" Fill="YellowGreen" BorderBrush="YellowGreen" BorderThickness="1"/>
+    <esri:SimpleFillSymbol x:Key="ContourFillSymbol9" Fill="Yellow" BorderBrush="Yellow" BorderThickness="1"/>
+    <esri:SimpleFillSymbol x:Key="ContourFillSymbol10" Fill="Gold" BorderBrush="Gold" BorderThickness="1"/>
+    <esri:SimpleFillSymbol x:Key="ContourFillSymbol11" Fill="Goldenrod" BorderBrush="Goldenrod" BorderThickness="1"/>
+    <esri:SimpleFillSymbol x:Key="ContourFillSymbol12" Fill="Pink" BorderBrush="Pink" BorderThickness="1"/>
+    <esri:SimpleFillSymbol x:Key="ContourFillSymbol13" Fill="Orange" BorderBrush="Orange" BorderThickness="1"/>
+    <esri:SimpleFillSymbol x:Key="ContourFillSymbol14" Fill="Orchid" BorderBrush="Orchid" BorderThickness="1"/>
+    <esri:SimpleFillSymbol x:Key="ContourFillSymbol15" Fill="Magenta" BorderBrush="Magenta" BorderThickness="1"/>
+    <esri:SimpleFillSymbol x:Key="ContourFillSymbol16" Fill="Red" BorderBrush="Red" BorderThickness="1"/>
+
+
+</ResourceDictionary>

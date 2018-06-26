@@ -1,0 +1,182 @@
+﻿<UserControl
+    x:Class="IS3.Desktop.Geology.GeologyPanel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    mc:Ignorable="d" 
+    d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <Style x:Key="OptionImage" TargetType="Image" >
+            <Setter Property="Source"
+                    Value="/IS3.Desktop;component/Images/i_options.png" />
+        </Style>
+        <Style x:Key="ChartviewImage" TargetType="Image" >
+            <Setter Property="Source"
+                    Value="/IS3.Desktop;component/Images/chart-curve-icon.png" />
+        </Style>
+        <Style x:Key="AttachmentImage" TargetType="Image">
+            <Setter Property="Source"
+                    Value="/IS3.Desktop;component/Images/attachment.png" />
+        </Style>
+        <Style x:Key="ObjectsImage" TargetType="Image">
+            <Setter Property="Source"
+                    Value="/IS3.Desktop;component/Images/Objects.png" />
+        </Style>
+        <Style x:Key="SubCategoryImage" TargetType="Image">
+            <Setter Property="Source"
+                    Value="/IS3.Desktop;component/Images/Subcategory.png" />
+        </Style>
+        <Style x:Key="PinImage" TargetType="Image" >
+            <Setter Property="Source"
+                    Value="/IS3.Desktop;component/Images/pin_red.png" />
+        </Style>
+        <Style x:Key="GetInfoImage" TargetType="Image">
+            <Setter Property="Source"
+                    Value="/IS3.Desktop;component/Images/get_info.png" />
+        </Style>
+        <Style x:Key="SelectionImage" TargetType="Image">
+            <Setter Property="Source"
+                    Value="/IS3.Desktop;component/Images/selection.png" />
+        </Style>
+        <Style x:Key="GeologyAnalysisImage" TargetType="Image">
+            <Setter Property="Source"
+                    Value="/IS3.Desktop;component/Images/GeologyAnalysis-32.png"/>
+        </Style>
+        <HierarchicalDataTemplate x:Key="TreeTemplate" 
+                                  ItemsSource="{Binding Path=Children}">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{Binding DisplayName}" />
+            </StackPanel>
+        </HierarchicalDataTemplate>
+    </UserControl.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <!-- First row: Tool bar -->
+        <Border Grid.Row="0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Orientation="Horizontal"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center" >
+                    <Button x:Name="SettingsBtn"
+                            Height="30" Width="30" Margin="0,0,2,0"
+                            Style="{StaticResource MenuToolbarButton}"
+                            HorizontalContentAlignment="Left" Padding="2"
+                            ToolTipService.ToolTip="Geology settings"
+                            Click="Button_Click"
+                            >
+                        <Image Style="{StaticResource OptionImage}"
+                               Margin="2" />
+                    </Button>
+                    <Button x:Name="DataWindowBtn"
+                            Style="{StaticResource MenuToolbarButton}"
+                            Height="30" Width="30" Margin="0,0,2,0"
+                            HorizontalContentAlignment="Left" Padding="2"
+                            ToolTipService.ToolTip="Open or close data window"
+                            Click="Button_Click"
+                            >
+                        <Image Style="{StaticResource ChartviewImage}"
+                               Margin="2" />
+                    </Button>
+                    <Button x:Name="AttachmentBtn"
+                            Style="{StaticResource MenuToolbarButton}"
+                            Height="30" Width="30" Margin="0,0,2,0"
+                            HorizontalContentAlignment="Left" Padding="2"
+                            ToolTipService.ToolTip="Display category attachment"
+                            Click="Button_Click"
+                            >
+                        <Image Style="{StaticResource AttachmentImage}"
+                               Margin="2" />
+                    </Button>
+                    <Button x:Name="ObjectsBtn"
+                            Style="{StaticResource MenuToolbarButton}"
+                            Height="30" Width="30" Margin="0,0,2,0"
+                            HorizontalContentAlignment="Left" Padding="2"
+                            ToolTipService.ToolTip="Dispaly objects"
+                            Click="Button_Click"
+                            >
+                        <Image Style="{StaticResource ObjectsImage}"
+                               Margin="2" />
+                    </Button>
+                    <Button x:Name="SubCategoryBtn"
+                            Style="{StaticResource MenuToolbarButton}"
+                            Height="30" Width="30" Margin="0,0,2,0"
+                            HorizontalContentAlignment="Left" Padding="2"
+                            ToolTipService.ToolTip="Dispaly Sub-category data"
+                            Click="Button_Click"
+                            >
+                        <Image Style="{StaticResource SubCategoryImage}"
+                               Margin="2" />
+                    </Button>
+                    <Button x:Name="PinBtn"
+                            Style="{StaticResource MenuToolbarButton}"
+                            Height="30" Width="30" Margin="0,0,2,0"
+                            HorizontalContentAlignment="Left" Padding="2"
+                            ToolTipService.ToolTip="Locate the selected entity"
+                            Click="Button_Click"
+                            >
+                        <Image Style="{StaticResource PinImage}"
+                               Margin="2" />
+                    </Button>
+                    <Button x:Name="GetInfoBtn"
+                            Style="{StaticResource MenuToolbarButton}"
+                            Height="30" Width="30" Margin="0,0,2,0"
+                            HorizontalContentAlignment="Left" Padding="2"
+                            ToolTipService.ToolTip="Identify object on the map"
+                            Click="Button_Click"
+                            >
+                        <Image Style="{StaticResource GetInfoImage}"
+                               Margin="2" />
+                    </Button>
+                    <Button x:Name="SelectionBtn"
+                            Style="{StaticResource MenuToolbarButton}"
+                            Height="30" Width="30" Margin="0,0,2,0"
+                            HorizontalContentAlignment="Left" Padding="2"
+                            ToolTipService.ToolTip="Select objects on the map"
+                            Click="Button_Click"
+                            >
+                        <Image Style="{StaticResource SelectionImage}"
+                               Margin="2" />
+                    </Button>
+                    <Button x:Name="AnalysisBtn"
+                            Style="{StaticResource MenuToolbarButton}"
+                            Height="30" Width="30" Margin="0,0,2,0"
+                            HorizontalContentAlignment="Left" Padding="2"
+                            ToolTipService.ToolTip="Toggle geology analysis tools"
+                            Click="Button_Click"
+                            >
+                        <Image Style="{StaticResource GeologyAnalysisImage}"
+                               Margin="2" />
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- Add search box in the future -->
+
+        <!-- Second row: geology layer list (column 1), 
+        and geology layer item data grid (column 2)-->
+        <Grid Grid.Row="1">
+            <TreeView x:Name="GeologyTreeView"
+                      ItemTemplate="{StaticResource TreeTemplate}"
+                      SelectedItemChanged="GeologyTreeView_SelectedItemChanged"
+                      >
+                <TreeView.ItemContainerStyle>
+                    <Style TargetType="{x:Type TreeViewItem}">
+                        <Setter Property="IsExpanded" Value="True" />
+                    </Style>
+                </TreeView.ItemContainerStyle>
+            </TreeView>
+        </Grid>
+    </Grid>
+</UserControl>

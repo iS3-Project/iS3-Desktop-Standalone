@@ -1,0 +1,3063 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>System.Windows.Controls.WpfPropertyGrid</name>
+    </assembly>
+    <members>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.CategoryEditor">
+            <summary>
+            Specifies the default category editor.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.Editor">
+            <summary>
+            A base class for all value editors.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.Editor.InlineTemplateProperty">
+            <summary>
+            Identifies the <see cref="P:System.Windows.Controls.WpfPropertyGrid.Editor.InlineTemplate"/> property. This is a dependency property.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.Editor.ExtendedTemplateProperty">
+            <summary>
+            Identifies the <see cref="P:System.Windows.Controls.WpfPropertyGrid.Editor.ExtendedTemplate"/> property. This is a dependency property.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.Editor.DialogTemplateProperty">
+            <summary>
+            Idenfities the <see cref="P:System.Windows.Controls.WpfPropertyGrid.Editor.DialogTemplate"/>. This is a dependency property.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.Editor.ShowDialog(System.Windows.Controls.WpfPropertyGrid.PropertyItemValue,System.Windows.IInputElement)">
+            <summary>
+            Shows the dialog for editing property value.
+            </summary>
+            <param name="propertyValue">The property value.</param>
+            <param name="commandSource">The command source.</param>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.Editor.InlineTemplate">
+            <summary>
+            Gets or sets the inline template. Can be either DataTemplate or ComponentResourceKey object.
+            </summary>
+            <value>The inline template.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.Editor.ExtendedTemplate">
+            <summary>
+            Gets or sets the extended template. Can be either DataTemplate or ComponentResourceKey object.
+            </summary>
+            <value>The extended template.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.Editor.DialogTemplate">
+            <summary>
+            Gets or sets the dialog template.
+            </summary>
+            <value>The dialog template.</value>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.CategoryEditor.DeclaringTypeProperty">
+            <summary>
+            Identifies the <see cref="P:System.Windows.Controls.WpfPropertyGrid.CategoryEditor.DeclaringType"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.CategoryEditor.CategoryNameProperty">
+            <summary>
+            Identifies the <see cref="P:System.Windows.Controls.WpfPropertyGrid.CategoryEditor.CategoryName"/> dependency property.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.CategoryEditor.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.CategoryEditor"/> class.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.CategoryEditor.#ctor(System.Type,System.String,System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.CategoryEditor"/> class.
+            </summary>
+            <param name="declaringType">Declaring type.</param>
+            <param name="categoryName">Name of the category.</param>
+            <param name="inlineTemplate">The inline template.</param>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.CategoryEditor.DeclaringType">
+            <summary>
+            Gets or sets the declaring type. This is a dependency property.
+            </summary>
+            <value>The declaring type.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.CategoryEditor.CategoryName">
+            <summary>
+            Gets or sets the name of the category. This is a dependency property.
+            </summary>
+            <value>The name of the category.</value>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.CategoryItem">
+            <summary>
+            Special grid entry that provides information about property category and gives access to underlying properties.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.GridEntry">
+            <summary>
+            Specifies a base item for a property grid.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.IPropertyFilterTarget">
+            <summary>
+            Describes an object that supports filtering.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.IPropertyFilterTarget.ApplyFilter(System.Windows.Controls.WpfPropertyGrid.PropertyFilter)">
+            <summary>
+            Applies the filter for the entry.
+            </summary>
+            <param name="filter">The filter.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.IPropertyFilterTarget.MatchesPredicate(System.Windows.Controls.WpfPropertyGrid.PropertyFilterPredicate)">
+            <summary>
+            Checks whether the entry matches the filtering predicate.
+            </summary>
+            <param name="predicate">The filtering predicate.</param>    
+            <returns><c>true</c> if entry matches filter; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="E:System.Windows.Controls.WpfPropertyGrid.IPropertyFilterTarget.FilterApplied">
+            <summary>
+            Occurs when filter is applied for the entry.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.IPropertyFilterTarget.MatchesFilter">
+            <summary>
+            Gets or sets a value indicating whether the entry matches filter.
+            </summary>
+            <value><c>true</c> if entry matches filter; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.GridEntry.OnBrowsableChanged">
+            <summary>
+            Called when visibility state of the property is changed.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.GridEntry.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.GridEntry.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.GridEntry.Finalize">
+            <summary>
+            Releases unmanaged resources and performs other cleanup operations before the
+            <see cref="T:System.Windows.Controls.WpfPropertyGrid.PropertyItem"/> is reclaimed by garbage collection.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.GridEntry.OnFilterApplied(System.Windows.Controls.WpfPropertyGrid.PropertyFilter)">
+            <summary>
+            Called when filter was applied for the entry.
+            </summary>
+            <param name="filter">The filter.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.GridEntry.ApplyFilter(System.Windows.Controls.WpfPropertyGrid.PropertyFilter)">
+            <summary>
+            Applies the filter for the entry.
+            </summary>
+            <param name="filter">The filter.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.GridEntry.MatchesPredicate(System.Windows.Controls.WpfPropertyGrid.PropertyFilterPredicate)">
+            <summary>
+            Checks whether the entry matches the filtering predicate.
+            </summary>
+            <param name="predicate">The filtering predicate.</param>        
+            <returns><c>true</c> if entry matches predicate; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.GridEntry.Name">
+            <summary>
+            Gets the name of the encapsulated item.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.GridEntry.IsBrowsable">
+            <summary>
+            Gets or sets a value indicating whether this instance is browsable.
+            </summary>
+            <value>
+            	<c>true</c> if this instance is browsable; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.GridEntry.Owner">
+            <summary>
+            Gets or sets the owner of the item.
+            </summary>
+            <value>The owner of the item.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.GridEntry.Editor">
+            <summary>
+            Gets or sets the editor.
+            </summary>
+            <value>The editor.</value>
+        </member>
+        <member name="E:System.Windows.Controls.WpfPropertyGrid.GridEntry.BrowsableChanged">
+            <summary>
+            Occurs when visibility state of the property is changed.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.GridEntry.Disposed">
+            <summary>
+            Gets a value indicating whether this <see cref="T:System.Windows.Controls.WpfPropertyGrid.PropertyItem"/> is disposed.
+            </summary>
+            <value><c>true</c> if disposed; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="E:System.Windows.Controls.WpfPropertyGrid.GridEntry.FilterApplied">
+            <summary>
+            Occurs when filter is applied for the entry.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.GridEntry.MatchesFilter">
+            <summary>
+            Gets or sets a value indicating whether the entry matches filter.
+            </summary>
+            <value><c>true</c> if entry matches filter; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.CategoryItem.#ctor(System.Windows.Controls.WpfPropertyGrid.PropertyGrid,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.CategoryItem"/> class.
+            </summary>
+            <param name="owner">The owner.</param>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.CategoryItem.#ctor(System.Windows.Controls.WpfPropertyGrid.PropertyGrid,System.ComponentModel.CategoryAttribute)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.CategoryItem"/> class.
+            </summary>
+            <param name="owner">The owner.</param>
+            <param name="category">The category.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.CategoryItem.AddProperty(System.Windows.Controls.WpfPropertyGrid.PropertyItem)">
+            <summary>
+            Adds the property.
+            </summary>
+            <param name="property">The property.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.CategoryItem.MatchesPredicate(System.Windows.Controls.WpfPropertyGrid.PropertyFilterPredicate)">
+            <summary>
+            Checks whether the entry matches the filtering predicate.
+            </summary>
+            <param name="predicate">The filtering predicate.</param>
+            <returns>
+            	<c>true</c> if entry matches predicate; otherwise, <c>false</c>.
+            </returns>   
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.CategoryItem.ApplyFilter(System.Windows.Controls.WpfPropertyGrid.PropertyFilter)">
+            <summary>
+            Applies the filter for the entry.
+            </summary>
+            <param name="filter">The filter.</param>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.CategoryItem.Attribute">
+            <summary>
+            Gets or sets the attribute the category was created with.
+            </summary>
+            <value>The attribute.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.CategoryItem.IsExpanded">
+            <summary>
+            Gets or sets a value indicating whether this category is expanded.
+            </summary>
+            <value>
+            	<c>true</c> if this category is expanded; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.CategoryItem.Properties">
+            <summary>
+            Get all the properties in the category.
+            </summary>
+            <value></value>
+            <returns>
+            An enumerable collection of all the properties in the category.
+            </returns>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.CategoryItem.Item(System.String)">
+            <summary>
+            Gets the <see cref="T:System.Windows.Controls.WpfPropertyGrid.PropertyItem"/> with the specified property name.
+            </summary>
+            <value></value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.CategoryItem.Comparer">
+            <summary>
+            Gets or sets the comparer used to sort properties.
+            </summary>
+            <value>The comparer. </value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.CategoryItem.HasVisibleProperties">
+            <summary>
+            Gets or sets a value indicating whether this instance has visible properties.
+            </summary>
+            <value>
+            	<c>true</c> if this instance has visible properties; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.Controls.SliderEditorBase">
+            <summary>
+            Base class for Slider-like editor implementations.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.Controls.SliderEditorBase.PropertyEditingStartedEvent">
+            <summary>
+            Identifies the <see cref="E:System.Windows.Controls.WpfPropertyGrid.Controls.SliderEditorBase.PropertyEditingStarted"/> routed event.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.Controls.SliderEditorBase.PropertyEditingFinishedEvent">
+            <summary>
+            Identifies the <see cref="E:System.Windows.Controls.WpfPropertyGrid.Controls.SliderEditorBase.PropertyEditingFinished"/> routed event.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.Controls.SliderEditorBase.PropertyDescriptorProperty">
+            <summary>
+            Identifies the <see cref="P:System.Windows.Controls.WpfPropertyGrid.Controls.SliderEditorBase.PropertyDescriptor"/> dependency property.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.Controls.SliderEditorBase.OnPropertyEditingStarted">
+            <summary>
+            Raises the <see cref="E:System.Windows.Controls.WpfPropertyGrid.Controls.SliderEditorBase.PropertyEditingStarted"/> event.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.Controls.SliderEditorBase.OnPropertyEditingFinished">
+            <summary>
+            Raises the <see cref="E:System.Windows.Controls.WpfPropertyGrid.Controls.SliderEditorBase.PropertyEditingFinished"/> event.
+            </summary>
+        </member>
+        <member name="E:System.Windows.Controls.WpfPropertyGrid.Controls.SliderEditorBase.PropertyEditingStarted">
+            <summary>
+            Occurs when property editing started.
+            </summary>
+        </member>
+        <member name="E:System.Windows.Controls.WpfPropertyGrid.Controls.SliderEditorBase.PropertyEditingFinished">
+            <summary>
+            Occurs when property editing is finished.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.Controls.SliderEditorBase.PropertyDescriptor">
+            <summary>
+            Underlying property descriptor. This is a dependency property.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.DebugConverter">
+            <summary>
+            Value converter that can be used for editor debugging purposes.   
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.EnumValueConverter">
+            <summary>
+            Default enum converter.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.EnumValueConverter.NullValueString">
+            <summary>
+            Default string presenting a null value.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.EnumValueConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a value.
+            </summary>
+            <param name="value">The value produced by the binding source.</param>
+            <param name="targetType">The type of the binding target property.</param>
+            <param name="parameter">The converter parameter to use.</param>
+            <param name="culture">The culture to use in the converter.</param>
+            <returns>
+            A converted value. If the method returns null, the valid null value is used.
+            </returns>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.EnumValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a value.
+            </summary>
+            <param name="value">The value that is produced by the binding target.</param>
+            <param name="targetType">The type to convert to.</param>
+            <param name="parameter">The converter parameter to use.</param>
+            <param name="culture">The culture to use in the converter.</param>
+            <returns>
+            A converted value. If the method returns null, the valid null value is used.
+            </returns>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.ExpanderHeaderWidthConverter">
+            <summary>
+            Expander header width converter
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.ExpanderHeaderWidthConverter.DefaultOffset">
+            <summary>
+            Specifies the default offset that should be used in case no parameter is provided. By default is -25.0
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.ExpanderHeaderWidthConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a value.
+            </summary>
+            <param name="value">The value produced by the binding source.</param>
+            <param name="targetType">The type of the binding target property.</param>
+            <param name="parameter">The converter parameter to use.</param>
+            <param name="culture">The culture to use in the converter.</param>
+            <returns>
+            A converted value. If the method returns null, the valid null value is used.
+            </returns>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.ExpanderHeaderWidthConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a value.
+            </summary>
+            <param name="value">The value that is produced by the binding target.</param>
+            <param name="targetType">The type to convert to.</param>
+            <param name="parameter">The converter parameter to use.</param>
+            <param name="culture">The culture to use in the converter.</param>
+            <returns>
+            A converted value. If the method returns null, the valid null value is used.
+            </returns>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.FontConverterDecorator">
+            <summary>
+            Specifies a generic font type converter that provides standard values collection.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.FontConverterDecorator.#ctor(System.ComponentModel.TypeConverter)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.FontConverterDecorator"/> class.
+            </summary>
+            <param name="converter">The original converter.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.FontConverterDecorator.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+            <summary>
+            Returns whether this converter can convert an object of the given type to the type of this converter, using the specified context.
+            </summary>
+            <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext"/> that provides a format context.</param>
+            <param name="sourceType">A <see cref="T:System.Type"/> that represents the type you want to convert from.</param>
+            <returns>
+            true if this converter can perform the conversion; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.FontConverterDecorator.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+            <summary>
+            Returns whether this converter can convert the object to the specified type, using the specified context.
+            </summary>
+            <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext"/> that provides a format context.</param>
+            <param name="destinationType">A <see cref="T:System.Type"/> that represents the type you want to convert to.</param>
+            <returns>
+            true if this converter can perform the conversion; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.FontConverterDecorator.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+            <summary>
+            Converts the given object to the type of this converter, using the specified context and culture information.
+            </summary>
+            <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext"/> that provides a format context.</param>
+            <param name="culture">The <see cref="T:System.Globalization.CultureInfo"/> to use as the current culture.</param>
+            <param name="value">The <see cref="T:System.Object"/> to convert.</param>
+            <returns>
+            An <see cref="T:System.Object"/> that represents the converted value.
+            </returns>
+            <exception cref="T:System.NotSupportedException">
+            The conversion cannot be performed.
+            </exception>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.FontConverterDecorator.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+            <summary>
+            Converts the given value object to the specified type, using the specified context and culture information.
+            </summary>
+            <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext"/> that provides a format context.</param>
+            <param name="culture">A <see cref="T:System.Globalization.CultureInfo"/>. If null is passed, the current culture is assumed.</param>
+            <param name="value">The <see cref="T:System.Object"/> to convert.</param>
+            <param name="destinationType">The <see cref="T:System.Type"/> to convert the <paramref name="value"/> parameter to.</param>
+            <returns>
+            An <see cref="T:System.Object"/> that represents the converted value.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            The <paramref name="destinationType"/> parameter is null.
+            </exception>
+            <exception cref="T:System.NotSupportedException">
+            The conversion cannot be performed.
+            </exception>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.FontConverterDecorator.GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext)">
+            <summary>
+            Returns whether this object supports a standard set of values that can be picked from a list, using the specified context.
+            </summary>
+            <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext"/> that provides a format context.</param>
+            <returns>
+            true if <see cref="M:System.ComponentModel.TypeConverter.GetStandardValues"/> should be called to find a common set of values the object supports; otherwise, false.
+            </returns>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.FontStretchConverterDecorator">
+            <summary>
+            Extended <see cref="T:System.Windows.FontStretchConverter"/> that provides standard values collection.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.FontStretchConverterDecorator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.FontStretchConverterDecorator"/> class.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.FontStretchConverterDecorator.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)">
+            <summary>
+            Returns a collection of standard values for the data type this type converter is designed for when provided with a format context.
+            </summary>
+            <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext"/> that provides a format context that can be used to extract additional information about the environment from which this converter is invoked. This parameter or properties of this parameter can be null.</param>
+            <returns>
+            A <see cref="T:System.ComponentModel.TypeConverter.StandardValuesCollection"/> that holds a standard set of valid values, or null if the data type does not support a standard set of values.
+            </returns>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.FontStyleConverterDecorator">
+            <summary>
+            Extended <see cref="T:System.Windows.FontStyleConverter"/> that provides standard values collection.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.FontStyleConverterDecorator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.FontStyleConverterDecorator"/> class.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.FontStyleConverterDecorator.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)">
+            <summary>
+            Returns a collection of standard values for the data type this type converter is designed for when provided with a format context.
+            </summary>
+            <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext"/> that provides a format context that can be used to extract additional information about the environment from which this converter is invoked. This parameter or properties of this parameter can be null.</param>
+            <returns>
+            A <see cref="T:System.ComponentModel.TypeConverter.StandardValuesCollection"/> that holds a standard set of valid values, or null if the data type does not support a standard set of values.
+            </returns>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.FontWeightConverterDecorator">
+            <summary>
+            Extended <see cref="T:System.Windows.FontWeightConverter"/> that provides standard values collection.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.FontWeightConverterDecorator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.FontWeightConverterDecorator"/> class.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.FontWeightConverterDecorator.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)">
+            <summary>
+            Returns a collection of standard values for the data type this type converter is designed for when provided with a format context.
+            </summary>
+            <param name="context">An <see cref="T:System.ComponentModel.ITypeDescriptorContext"/> that provides a format context that can be used to extract additional information about the environment from which this converter is invoked. This parameter or properties of this parameter can be null.</param>
+            <returns>
+            A <see cref="T:System.ComponentModel.TypeConverter.StandardValuesCollection"/> that holds a standard set of valid values, or null if the data type does not support a standard set of values.
+            </returns>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.MultiBooleanToVisibilityConverter">
+            <summary>
+            Provides convertion to Visibility from multiple boolean values.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.MultiBooleanToVisibilityConverter.Convert(System.Object[],System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts source values to a value for the binding target. The data binding engine calls this method when it propagates the values from source bindings to the binding target.
+            </summary>
+            <param name="values">The array of values that the source bindings in the <see cref="T:System.Windows.Data.MultiBinding"/> produces. The value <see cref="F:System.Windows.DependencyProperty.UnsetValue"/> indicates that the source binding has no value to provide for conversion.</param>
+            <param name="targetType">The type of the binding target property.</param>
+            <param name="parameter">The converter parameter to use.</param>
+            <param name="culture">The culture to use in the converter.</param>
+            <returns>
+            A converted value.
+            If the method returns null, the valid null value is used.
+            A return value of <see cref="T:System.Windows.DependencyProperty"/>.<see cref="F:System.Windows.DependencyProperty.UnsetValue"/> indicates that the converter did not produce a value, and that the binding will use the <see cref="P:System.Windows.Data.BindingBase.FallbackValue"/> if it is available, or else will use the default value.
+            A return value of <see cref="T:System.Windows.Data.Binding"/>.<see cref="F:System.Windows.Data.Binding.DoNothing"/> indicates that the binding does not transfer the value or use the <see cref="P:System.Windows.Data.BindingBase.FallbackValue"/> or the default value.
+            </returns>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.MultiBooleanToVisibilityConverter.ConvertBack(System.Object,System.Type[],System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a binding target value to the source binding values.
+            </summary>
+            <param name="value">The value that the binding target produces.</param>
+            <param name="targetTypes">The array of types to convert to. The array length indicates the number and types of values that are suggested for the method to return.</param>
+            <param name="parameter">The converter parameter to use.</param>
+            <param name="culture">The culture to use in the converter.</param>
+            <returns>
+            An array of values that have been converted from the target value back to the source values.
+            </returns>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.NullValueConverter">
+            <summary>
+            Converts a null value into a string representation.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.NullValueConverter.NullString">
+            <summary>
+            Default Null presentation. The default value is "(null)".
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.NullValueConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a value.
+            </summary>
+            <param name="value">The value produced by the binding source.</param>
+            <param name="targetType">The type of the binding target property.</param>
+            <param name="parameter">The converter parameter to use.</param>
+            <param name="culture">The culture to use in the converter.</param>
+            <returns>
+            A converted value. If the method returns null, the valid null value is used.
+            </returns>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.NullValueConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a value.
+            </summary>
+            <param name="value">The value that is produced by the binding target.</param>
+            <param name="targetType">The type to convert to.</param>
+            <param name="parameter">The converter parameter to use.</param>
+            <param name="culture">The culture to use in the converter.</param>
+            <returns>
+            A converted value. If the method returns null, the valid null value is used.
+            </returns>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.DataResource">
+            <summary>
+            Defines a helper object for binding to CLR properties.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.DataResource.BindingTargetProperty">
+            <summary>
+            Identifies the <see cref="P:System.Windows.Controls.WpfPropertyGrid.DataResource.BindingTarget"/> dependency property.
+            </summary>
+            <value>
+            The identifier for the <see cref="P:System.Windows.Controls.WpfPropertyGrid.DataResource.BindingTarget"/> dependency property.
+            </value>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.DataResource.CreateInstanceCore">
+            <summary>
+            Creates an instance of the specified type using that type's default constructor. 
+            </summary>
+            <returns>
+            A reference to the newly created object.
+            </returns>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.DataResource.CloneCore(System.Windows.Freezable)">
+            <summary>
+            Makes the instance a clone (deep copy) of the specified <see cref="T:System.Windows.Freezable"/>
+            using base (non-animated) property values. 
+            </summary>
+            <param name="sourceFreezable">
+            The object to clone.
+            </param>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.DataResource.BindingTarget">
+            <summary>
+            Gets or sets the binding target.
+            </summary>
+            <value>The binding target.</value>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.DataResourceBindingExtension">
+            <summary>
+            Markup extension for establishing bindings to CLR properties from XAML.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.DataResourceBindingExtension.ProvideValue(System.IServiceProvider)">
+            <summary>
+            When implemented in a derived class, returns an object that is set as the value of the target property for this markup extension.
+            </summary>
+            <param name="serviceProvider">Object that can provide services for the markup extension.</param>
+            <returns>
+            The object value to set on the property where the extension is applied.
+            </returns>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.DataResourceBindingExtension.DataResource">
+            <summary>
+            Gets or sets the data resource.
+            </summary>
+            <value>The data resource.</value>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.GridEntryContainer">
+            <summary>
+            Specifies a UI container for <see cref="T:System.Windows.Controls.WpfPropertyGrid.GridEntry"/>
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.GridEntryContainer.ParentContainerProperty">
+            <summary>
+            Identifies a ParentContainer attached property.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.GridEntryContainer.GetParentContainer(System.Windows.DependencyObject)">
+            <summary>
+            Gets the parent container.
+            </summary>
+            <param name="dependencyObject">The dependency object.</param>
+            <returns>Parent container</returns>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.GridEntryContainer.SetParentContainer(System.Windows.DependencyObject,System.Windows.Controls.WpfPropertyGrid.GridEntryContainer)">
+            <summary>
+            Sets the parent container.
+            </summary>
+            <param name="dependencyObject">The dependency object.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.GridEntryContainer.EntryProperty">
+            <summary>
+            Identifies the <see cref="P:System.Windows.Controls.WpfPropertyGrid.GridEntryContainer.Entry"/> property. This is a dependency property.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.GridEntryContainer.FindEditorTemplate">
+            <summary>
+            Finds the editor template.
+            </summary>
+            <returns>DataTemplate the Editor should be applied.</returns>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.GridEntryContainer.ResourceLocator">
+            <summary>
+            Gets or sets the resource locator.
+            </summary>
+            <value>The resource locator.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.GridEntryContainer.Entry">
+            <summary>
+            Gets or sets the entry container displays.
+            </summary>
+            <value>The entry container diplays.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.GridEntryContainer.EditorTemplate">
+            <summary>
+            Gets the editor template to present contained entry.
+            </summary>
+            <value>The editor template to present contained entry.</value>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.Design.GridEntryLayout`1">
+            <summary>
+            Defines a basement for GridEntry UI layouts (panels, lists, etc)
+            </summary>
+            <typeparam name="T">The type of elements in the control.</typeparam>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.Design.GridEntryLayout`1.GetContainerForItemOverride">
+            <summary>
+            Creates or identifies the element that is used to display the given item.
+            </summary>
+            <returns>
+            The element that is used to display the given item.
+            </returns>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.Design.GridEntryLayout`1.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            Prepares the specified element to display the specified item.
+            </summary>
+            <param name="element">Element used to display the specified item.</param>
+            <param name="item">Specified item.</param>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.EditorCollection">
+            <summary>
+            Defines a collection of value Editors (Type, Category and Property editors).
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.EditorCollection.FindTypeEditor(System.Type)">
+            <summary>
+            Finds the type editor.
+            </summary>
+            <param name="editedType">Edited type.</param>
+            <returns>Editor for Type</returns>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.EditorCollection.FindPropertyEditor(System.Type,System.String)">
+            <summary>
+            Finds the property editor.
+            </summary>
+            <param name="declaringType">Declaring type.</param>
+            <param name="propertyName">Name of the property.</param>
+            <returns>Editor for Property</returns>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.EditorCollection.FindCategoryEditor(System.Type,System.String)">
+            <summary>
+            Finds the category editor.
+            </summary>
+            <param name="declaringType">Declaring type.</param>
+            <param name="categoryName">Name of the category.</param>
+            <returns>Editor for Category</returns>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.EditorCollection.GetPropertyEditorByAttributes(System.ComponentModel.AttributeCollection)">
+            <summary>
+            Gets the property editor by attributes.
+            </summary>
+            <param name="attributes">The attributes.</param>
+            <returns>Editor for Property</returns>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.EditorCollection.GetCategoryEditorByAttributes(System.Type,System.String)">
+            <summary>
+            Gets the category editor by attributes.
+            </summary>
+            <param name="declaringType">Type of the declaring.</param>
+            <param name="categoryName">Name of the category.</param>
+            <returns>Editor for Category</returns>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.EditorCollection.GetEditor(System.Windows.Controls.WpfPropertyGrid.CategoryItem)">
+            <summary>
+            Gets the editor.
+            </summary>
+            <param name="categoryItem">The category item.</param>
+            <returns>Editor for Category</returns>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.EditorCollection.GetEditor(System.Windows.Controls.WpfPropertyGrid.PropertyItem)">
+            <summary>
+            Gets the editor.
+            </summary>
+            <param name="propertyItem">The property item.</param>
+            <returns>Editor for Property</returns>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.Controls.SearchMode">
+            <summary>
+            Defines the search behavior of <see cref="T:System.Windows.Controls.WpfPropertyGrid.Controls.SearchTextBox"/>.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.Controls.SearchMode.Instant">
+            <summary>
+            Immediatelly fire search.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.Controls.SearchMode.Delayed">
+            <summary>
+            Fire search with a delay.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.Controls.SearchTextBox">
+            <summary>
+            Property search box control.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.Controls.SearchTextBox.LabelTextProperty">
+            <summary>
+            Identifies the <see cref="P:System.Windows.Controls.WpfPropertyGrid.Controls.SearchTextBox.LabelText"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.Controls.SearchTextBox.LabelTextColorProperty">
+            <summary>
+            Identifies the <see cref="P:System.Windows.Controls.WpfPropertyGrid.Controls.SearchTextBox.LabelTextColor"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.Controls.SearchTextBox.SearchModeProperty">
+            <summary>
+            Identifies the <see cref="P:System.Windows.Controls.WpfPropertyGrid.Controls.SearchTextBox.SearchMode"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.Controls.SearchTextBox.HasTextProperty">
+            <summary>
+            Identifies the <see cref="P:System.Windows.Controls.WpfPropertyGrid.Controls.SearchTextBox.HasText"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.Controls.SearchTextBox.IsMouseLeftButtonDownProperty">
+            <summary>
+            Identifies the <see cref="P:System.Windows.Controls.WpfPropertyGrid.Controls.SearchTextBox.IsMouseLeftButtonDown"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.Controls.SearchTextBox.SearchEventTimeDelayProperty">
+            <summary>
+            Identifies the <see cref="P:System.Windows.Controls.WpfPropertyGrid.Controls.SearchTextBox.SearchEventTimeDelay"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.Controls.SearchTextBox.SearchEvent">
+            <summary>
+            Identifies the <see cref="E:System.Windows.Controls.WpfPropertyGrid.Controls.SearchTextBox.Search"/> routed event.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.Controls.SearchTextBox.#cctor">
+            <summary>
+            Initializes the <see cref="T:System.Windows.Controls.WpfPropertyGrid.Controls.SearchTextBox"/> class.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.Controls.SearchTextBox.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.Controls.SearchTextBox"/> class.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.Controls.SearchTextBox.OnTextChanged(System.Windows.Controls.TextChangedEventArgs)">
+            <summary>
+            Is called when content in this editing control changes.
+            </summary>
+            <param name="e">The arguments that are associated with the <see cref="E:System.Windows.Controls.Primitives.TextBoxBase.TextChanged"/> event.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.Controls.SearchTextBox.OnApplyTemplate">
+            <summary>
+            Is called when a control template is applied.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.Controls.SearchTextBox.OnKeyDown(System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Invoked whenever an unhandled <see cref="E:System.Windows.UIElement.KeyDown"/> attached routed event reaches an element derived from this class in its route. Implement this method to add class handling for this event.
+            </summary>
+            <param name="e">Provides data about the event.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.Controls.SearchTextBox.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Called when one or more of the dependency properties that exist on the element have had their effective values changed.
+            </summary>
+            <param name="e">Arguments for the associated event.</param>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.Controls.SearchTextBox.LabelText">
+            <summary>
+            Gets or sets the label text. This is a dependency property.
+            </summary>
+            <value>The label text.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.Controls.SearchTextBox.LabelTextColor">
+            <summary>
+            Gets or sets the color of the label text. This is a dependency property.
+            </summary>
+            <value>The color of the label text.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.Controls.SearchTextBox.SearchMode">
+            <summary>
+            Gets or sets the search mode. This is a dependency property.
+            </summary>
+            <value>The search mode.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.Controls.SearchTextBox.HasText">
+            <summary>
+            Gets a value indicating whether this instance has text. This is a dependency property.
+            </summary>
+            <value><c>true</c> if this instance has text; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.Controls.SearchTextBox.SearchEventTimeDelay">
+            <summary>
+            Gets or sets the search event time delay. This is a dependency property.
+            </summary>
+            <value>The search event time delay.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.Controls.SearchTextBox.IsMouseLeftButtonDown">
+            <summary>
+            Gets or sets a value indicating whether mouse left button is down.
+            </summary>
+            <value>
+            	<c>true</c> if mouse left button is down; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="E:System.Windows.Controls.WpfPropertyGrid.Controls.SearchTextBox.Search">
+            <summary>
+            Occurs when search is performed.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.CategoryContainer">
+            <summary>
+            Specialized UI container for a category entry.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.CategoryContainer.#cctor">
+            <summary>
+            Initializes the <see cref="T:System.Windows.Controls.WpfPropertyGrid.CategoryContainer"/> class.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.CategoryContainer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.CategoryContainer"/> class.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.Controls.EnumDropdown">
+            <summary>
+            Combobox control to present enumeration classes.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.Controls.EnumDropdown.PropertyValueProperty">
+            <summary>
+            Identifies the <see cref="P:System.Windows.Controls.WpfPropertyGrid.Controls.EnumDropdown.PropertyValue"/> dependency property.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.Controls.EnumDropdown.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.Controls.EnumDropdown"/> class.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.Controls.EnumDropdown.OnSelectionChanged(System.Windows.Controls.SelectionChangedEventArgs)">
+            <summary>
+            Responds to a <see cref="T:System.Windows.Controls.ComboBox"/> selection change by raising a <see cref="E:System.Windows.Controls.Primitives.Selector.SelectionChanged"/> event.
+            </summary>
+            <param name="e">Provides data for <see cref="T:System.Windows.Controls.SelectionChangedEventArgs"/>.</param>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.Controls.EnumDropdown.PropertyValue">
+            <summary>
+            Gets or sets the property value. This is a dependency property.
+            </summary>
+            <value>The property value.</value>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.Design.ExtendedPropertyEditorTab">
+            <summary>
+            Special Tab used to contain Extended Editors. Used in Tabbed Layout.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.Design.TabbedLayoutItem">
+            <summary>
+            Native Tab item for <see cref="T:System.Windows.Controls.WpfPropertyGrid.Design.TabbedLayout"/>
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.Design.TabbedLayoutItem.#cctor">
+            <summary>
+            Initializes the <see cref="T:System.Windows.Controls.WpfPropertyGrid.Design.TabbedLayoutItem"/> class.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.Design.TabbedLayoutItem.CanCloseProperty">
+            <summary>
+            Identifies the <see cref="P:System.Windows.Controls.WpfPropertyGrid.Design.TabbedLayoutItem.CanClose"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.Design.TabbedLayoutItem.CanClose">
+            <summary>
+            Gets or sets a value indicating whether this instance can close.
+            </summary>
+            <value><c>true</c> if this instance can close; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.Design.ExtendedPropertyEditorTab.#cctor">
+            <summary>
+            Initializes the <see cref="T:System.Windows.Controls.WpfPropertyGrid.Design.ExtendedPropertyEditorTab"/> class.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.Design.ExtendedPropertyEditorTab.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.Design.ExtendedPropertyEditorTab"/> class.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.Design.ExtendedPropertyEditorTab.#ctor(System.Windows.Controls.WpfPropertyGrid.PropertyItem)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.Design.ExtendedPropertyEditorTab"/> class.
+            </summary>
+            <param name="property">The property to display extended editor for.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.Design.ExtendedPropertyEditorTab.CreateContent(System.Windows.Controls.WpfPropertyGrid.PropertyItem)">
+            <summary>
+            Creates the content with extended editor.
+            </summary>
+            <param name="propertyItem">The property item.</param>
+            <returns>ContentControl to place into Tabbed Layout tab.</returns>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.Design.ExtendedPropertyEditorTab.Property">
+            <summary>
+            Gets or sets the property an extended editor is bound to.
+            </summary>
+            <value>The property.</value>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.Design.CategoryEditorContentPresenter">
+            <summary>
+            Defines a content presenter control for a Category editor.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.Design.CategoryEditorContentPresenter.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.Design.CategoryEditorContentPresenter"/> class.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.Design.CategoryItemsLayout">
+            <summary>
+            Specifies a layout for categories.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.PropertyContainer">
+            <summary>
+            Specialized UI container for a property entry.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyContainer.#cctor">
+            <summary>
+            Initializes the <see cref="T:System.Windows.Controls.WpfPropertyGrid.PropertyContainer"/> class.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyContainer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.PropertyContainer"/> class.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.Design.PropertyEditorContentPresenter">
+            <summary>
+            Defines a content presenter control for a Property editor.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.Design.PropertyEditorContentPresenter.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.Design.PropertyEditorContentPresenter"/> class.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.Design.PropertyItemsLayout">
+            <summary>
+            Specifies a layout for properties.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.Design.PropertyNameTextBlock">
+            <summary>
+            Specifies a property name presenter.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.Design.PropertyNameTextBlock.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.Design.PropertyNameTextBlock"/> class.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.EditorKeys">
+            <summary>
+            Contains a set of editor keys.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.EditorKeys.NamedColorEditorKey">
+            <summary>
+            Gets the NamedColor editor key.
+            </summary>
+            <value>The named color editor key.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.EditorKeys.PasswordEditorKey">
+            <summary>
+            Gets the password editor key.
+            </summary>
+            <value>The password editor key.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.EditorKeys.DefaultEditorKey">
+            <summary>
+            Gets the default editor key.
+            </summary>
+            <value>The default editor key.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.EditorKeys.BooleanEditorKey">
+            <summary>
+            Gets the boolean editor key.
+            </summary>
+            <value>The boolean editor key.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.EditorKeys.DoubleEditorKey">
+            <summary>
+            Gets the double editor key.
+            </summary>
+            <value>The double editor key.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.EditorKeys.EnumEditorKey">
+            <summary>
+            Gets the enum editor key.
+            </summary>
+            <value>The enum editor key.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.EditorKeys.SliderEditorKey">
+            <summary>
+            Gets the slider editor key.
+            </summary>
+            <value>The slider editor key.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.EditorKeys.FontFamilyEditorKey">
+            <summary>
+            Gets the font family editor key.
+            </summary>
+            <value>The font family editor key.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.EditorKeys.BrushEditorKey">
+            <summary>
+            Gets the brush editor key.
+            </summary>
+            <value>The brush editor key.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.EditorKeys.DefaultCategoryEditorKey">
+            <summary>
+            Gets the default category editor key.
+            </summary>
+            <value>The default category editor key.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.EditorKeys.ComplexPropertyEditorKey">
+            <summary>
+            Gets the default complex property editor key.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.GridEntryCollection`1">
+            <summary>
+            Represents a strongly typed collection of <see cref="T:System.Windows.Controls.WpfPropertyGrid.GridEntry"/>-based items that can be accessed by index or name.
+            Provides collection change notifications, methods to search, sort, and manipulate lists.
+            </summary>
+            <typeparam name="T">The type of elements in the list.</typeparam>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.GridEntryCollection`1.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.GridEntryCollection`1"/> class.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.GridEntryCollection`1.#ctor(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.GridEntryCollection`1"/> class.
+            </summary>
+            <param name="collection">The collection from which the elements are copied.</param>
+            <exception cref="T:System.ArgumentNullException">
+            The <paramref name="collection"/> parameter cannot be null.
+            </exception>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.GridEntryCollection`1.BinarySearch(`0)">
+            <summary>
+            Searches the entire sorted GridEntryCollection&lt;T&gt; for an element using the specified comparer 
+            and returns the zero-based index of the element.
+            </summary>
+            <param name="item">The object to locate. The value can be null for reference types.</param>
+            <returns>
+            The zero-based index of item in the sorted GridEntryCollection&lt;T&gt;, 
+            if item is found; otherwise, a negative number that is the bitwise complement
+            of the index of the next element that is larger than item or, if there is
+            no larger element, the bitwise complement of GridEntryCollection&lt;T&gt;.Count.
+            </returns>  
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.GridEntryCollection`1.BinarySearch(`0,System.Collections.Generic.IComparer{`0})">
+            <summary>
+            Searches the entire sorted GridEntryCollection&lt;T&gt; for an element using the specified comparer 
+            and returns the zero-based index of the element.
+            </summary>
+            <param name="item">The object to locate. The value can be null for reference types.</param>
+            <param name="comparer">
+            The System.Collections.Generic.IComparer&lt;T&gt; implementation to use when comparing elements.  
+            -or- null to use the default comparer System.Collections.Generic.Comparer&lt;T&gt;.Default.
+            </param>
+            <returns>
+            The zero-based index of item in the sorted GridEntryCollection&lt;T&gt;, 
+            if item is found; otherwise, a negative number that is the bitwise complement
+            of the index of the next element that is larger than item or, if there is
+            no larger element, the bitwise complement of GridEntryCollection&lt;T&gt;.Count.
+            </returns>    
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.GridEntryCollection`1.Sort(System.Collections.Generic.IComparer{`0})">
+            <summary>
+            Sorts the elements in the entire collection using the specified comparer.
+            </summary>
+            <param name="comparer">
+            The System.Collections.Generic.IComparer&lt;T&gt; implementation to use when comparing elements.  
+            -or- null to use the default comparer System.Collections.Generic.Comparer&lt;T&gt;.Default.
+            </param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.GridEntryCollection`1.CopyFrom(System.Collections.Generic.IEnumerable{`0})">
+            <summary>
+            Copies values from collection.
+            </summary>
+            <param name="collection">The collection.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.GridEntryCollection`1.InsertItem(System.Int32,`0)">
+            <summary>
+            Inserts an item into the collection at the specified index.
+            </summary>
+            <param name="index">The zero-based index at which <paramref name="item"/> should be inserted.</param>
+            <param name="item">The object to insert.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.GridEntryCollection`1.RemoveItem(System.Int32)">
+            <summary>
+            Removes the item at the specified index of the collection.
+            </summary>
+            <param name="index">The zero-based index of the element to remove.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.GridEntryCollection`1.ClearItems">
+            <summary>
+            Removes all items from the collection.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.GridEntryCollection`1.SetItem(System.Int32,`0)">
+            <summary>
+            Replaces the element at the specified index.
+            </summary>
+            <param name="index">The zero-based index of the element to replace.</param>
+            <param name="item">The new value for the element at the specified index.</param>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.GridEntryCollection`1.Item(System.String)">
+            <summary>
+            Gets the item with the specified name or null if no item with the name specified was found.
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.KnownTypes">
+            <summary>
+            Frequently used types cache used performance optimization.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.CategoryEditorAttribute">
+            <summary>
+            Specifies the editor to use to change the category.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.CategoryEditorAttribute.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.CategoryEditorAttribute"/> class.
+            </summary>
+            <param name="categoryName">Name of the category.</param>
+            <param name="editorType">Type of the editor.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.CategoryEditorAttribute.#ctor(System.String,System.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.CategoryEditorAttribute"/> class.
+            </summary>
+            <param name="categoryName">Name of the category.</param>
+            <param name="editorType">Type of the editor.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.CategoryEditorAttribute.GetHashCode">
+            <summary>
+            Returns the hash code for this instance.
+            </summary>
+            <returns>A 32-bit signed integer hash code.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.CategoryEditorAttribute.Equals(System.Object)">
+            <summary>
+            Returns a value that indicates whether this instance is equal to a specified object.
+            </summary>
+            <param name="obj">An <see cref="T:System.Object"/> to compare with this instance or null.</param>
+            <returns>
+            true if <paramref name="obj"/> equals the type and value of this instance; otherwise, false.
+            </returns>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.CategoryEditorAttribute.EditorType">
+            <summary>
+            Gets or sets the type of the editor.
+            </summary>
+            <value>The type of the editor.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.CategoryEditorAttribute.CategoryName">
+            <summary>
+            Gets or sets the name of the category.
+            </summary>
+            <value>The name of the category.</value>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.PropertyEditorAttribute">
+            <summary>
+            Specifies the editor to use to change the property.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyEditorAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.PropertyEditorAttribute"/> class.
+            </summary>
+            <param name="editorType">Type of the editor.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyEditorAttribute.#ctor(System.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.PropertyEditorAttribute"/> class.
+            </summary>
+            <param name="editorType">Type of the editor.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyEditorAttribute.GetHashCode">
+            <summary>
+            Returns the hash code for this instance.
+            </summary>
+            <returns>A 32-bit signed integer hash code.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyEditorAttribute.Equals(System.Object)">
+            <summary>
+            Returns a value that indicates whether this instance is equal to a specified object.
+            </summary>
+            <param name="obj">An <see cref="T:System.Object"/> to compare with this instance or null.</param>
+            <returns>
+            true if <paramref name="obj"/> equals the type and value of this instance; otherwise, false.
+            </returns>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyEditorAttribute.EditorType">
+            <summary>
+            Gets or sets the type of the editor.
+            </summary>
+            <value>The type of the editor.</value>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.PropertyEditingEventHandler">
+            <summary>
+            Encapsulates a method that contains an object and PropertyEditingEventArgs event arguments.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyEditingEventArgs.PropertyDescriptor">
+            <summary>
+            Gets property descriptor.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.PropertyFilterAppliedEventArgs">
+            <summary>
+            Contains state information and data related to FilterApplied event.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyFilterAppliedEventArgs.#ctor(System.Windows.Controls.WpfPropertyGrid.PropertyFilter)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.PropertyFilterAppliedEventArgs"/> class.
+            </summary>
+            <param name="filter">The filter.</param>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyFilterAppliedEventArgs.Filter">
+            <summary>
+            Gets the filter.
+            </summary>
+            <value>The filter.</value>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.NamedColor">
+            <summary>
+            Provides basic information for named colors.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.NamedColor.#ctor(System.String,System.Windows.Media.Color)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.NamedColor"/> class.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="color">The color.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.NamedColor.ToString">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents the current <see cref="T:System.Object"/>.
+            </summary>
+            <returns>
+            A <see cref="T:System.String"/> that represents the current <see cref="T:System.Object"/>.
+            </returns>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.NamedColor.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.NamedColor.Color">
+            <summary>
+            Gets or sets the color.
+            </summary>
+            <value>The color.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.NamedColor.Brush">
+            <summary>
+            Gets or sets the brush.
+            </summary>
+            <value>The brush.</value>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.NamedColorList">
+            <summary>
+            Provides a list of colors that is possible to bind to UI
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.NamedColorList.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.NamedColorList"/> class.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.PropertyEditor">
+            <summary>
+            Provides value editing service for a property value.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.PropertyEditor.DeclaringTypeProperty">
+            <summary>
+            Identifies the <see cref="P:System.Windows.Controls.WpfPropertyGrid.PropertyEditor.DeclaringType"/> property. This is a dependency property.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.PropertyEditor.PropertyNameProperty">
+            <summary>
+            Identifies the <see cref="P:System.Windows.Controls.WpfPropertyGrid.PropertyEditor.PropertyName"/> property. This is a dependency property.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyEditor.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.PropertyEditor"/> class.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyEditor.#ctor(System.Type,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.PropertyEditor"/> class.
+            </summary>
+            <param name="declaringType">Type that contains targeted property.</param>
+            <param name="propertyName">Name of the property to bind the editor to.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyEditor.#ctor(System.Type,System.String,System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.PropertyEditor"/> class.
+            </summary>
+            <param name="declaringType">Type that contains targeted property.</param>
+            <param name="propertyName">Name of the property to bind the editor to.</param>
+            <param name="inlineTemplate">The inline template for UI presentation. Can be either a DataTemplate or ComponentResourceKey object.</param>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyEditor.DeclaringType">
+            <summary>
+            Gets or sets type of the object containing edited property.
+            </summary>
+            <value>The type of the edited property </value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyEditor.PropertyName">
+            <summary>
+            Gets or sets the name of the property the editor is bound to.
+            </summary>
+            <value>The name of the property editor is bound to.</value>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.ResourceLocator">
+            <summary>
+            Provides a unified approach for resolving resources.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.ResourceLocator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.ResourceLocator"/> class.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.ResourceLocator.#ctor(System.Windows.Application)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.ResourceLocator"/> class.
+            </summary>
+            <param name="application">The application instance.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.ResourceLocator.GetResource(System.Object)">
+            <summary>
+            Gets the resource.
+            </summary>
+            <param name="key">The key.</param>
+            <returns>Object from resources.</returns>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.TypeEditor">
+            <summary>
+            Provides value editing service for property value that is of some specific type.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.TypeEditor.EditedTypeProperty">
+            <summary>
+            Identifies the <see cref="P:System.Windows.Controls.WpfPropertyGrid.TypeEditor.EditedType"/> property. This is a dependency property.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.TypeEditor.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.TypeEditor"/> class.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.TypeEditor.#ctor(System.Type)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.TypeEditor"/> class.
+            </summary>
+            <param name="editedType">The type of the object editor is bound to.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.TypeEditor.#ctor(System.Type,System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.TypeEditor"/> class.
+            </summary>
+            <param name="editedType">The type of the object editor is bound to.</param>
+            <param name="inlineTemplate">The inline template for UI presentation. Can be either a DataTemplate or ComponentResourceKey object.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.TypeEditor.#ctor(System.Type,System.Object,System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.TypeEditor"/> class.
+            </summary>
+            <param name="editedType">Type of the edited.</param>
+            <param name="inlineTemplate">The inline template for UI presentation. Can be either a DataTemplate or ComponentResourceKey object.</param>
+            <param name="extendedTemplate">The extended template for UI presentation. Can be either a DataTemplate or ComponentResourceKey object.</param>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.TypeEditor.EditedType">
+            <summary>
+            Gets or sets the type of the object editor is bound to.
+            </summary>
+            <value>The type of the object editor is bound to.</value>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.PropertyValueChangedEventHandler">
+            <summary>
+            Encapsulates a method that contains an object and PropertyValueChanged event arguments.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.PropertyValueChangedEventArgs">
+            <summary>
+            Contains state information and data associated with property value change events.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyValueChangedEventArgs.#ctor(System.Windows.RoutedEvent,System.Windows.Controls.WpfPropertyGrid.PropertyItem,System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.PropertyValueChangedEventArgs"/> class.
+            </summary>
+            <param name="routedEvent">The routed event.</param>
+            <param name="property">The property.</param>
+            <param name="oldValue">The old value.</param>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyValueChangedEventArgs.OldValue">
+            <summary>
+            Gets the old value.
+            </summary>
+            <value>The old value.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyValueChangedEventArgs.NewValue">
+            <summary>
+            Gets the new value.
+            </summary>
+            <value>The new value.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyValueChangedEventArgs.Property">
+            <summary>
+            Gets the property.
+            </summary>
+            <value>The property.</value>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.PropertyEditorCommands">
+             <summary>
+            Provides a standard set of property editor related commands.
+             </summary>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyEditorCommands.ShowDialogEditor">
+            <summary>
+            Defines a command to show dialog editor for a property.
+            </summary>    
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyEditorCommands.ShowExtendedEditor">
+            <summary>
+            Defines a command to show extended editor for a property.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.Internal.MathUtil">
+            <summary>
+            Helper class that contains methods that execute mathematical operations
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.Internal.MathUtil.IncrementDecrementNumber(System.String,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Validates the string passed by parsing it as int and checking if it is inside the bounds specified 
+            then the resulting int will be incremented/decremented
+            </summary>
+            <param name="num">The string to parse as int and increment/decrement</param>
+            <param name="minValue">The min value for the bound checking</param>
+            <param name="maxVal">The max value for the bounds checking</param>
+            <param name="increment">Pass true to increment and false to decrement</param>
+            <returns>Returns the new number incremented or decremeneted</returns>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.Internal.MathUtil.ValidateNumber(System.String,System.Int32,System.Int32)">
+            <summary>
+            Parses the number and makes sure that it is within the bounds specified
+            </summary>
+            <param name="newNum">The string to parse and validate</param>
+            <param name="minValue">The min value for the bound checking</param>
+            <param name="maxValue">The max value for the bound checking</param>
+            <returns>Returns the int that was constructed from the string + bound checking</returns>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.Internal.MathUtil.ValidateNumber(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            makes sure that the number is within the bounds specified
+            </summary>
+            <param name="newNum">The number to validate</param>
+            <param name="minValue">The min value for the bound checking</param>
+            <param name="maxValue">The max value for the bound checking</param>
+            <returns>Returns the int that was constructed from the string + bound checking</returns>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.Design.AlphabeticalLayout">
+            <summary>
+            The default alphabetical view for properties.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.Design.CategorizedLayout">
+            <summary>
+            The default categorized view for properties.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.Design.TabbedLayout">
+            <summary>
+            The default tabbed layout.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.Design.TabbedLayout.DefaultHeader">
+            <summary>
+            The fallback header for a tab if no header custom is provided.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.Design.TabbedLayout.#cctor">
+            <summary>
+            Initializes the <see cref="T:System.Windows.Controls.WpfPropertyGrid.Design.TabbedLayout"/> class.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.Design.TabbedLayout.CanCloseProperty">
+            <summary>
+            Identifies the CanClose property. This is an attached property.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.Design.TabbedLayout.GetCanClose(System.Windows.DependencyObject)">
+            <summary>
+            Gets the value indicating whether the target element can be closed from UI.
+            </summary>
+            <param name="obj">The dependency object</param>
+            <returns>
+            	<c>true</c> if tab item can be closed; otherwise, <c>false</c>.
+            </returns>  
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.Design.TabbedLayout.SetCanClose(System.Windows.DependencyObject,System.Boolean)">
+            <summary>
+            Sets the value indicating whether the target element can be closed from UI.
+            </summary>
+            <param name="obj">The dependency object.</param>
+            <param name="value">if set to <c>true</c> the tab item can be closed from UI.</param>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.Design.TabbedLayout.HeaderProperty">
+            <summary>
+            Identifies the Header property. This is an attached property.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.Design.TabbedLayout.GetHeader(System.Windows.DependencyObject)">
+            <summary>
+            Gets the header.
+            </summary>
+            <param name="obj">The dependency object.</param>
+            <returns>Tab header</returns>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.Design.TabbedLayout.SetHeader(System.Windows.DependencyObject,System.String)">
+            <summary>
+            Sets the header.
+            </summary>
+            <param name="obj">The dependency object.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.Design.TabbedLayout.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.Design.TabbedLayout"/> class.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.Design.TabbedLayout.FindExtendedEditorTab(System.Windows.Controls.WpfPropertyGrid.PropertyItem)">
+            <summary>
+            Finds the extended editor tab.
+            </summary>
+            <param name="property">The property.</param>
+            <returns>Tab associated with property.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.Design.TabbedLayout.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
+            <summary>
+            Prepares the specified element to display the specified item.
+            </summary>
+            <param name="element">Element used to display the specified item.</param>
+            <param name="item">Specified item.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.Design.TabbedLayout.IsItemItsOwnContainerOverride(System.Object)">
+            <summary>
+            Determines if the specified item is (or is eligible to be) its own ItemContainer.
+            </summary>
+            <param name="item">Specified item.</param>
+            <returns>
+            Returns true if the item is its own ItemContainer; otherwise, false.
+            </returns>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.Design.TabbedLayout.GetContainerForItemOverride">
+            <summary>
+            Creates or identifies the element used to display the specified item.
+            </summary>
+            <returns>
+            A <see cref="T:System.Windows.Controls.TabItem"/>.
+            </returns>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.Design.TabbedLayout.ItemHeaderProperty">
+            <summary>
+            Gets or sets the item header property.
+            </summary>
+            <value>The item header property.</value>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.AttributesContainer">
+            <summary>
+            Holds custom attributes collection and provides facilities accessing attribute values from UI.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.AttributesContainer.#ctor(System.ComponentModel.AttributeCollection)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.AttributesContainer"/> class.
+            </summary>
+            <param name="attributes">The collection of attributes.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.AttributesContainer.RegisterAttribute(System.String,System.Type)">
+            <summary>
+            Registers the attribute within the container.
+            </summary>
+            <param name="name">The public name of the attribute. The "Attribute" suffix will be automatically removed.</param>
+            <param name="attributeType">Type of the attribute.</param>
+            <returns>true is attribute was successfully registered, otherwise false</returns>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.AttributesContainer.Item(System.String)">
+            <summary>
+            Gets the attribute with the specified key.
+            </summary>
+            <value>Attribute with the specified key.</value>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.BrowsableCategoryAttribute">
+            <summary>
+            Controls the Browsable state of the category with corresponding properties.
+            Supports the "*" (All) wildcard determining whether all the categories within the given class should be Browsable.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.BrowsableCategoryAttribute.All">
+            <summary>
+            Determines a wildcard for all categories to be affected.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.BrowsableCategoryAttribute.#ctor(System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.BrowsableCategoryAttribute"/> class.
+            </summary>
+            <param name="categoryName">Name of the category.</param>
+            <param name="browsable">if set to <c>true</c> the category is browsable.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.BrowsableCategoryAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.BrowsableCategoryAttribute"/> class.
+            </summary>
+            <param name="categoryName">Name of the category.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.BrowsableCategoryAttribute.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.BrowsableCategoryAttribute"/> class.
+            </summary>
+            <param name="browsable">if set to <c>true</c> all categories are browsable; otherwise hidden</param>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.BrowsableCategoryAttribute.CategoryName">
+            <summary>
+            Gets the name of the category.
+            </summary>
+            <value>The name of the category.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.BrowsableCategoryAttribute.Browsable">
+            <summary>
+            Gets or sets a value indicating whether category is browsable.
+            </summary>
+            <value><c>true</c> if category should be displayed at run time; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.BrowsablePropertyAttribute">
+            <summary>
+            Controls Browsable state of the property without having access to property declaration or inherited property.
+            Supports a "*" (All) wildcard determining whether all the properties within the given class should be Browsable.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.BrowsablePropertyAttribute.All">
+            <summary>
+            Determines a wildcard for all properties to be affected.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.BrowsablePropertyAttribute.#ctor(System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.BrowsablePropertyAttribute"/> class.
+            </summary>
+            <param name="propertyName">Name of the property.</param>
+            <param name="browsable">if set to <c>true</c> the property is browsable.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.BrowsablePropertyAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.BrowsablePropertyAttribute"/> class.
+            </summary>
+            <param name="propertyName">Name of the property.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.BrowsablePropertyAttribute.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.BrowsablePropertyAttribute"/> class.
+            </summary>
+            <param name="browsable">if set to <c>true</c> all public properties are browsable; otherwise hidden.</param>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.BrowsablePropertyAttribute.PropertyName">
+            <summary>
+            Gets the name of the property.
+            </summary>
+            <value>The name of the property.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.BrowsablePropertyAttribute.Browsable">
+            <summary>
+            Gets or sets a value indicating whether property is browsable.
+            </summary>
+            <value><c>true</c> if property should be displayed at run time; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.FlatternHierarchyAttribute">
+            <summary>
+            Specifies whether the property hierarchy should be flatterned for visualization.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.PropertyGridCommands">
+            <summary>
+            Provides a standard set of property grid related commands.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyGridCommands.ShowFilter">
+            <summary>
+            Represents a command for the control to show property filter box.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyGridCommands.HideFilter">
+            <summary>
+            Represents a command for the control to hide property filter box.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyGridCommands.ToggleFilter">
+            <summary>
+            Represents a command for the control to toggle visibility of property filter box.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyGridCommands.ResetFilter">
+            <summary>
+            Represents a command that resets current grid filter.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyGridCommands.Reload">
+            <summary>
+            Represents a command that reloads current grid properties.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyGridCommands.ShowReadOnlyProperties">
+            <summary>
+            Represents a command for the control to show all read-only properties.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyGridCommands.HideReadOnlyProperties">
+            <summary>
+            Represetns a command for the control to hide all read-only properties.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyGridCommands.ToggleReadOnlyProperties">
+            <summary>
+            Represents a command for the control to toggle visibility of read-only properties.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyGridCommands.ShowAttachedProperties">
+            <summary>
+            Represents a command for the control to show all attached properties.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyGridCommands.HideAttachedProperties">
+            <summary>
+            Represents a command for the control to hide all attached properties.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyGridCommands.ToggleAttachedProperties">
+            <summary>
+            Represents a command for the control to toggle visibility of attached properties.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyGridCommands.ClosePropertyTab">
+            <summary>
+            Represents a command for the control to close active property tab.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.NumberRangeAttribute">
+            <summary>
+            Specifies a range.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.NumberRangeAttribute.#ctor(System.Double,System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.NumberRangeAttribute"/> class.
+            </summary>
+            <param name="minimum">The minimum.</param>
+            <param name="maximum">The maximum.</param>
+            <param name="tick">The tick.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.NumberRangeAttribute.#ctor(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.NumberRangeAttribute"/> class.
+            </summary>
+            <param name="minimum">The minimum.</param>
+            <param name="maximum">The maximum.</param>
+            <param name="tick">The tick.</param>
+            <param name="precision">The precision.</param>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.NumberRangeAttribute.Minimum">
+            <summary>
+            Gets or sets the minimum.
+            </summary>
+            <value>The minimum.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.NumberRangeAttribute.Maximum">
+            <summary>
+            Gets or sets the maximum.
+            </summary>
+            <value>The maximum.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.NumberRangeAttribute.Tick">
+            <summary>
+            Gets or sets the tick.
+            </summary>
+            <value>The tick.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.NumberRangeAttribute.Precision">
+            <summary>
+            Gets or sets the precision.
+            </summary>
+            <value>The precision.</value>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor">
+            <summary>
+            Simple Expression Blend like double editor.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.PropertyEditingStartedEvent">
+            <summary>
+            Identifies the <see cref="E:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.PropertyEditingStarted"/> routed event.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.PropertyEditingFinishedEvent">
+            <summary>
+            Identifies the <see cref="E:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.PropertyEditingFinished"/> routed event.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.ValueProperty">
+            <summary>
+            Identifies the <see cref="P:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.Value"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.SmallChangeProperty">
+            <summary>
+            Identifies the <see cref="P:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.SmallChange"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.LargeChangeProperty">
+            <summary>
+            Identifies the <see cref="P:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.LargeChange"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.DefaultChangeProperty">
+            <summary>
+            Identifies the <see cref="P:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.DefaultChange"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.MinimumProperty">
+            <summary>
+            Identifies the <see cref="P:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.Minimum"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.MaximumProperty">
+            <summary>
+            Identifies the <see cref="P:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.Maximum"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.MaxPrecisionProperty">
+            <summary>
+            Identifies the <see cref="P:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.MaxPrecision"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.IsDraggingProperty">
+            <summary>
+            Identifies the <see cref="P:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.IsDragging"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.Increase">
+            <summary>
+            Specifies a command to increase value.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.Decrease">
+            <summary>
+            Specifies a command to decrease value.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.PropertyDescriptorProperty">
+            <summary>
+            Identifies the <see cref="P:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.PropertyDescriptor"/> dependency property.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.OnMouseDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Invoked when an unhandled <see cref="E:System.Windows.Input.Mouse.MouseDown"/> attached event reaches an element in its route that is derived from this class. Implement this method to add class handling for this event.
+            </summary>
+            <param name="e">The <see cref="T:System.Windows.Input.MouseButtonEventArgs"/> that contains the event data. This event data reports details about the mouse button that was pressed and the handled state.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.OnMouseMove(System.Windows.Input.MouseEventArgs)">
+            <summary>
+            Invoked when an unhandled <see cref="E:System.Windows.Input.Mouse.MouseMove"/> attached event reaches an element in its route that is derived from this class. Implement this method to add class handling for this event.
+            </summary>
+            <param name="e">The <see cref="T:System.Windows.Input.MouseEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.OnMouseUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Invoked when an unhandled <see cref="E:System.Windows.Input.Mouse.MouseUp"/> routed event reaches an element in its route that is derived from this class. Implement this method to add class handling for this event.
+            </summary>
+            <param name="e">The <see cref="T:System.Windows.Input.MouseButtonEventArgs"/> that contains the event data. The event data reports that the mouse button was released.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.OnPropertyEditingStarted">
+            <summary>
+            Raises the <see cref="E:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.PropertyEditingStarted"/> event.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.OnPropertyEditingFinished">
+            <summary>
+            Raises the <see cref="E:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.PropertyEditingFinished"/> event.
+            </summary>
+        </member>
+        <member name="E:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.PropertyEditingStarted">
+            <summary>
+            Occurs when property editing is started.
+            </summary>
+        </member>
+        <member name="E:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.PropertyEditingFinished">
+            <summary>
+            Occurs when property editing is finished.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.PropertyDescriptor">
+            <summary>
+            Underlying property descriptor. This is a dependency property.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.Value">
+            <summary>
+            Gets or sets the value. This is a dependency property.
+            </summary>
+            <value>The value.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.SmallChange">
+            <summary>
+            Gets or sets the small change value. This is a dependency property.
+            </summary>
+            <value>The small change value.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.DefaultChange">
+            <summary>
+            Gets or sets the default change value. This is a dependency property.
+            </summary>
+            <value>The default change value.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.LargeChange">
+            <summary>
+            Gets or sets the large change value. This is a dependency property.
+            </summary>
+            <value>The large change value.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.Minimum">
+            <summary>
+            Gets or sets the minimum. This is a dependency property.
+            </summary>
+            <value>The minimum.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.Maximum">
+            <summary>
+            Gets or sets the maximum. This is a dependency property.
+            </summary>
+            <value>The maximum.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.MaxPrecision">
+            <summary>
+            Gets or sets the maximum precision. This is a dependency property.
+            </summary>
+            <value>The maximum precision.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.Controls.DoubleEditor.IsDragging">
+            <summary>
+            Gets or sets a value indicating whether this instance is dragging.
+            </summary>
+            <value>
+            	<c>true</c> if this instance is dragging; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.PropertyOrderAttribute">
+            <summary>
+            Specifies the order of property.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyOrderAttribute.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.PropertyOrderAttribute"/> class.
+            </summary>
+            <param name="order">The order.</param>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyOrderAttribute.Order">
+            <summary>
+            Gets or sets the order.
+            </summary>
+            <value>The order.</value>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.PropertyGrid">
+            <summary>
+            PropertyGrid control.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.InitializeCommandBindings">
+            <summary>
+            Initializes the command bindings.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.OnPropertyChanged(System.String)">
+            <summary>
+            Called when property value changes.
+            </summary>
+            <param name="propertyName">Name of the property.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.PropertyGrid"/> class.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.CurrentDescriptionProperty">
+            <summary>
+            CurrentDescription Dependency Property
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.OnCurrentDescriptionChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Handles changes to the CurrentDescription property.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.OnCurrentDescriptionChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>
+            Provides derived classes an opportunity to handle changes to the CurrentDescription property.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.PropertyEditingStartedEvent">
+            <summary>
+            Identifies the <see cref="E:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.PropertyEditingStarted"/> routed event.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.PropertyEditingFinishedEvent">
+            <summary>
+            Identifies the <see cref="E:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.PropertyEditingFinished"/> routed event.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.PropertyValueChangedEvent">
+            <summary>
+            Identifies the <see cref="E:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.PropertyValueChanged"/> routed event.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.OnSelectedObjectsChanged">
+            <summary>
+            Called when selected objects were changed.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.ItemsBackgroundProperty">
+            <summary>
+            Identifies the <see cref="P:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.ItemsBackground"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.ItemsForegroundProperty">
+            <summary>
+            Identifies the <see cref="P:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.ItemsForeground"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.LayoutProperty">
+            <summary>
+            Identifies the <see cref="P:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.Layout"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.ShowReadOnlyPropertiesProperty">
+            <summary>
+            Identifies the <see cref="P:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.ShowReadOnlyProperties"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.ShowAttachedPropertiesProperty">
+            <summary>
+            Identifies the <see cref="P:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.ShowAttachedProperties"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.PropertyFilterProperty">
+            <summary>
+            Identifies the <see cref="P:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.PropertyFilter"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.PropertyFilterVisibilityProperty">
+            <summary>
+            Identifies the <see cref="P:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.PropertyFilterVisibility"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.PropertyDisplayModeProperty">
+            <summary>
+            Identifies the <see cref="P:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.PropertyDisplayMode"/> dependency property.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.GetEditor(System.Windows.Controls.WpfPropertyGrid.GridEntry)">
+            <summary>
+            Gets the editor for a grid entry.
+            </summary>
+            <param name="entry">The entry to look the editor for.</param>
+            <returns>Editor for the entry</returns>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.OnKeyDown(System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Invoked when an unhandled <see cref="E:System.Windows.UIElement.KeyDown"/> attached event reaches an element in its route that is derived from this class. Implement this method to add class handling for this event.
+            </summary>
+            <param name="e">The <see cref="T:System.Windows.Input.KeyEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.GetTabElement(System.Windows.DependencyObject,System.Int32)">
+            <summary>
+            Gets the tab element on which the focus can be placed.
+            </summary>
+            <remarks>
+            If an element is not enabled it will not be returned.
+            </remarks>
+            <param name="source">The source.</param>
+            <param name="delta">The delta.</param>
+        </member>
+        <member name="E:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.PropertyChanged">
+            <summary>
+            Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.Editors">
+            <summary>
+            Gets the editors collection.
+            </summary>
+            <value>The editors collection.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.HasProperties">
+            <summary>
+            Gets a value indicating whether this instance has properties.
+            </summary>
+            <value>
+            	<c>true</c> if this instance has properties; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.HasCategories">
+            <summary>
+            Gets a value indicating whether this instance has categories.
+            </summary>
+            <value>
+            	<c>true</c> if this instance has categories; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.CurrentDescription">
+            <summary>
+            Gets or sets the CurrentDescription property.  
+            </summary>
+        </member>
+        <member name="E:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.PropertyEditingStarted">
+            <summary>
+            Occurs when property editing is started.
+            </summary>
+            <remarks>
+            This event is intended to be used in customization scenarios. It is not used by PropertyGrid control directly.
+            </remarks>
+        </member>
+        <member name="E:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.PropertyEditingFinished">
+            <summary>
+            Occurs when property editing is finished.
+            </summary>
+            <remarks>
+            This event is intended to be used in customization scenarios. It is not used by PropertyGrid control directly.
+            </remarks>
+        </member>
+        <member name="E:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.PropertyValueChanged">
+            <summary>
+            Occurs when property item value is changed.
+            </summary>
+        </member>
+        <member name="E:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.SelectedObjectsChanged">
+            <summary>
+            Occurs when selected objects are changed.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.ItemsBackground">
+            <summary>
+            Gets or sets the brush for items background. This is a dependency property.
+            </summary>
+            <value>The items background brush.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.ItemsForeground">
+            <summary>
+            Gets or sets the items foreground brush. This is a dependency property.
+            </summary>
+            <value>The items foreground brush.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.Layout">
+            <summary>
+            Gets or sets the layout to be used to display properties.
+            </summary>
+            <value>The layout to be used to display properties.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.SelectedObject">
+            <summary>
+            Gets or sets the selected object.
+            </summary>
+            <value>The selected object.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.SelectedObjects">
+            <summary>
+            Gets or sets the selected objects.
+            </summary>
+            <value>The selected objects.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.Properties">
+            <summary>
+            Gets or sets the properties of the selected object(s).
+            </summary>
+            <value>The properties of the selected object(s).</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.PropertyComparer">
+            <summary>
+            Gets or sets the default property comparer.
+            </summary>
+            <value>The default property comparer.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.CategoryComparer">
+            <summary>
+            Gets or sets the default category comparer.
+            </summary>
+            <value>The default category comparer.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.Categories">
+            <summary>
+            Gets or sets the categories of the selected object(s).
+            </summary>
+            <value>The categories of the selected object(s).</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.ShowReadOnlyProperties">
+            <summary>
+            Gets or sets a value indicating whether read-only properties should be displayed. This is a dependency property.
+            </summary>
+            <value>
+            	<c>true</c> if read-only properties should be displayed; otherwise, <c>false</c>. Default is <c>false</c>.
+            </value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.ShowAttachedProperties">
+            <summary>
+            Gets or sets a value indicating whether attached properties should be displayed.
+            </summary>
+            <value>
+            	<c>true</c> if attached properties should be displayed; otherwise, <c>false</c>. Default is <c>false</c>.
+            </value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.PropertyFilter">
+            <summary>
+            Gets or sets the property filter. This is a dependency property.
+            </summary>
+            <value>The property filter.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.PropertyFilterVisibility">
+            <summary>
+            Gets or sets the property filter visibility state.
+            </summary>
+            <value>The property filter visibility state.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyGrid.PropertyDisplayMode">
+            <summary>
+            Gets or sets the property display mode. This is a dependency property.
+            </summary>
+            <value>The property display mode.</value>
+        </member>
+        <member name="T:Sytem.Windows.Controls.WpfPropertyGrid.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Sytem.Windows.Controls.WpfPropertyGrid.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Sytem.Windows.Controls.WpfPropertyGrid.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.PropertyDisplayMode">
+            <summary>
+            Defines modes for property visualization.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.PropertyDisplayMode.All">
+            <summary>
+            Show all properties.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.PropertyDisplayMode.Dependency">
+            <summary>
+            Show dependency properties only.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.PropertyDisplayMode.Native">
+            <summary>
+            Show native CLR properties only.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.CategoryItemComparer">
+            <summary>
+            Default <see cref="T:System.Windows.Controls.WpfPropertyGrid.CategoryItem"/> comparer.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.CategoryItemComparer.Compare(System.Windows.Controls.WpfPropertyGrid.CategoryItem,System.Windows.Controls.WpfPropertyGrid.CategoryItem)">
+            <summary>
+            Compares two objects and returns a value indicating whether one is less than, equal to, or greater than the other.
+            </summary>
+            <param name="x">The first object to compare.</param>
+            <param name="y">The second object to compare.</param>
+            <returns>
+            Value
+            Condition
+            Less than zero
+            <paramref name="x"/> is less than <paramref name="y"/>.
+            Zero
+            <paramref name="x"/> equals <paramref name="y"/>.
+            Greater than zero
+            <paramref name="x"/> is greater than <paramref name="y"/>.
+            </returns>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.PropertyFilter">
+            <summary>
+            Specifies a default property filter.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyFilter.#ctor(System.Collections.Generic.IEnumerable{System.Windows.Controls.WpfPropertyGrid.PropertyFilterPredicate})">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.PropertyFilter"/> class.
+            </summary>
+            <param name="predicates">The predicates.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyFilter.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.PropertyFilter"/> class.
+            </summary>
+            <param name="filterText">The filter text.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyFilter.Match(System.Windows.Controls.WpfPropertyGrid.IPropertyFilterTarget)">
+            <summary>
+            Matches the specified target.
+            </summary>
+            <param name="target">The target.</param>
+            <returns><c>true</c> if target matches filter; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyFilter.IsEmpty">
+            <summary>
+            Gets a value indicating whether this instance is empty.
+            </summary>
+            <value><c>true</c> if this instance is empty; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.PropertyFilterPredicate">
+            <summary>
+            Property filter predicate.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyFilterPredicate.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.PropertyFilterPredicate"/> class.
+            </summary>
+            <param name="matchText">The match text.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyFilterPredicate.Match(System.String)">
+            <summary>
+            Matches the specified target.
+            </summary>
+            <param name="target">The target.</param>
+            <returns><c>true</c> if target matches predicate; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyFilterPredicate.MatchText">
+            <summary>
+            Gets or sets the match text.
+            </summary>
+            <value>The match text.</value>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.PropertyItemComparer">
+            <summary>
+            Default <see cref="T:System.Windows.Controls.WpfPropertyGrid.PropertyItem"/> comparer.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyItemComparer.Compare(System.Windows.Controls.WpfPropertyGrid.PropertyItem,System.Windows.Controls.WpfPropertyGrid.PropertyItem)">
+            <summary>
+            Compares two objects and returns a value indicating whether one is less than, equal to, or greater than the other.
+            </summary>
+            <param name="x">The first object to compare.</param>
+            <param name="y">The second object to compare.</param>
+            <returns>
+            Value
+            Condition
+            Less than zero
+            <paramref name="x"/> is less than <paramref name="y"/>.
+            Zero
+            <paramref name="x"/> equals <paramref name="y"/>.
+            Greater than zero
+            <paramref name="x"/> is greater than <paramref name="y"/>.
+            </returns>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.ValueExceptionEventArgs">
+            <summary>
+            Contains event data related to value exceptions.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.ValueExceptionEventArgs.#ctor(System.String,System.Windows.Controls.WpfPropertyGrid.PropertyItemValue,System.Windows.Controls.WpfPropertyGrid.ValueExceptionSource,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.ValueExceptionEventArgs"/> class.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="value">The value.</param>
+            <param name="source">The source.</param>
+            <param name="exception">The exception.</param>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.ValueExceptionEventArgs.Exception">
+            <summary>
+            Gets the exception.
+            </summary>
+            <value>The exception.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.ValueExceptionEventArgs.Message">
+            <summary>
+            Gets the message.
+            </summary>
+            <value>The message.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.ValueExceptionEventArgs.PropertyValue">
+            <summary>
+            Gets the property value.
+            </summary>
+            <value>The property value.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.ValueExceptionEventArgs.Source">
+            <summary>
+            Gets the source.
+            </summary>
+            <value>The source.</value>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.ValueExceptionSource">
+            <summary>
+            Specifies the source of value exception
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.ValueExceptionSource.Get">
+            <summary>
+            Exception occurred during a Get operation
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.ValueExceptionSource.Set">
+            <summary>
+            Exception occurred during a Set operation
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.PropertyItem">
+            <summary>
+            Defines a wrapper around object property to be used at presentation level.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyItem.ApplyFilter(System.Windows.Controls.WpfPropertyGrid.PropertyFilter)">
+            <summary>
+            Applies the filter for the entry.
+            </summary>
+            <param name="filter">The filter.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyItem.MatchesPredicate(System.Windows.Controls.WpfPropertyGrid.PropertyFilterPredicate)">
+            <summary>
+            Checks whether the entry matches the filtering predicate.
+            </summary>
+            <param name="predicate">The filtering predicate.</param>
+            <returns>
+            	<c>true</c> if entry matches predicate; otherwise, <c>false</c>.
+            </returns>        
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyItem.CreatePropertyValueInstance">
+            <summary>
+            Creates the property value instance.
+            </summary>
+            <returns>A new instance of <see cref="T:System.Windows.Controls.WpfPropertyGrid.PropertyItemValue"/>.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyItem.#ctor(System.Windows.Controls.WpfPropertyGrid.PropertyGrid,System.Object,System.ComponentModel.PropertyDescriptor)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.PropertyItem"/> class.
+            </summary>
+            <param name="owner">The owner.</param>
+            <param name="component">The component property belongs to.</param>
+            <param name="descriptor">The property descriptor</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyItem.#ctor(System.Windows.Controls.WpfPropertyGrid.PropertyItemValue)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.PropertyItem"/> class.
+            </summary>
+            <param name="parentValue">The parent value.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyItem.ClearValue">
+            <summary>
+            Clears the value.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyItem.GetValue">
+            <summary>
+            Gets the value.
+            </summary>
+            <returns>Property value</returns>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyItem.SetValue(System.Object)">
+            <summary>
+            Sets the value.
+            </summary>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyItem.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged and - optionally - managed resources
+            </summary>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyItem.GetAttribute``1">
+            <summary>
+            Gets the attribute bound to property.
+            </summary>
+            <typeparam name="T">Attribute type to look for</typeparam>
+            <returns>Attribute bound to property or null.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyItem.Validate(System.Object)">
+            <summary>
+            Validates the specified value.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>
+            	<c>true</c> if value can be applied for the property; otherwise, <c>false</c>.
+            </returns>  
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyItem.ParentValue">
+            <summary>
+            Gets the parent value.
+            <remarks>This property is reserved for future implementations</remarks>
+            </summary>
+            <value>The parent value.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyItem.PropertyValue">
+            <summary>
+            Gets the property value.
+            </summary>
+            <value>The property value.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyItem.PropertyDescriptor">
+            <summary>
+            Gets PropertyDescriptor instance for the underlying property.
+            </summary>
+        </member>
+        <member name="E:System.Windows.Controls.WpfPropertyGrid.PropertyItem.ValueChanged">
+            <summary>
+            Occurs when property value is changed.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyItem.DisplayName">
+            <summary>
+            Gets the display name for the property.
+            </summary>
+            <value></value>
+            <returns>
+            The display name for the property.
+            </returns>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyItem.CategoryName">
+            <summary>
+            Gets the name of the category that this property resides in.
+            </summary>
+            <value></value>
+            <returns>
+            The name of the category that this property resides in.
+            </returns>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyItem.Description">
+            <summary>
+            Gets the description of the encapsulated property.
+            </summary>
+            <value></value>
+            <returns>
+            The description of the encapsulated property.
+            </returns>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyItem.IsAdvanced">
+            <summary>
+            Gets a value indicating whether the encapsulated property is an advanced property.
+            </summary>    
+            <returns>true if the encapsulated property is an advanced property; otherwise, false.</returns>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyItem.IsLocalizable">
+            <summary>
+            Gets a value indicating whether the encapsulated property is localizable.
+            </summary>
+            <value>
+            	<c>true</c> if this instance is localizable; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyItem.IsReadOnly">
+            <summary>
+            Gets a value indicating whether the encapsulated property is read-only.
+            </summary>
+            <value></value>
+            <returns>true if the encapsulated property is read-only; otherwise, false.
+            </returns>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyItem.PropertyType">
+            <summary>
+            Gets the type of the encapsulated property.
+            </summary>
+            <value></value>
+            <returns>
+            The type of the encapsulated property.
+            </returns>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyItem.StandardValues">
+            <summary>
+            Gets the standard values that the encapsulated property supports.
+            </summary>
+            <value></value>
+            <returns>
+            A <see cref="T:System.Collections.ICollection"/> of standard values that the encapsulated property supports.
+            </returns>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyItem.Component">
+            <summary>
+            Gets the component the property belongs to.
+            </summary>
+            <value>The component.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyItem.UnwrappedComponent">
+            <summary>
+            Gets the component the property belongs to.
+            </summary>
+            <remarks>
+            This property returns a real unwrapped component even if a custom type descriptor is used.
+            </remarks>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyItem.ToolTip">
+            <summary>
+            Gets the tool tip.
+            </summary>
+            <value>The tool tip.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyItem.Attributes">
+            <summary>
+            Gets the custom attributes bound to property.
+            </summary>
+            <value>The attributes.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyItem.Metadata">
+            <summary>
+            Gets the custom attributes container.
+            </summary>
+            <value>The custom attributes container.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyItem.Converter">
+            <summary>
+            Gets the converter.
+            </summary>
+            <value>The converter.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyItem.CanClearValue">
+            <summary>
+            Gets a value indicating whether this instance can clear value.
+            </summary>
+            <value>
+            	<c>true</c> if this instance can clear value; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyItem.IsDefaultValue">
+            <summary>
+            Gets a value indicating whether this instance is default value.
+            <remarks>This property is reserved for future implementations.</remarks>
+            </summary>
+            <value>
+            	<c>true</c> if this instance is default value; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyItem.IsCollection">
+            <summary>
+            Gets a value indicating whether this instance is collection.
+            </summary>
+            <value>
+            	<c>true</c> if this instance is collection; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.PropertyItemValue">
+            <summary>
+            Provides a wrapper around property value to be used at presentation level.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyItemValue.#ctor(System.Windows.Controls.WpfPropertyGrid.PropertyItem)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Windows.Controls.WpfPropertyGrid.PropertyItemValue"/> class.
+            </summary>
+            <param name="property">The property.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyItemValue.ClearValue">
+            <summary>
+            Clears the value.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyItemValue.ConvertStringToValue(System.String)">
+            <summary>
+            Converts the string to value.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>Value instance</returns>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyItemValue.ConvertValueToString(System.Object)">
+            <summary>
+            Converts the value to string.
+            </summary>
+            <param name="value">The value.</param>
+            <returns>String presentation of the value</returns>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyItemValue.GetValueCore">
+            <summary>
+            Gets the value.
+            </summary>
+            <returns>Property value</returns>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyItemValue.SetValueCore(System.Object)">
+            <summary>
+            Sets the value.
+            </summary>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyItemValue.ValidateValue(System.Object)">
+            <summary>
+            Validates the value.
+            </summary>
+            <param name="valueToValidate">The value to validate.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyItemValue.OnPropertyValueException(System.Windows.Controls.WpfPropertyGrid.ValueExceptionEventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Controls.WpfPropertyGrid.PropertyItemValue.PropertyValueException"/> event.
+            </summary>
+            <param name="e">The <see cref="T:System.Windows.Controls.WpfPropertyGrid.ValueExceptionEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyItemValue.GetSerializationCulture">
+            <summary>
+            Gets the serialization culture.
+            </summary>
+            <returns>Culture to serialize value.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyItemValue.OnPropertyChanged(System.String)">
+            <summary>
+            Called when property value is changed.
+            </summary>
+            <param name="propertyName">Name of the property.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyItemValue.NotifyRootValueChanged">
+            <summary>
+            Notifies the root value changed.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PropertyItemValue.NotifySubPropertyChanged(System.Object,System.EventArgs)">
+            <summary>
+            Notifies the sub property changed.
+            </summary>
+        </member>
+        <member name="E:System.Windows.Controls.WpfPropertyGrid.PropertyItemValue.PropertyValueException">
+            <summary>
+            Occurs when exception is raised at Property Value.
+            <remarks>This event is reserved for future implementations.</remarks>
+            </summary>
+        </member>
+        <member name="E:System.Windows.Controls.WpfPropertyGrid.PropertyItemValue.RootValueChanged">
+            <summary>
+            Occurs when root value is changed.
+            <remarks>This event is reserved for future implementations.</remarks>
+            </summary>
+        </member>
+        <member name="E:System.Windows.Controls.WpfPropertyGrid.PropertyItemValue.SubPropertyChanged">
+            <summary>
+            Occurs when sub property changed.    
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyItemValue.ParentProperty">
+            <summary>
+            Gets the parent property.
+            </summary>
+            <value>The parent property.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyItemValue.HasSubProperties">
+            <summary>
+            Gets a value indicating whether encapsulated value has sub-properties.
+            </summary>
+            <remarks>This property is reserved for future implementations.</remarks>
+            <value>
+            	<c>true</c> if this instance has sub properties; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyItemValue.CanConvertFromString">
+            <summary>
+            Gets a value indicating whether this instance can convert from string.
+            </summary>
+            <value>
+            	<c>true</c> if this instance can convert from string; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyItemValue.IsCollection">
+            <summary>
+            Gets a value indicating whether encapsulated property value is collection.
+            </summary>
+            <value>
+            	<c>true</c> if encapsulated property value is collection; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyItemValue.IsDefaultValue">
+            <summary>
+            Gets a value indicating whether encapsulated property value is default value.
+            </summary>
+            <value>
+            	<c>true</c> if encapsulated property value is default value; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyItemValue.CatchExceptions">
+            <summary>
+            Gets a value indicating whether exceptions should be cought.
+            </summary>
+            <value><c>true</c> if expceptions should be cought; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyItemValue.StringValue">
+            <summary>
+            Gets or sets the string representation of the value.
+            </summary>
+            <value>The string value.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyItemValue.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>The value.</value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyItemValue.IsReadOnly">
+            <summary>
+            Gets a value indicating whether encapsulated property value is read only.
+            </summary>
+            <value>
+            	<c>true</c> if this instance is read only; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:System.Windows.Controls.WpfPropertyGrid.PropertyItemValue.IsEditable">
+            <summary>
+            Gets a value indicating whether encapsulated property value is editable.
+            </summary>
+            <value>
+            	<c>true</c> if this instance is editable; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="E:System.Windows.Controls.WpfPropertyGrid.PropertyItemValue.PropertyChanged">
+            <summary>
+            Occurs when a property value changes.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.PasswordBoxExtender">
+            <summary>
+            Provides binding support for PasswordBox.  
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.PasswordBoxExtender.BoundPasswordProperty">
+            <summary>
+            Identifies the <see cref="F:System.Windows.Controls.WpfPropertyGrid.PasswordBoxExtender.BoundPasswordProperty"/> attached property.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.PasswordBoxExtender.BindPasswordProperty">
+            <summary>
+            Identifies the <see cref="F:System.Windows.Controls.WpfPropertyGrid.PasswordBoxExtender.BindPasswordProperty"/> attached property.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PasswordBoxExtender.SetBindPassword(System.Windows.DependencyObject,System.Boolean)">
+            <summary>
+            Sets the password bound.
+            </summary>
+            <param name="dp">The dp.</param>
+            <param name="value">if set to <c>true</c> [value].</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PasswordBoxExtender.GetBindPassword(System.Windows.DependencyObject)">
+            <summary>
+            Gets the password.
+            </summary>
+            <param name="dp">The dp.</param>
+            <returns><c>true</c> if password was bound; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PasswordBoxExtender.GetBoundPassword(System.Windows.DependencyObject)">
+            <summary>
+            Gets the bound password.
+            </summary>
+            <param name="obj">The dependency object containing attached property value.</param>
+            <returns>Password value.</returns>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PasswordBoxExtender.SetBoundPassword(System.Windows.DependencyObject,System.String)">
+            <summary>
+            Sets the bound password.
+            </summary>
+            <param name="obj">The dependency object to contain attached property value.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PasswordBoxExtender.GetUpdatingPassword(System.Windows.DependencyObject)">
+            <summary>
+            Gets the value determining whether the password updating is in progress.
+            </summary>
+            <param name="obj">The dependency object containing the value of attached property.</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.PasswordBoxExtender.SetUpdatingPassword(System.Windows.DependencyObject,System.Boolean)">
+            <summary>
+            Sets the value indicating the password updating is in progress.
+            </summary>
+            <param name="obj">The dependency object to assign attached property value.</param>
+            <param name="value">if set to <c>true</c> the password is being updated.</param>
+        </member>
+        <member name="T:System.Windows.Controls.WpfPropertyGrid.TextBoxExtender">
+            <summary>
+            Provides additional facilities for TextBox control.  
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.TextBoxExtender.CommitOnEnterProperty">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.WpfPropertyGrid.TextBoxExtender.SelectAllOnFocusProperty">
+            <summary>
+            Identifies the SelectAllOnFocus attached property.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.TextBoxExtender.SetSelectAllOnFocus(System.Windows.DependencyObject,System.Boolean)">
+            <summary>
+            Sets the select all on focus.
+            </summary>
+            <param name="target">The target.</param>
+            <param name="value">if set to <c>true</c> [value].</param>
+        </member>
+        <member name="M:System.Windows.Controls.WpfPropertyGrid.TextBoxExtender.GetSelectAllOnFocus(System.Windows.DependencyObject)">
+            <summary>
+            Determines whether the all the text should be selected on focus.
+            </summary>
+            <param name="target">The target.</param>
+            <returns>
+            	<c>true</c> if text should be selected on focus; otherwise, <c>false</c>.
+            </returns>  
+        </member>
+    </members>
+</doc>

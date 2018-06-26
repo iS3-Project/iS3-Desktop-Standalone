@@ -1,0 +1,514 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{27E8435C-B314-434A-BB39-57CB53AC3A09}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IS3.Desktop</RootNamespace>
+    <AssemblyName>IS3.Desktop</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Output\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.UnityWebPlayerAXLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Output\libs\AxInterop.UnityWebPlayerAXLib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Esri.ArcGISRuntime">
+      <HintPath>..\..\Output\libs\arcgis\Esri.ArcGISRuntime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Interop.UnityWebPlayerAXLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\Output\libs\Interop.UnityWebPlayerAXLib.dll</HintPath>
+    </Reference>
+    <Reference Include="IS3.ArcGIS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Output\bin\IS3.ArcGIS.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Output\libs\System.Windows.Interactivity.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UnityCore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Output\libs\UnityCore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Output\libs\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WpfPageTransitions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Output\libs\WpfPageTransitions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock, Version=2.1.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Output\libs\Xceed.Wpf.AvalonDock.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero, Version=2.1.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Output\libs\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro, Version=2.1.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Output\libs\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010, Version=2.1.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Output\libs\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Xceed.Wpf.DataGrid, Version=2.1.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Output\libs\Xceed.Wpf.DataGrid.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit, Version=2.1.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Output\libs\Xceed.Wpf.Toolkit.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="IS3DataGrid.xaml.cs">
+      <DependentUpon>IS3DataGrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IS3ProfileView.cs" />
+    <Compile Include="IS3View.cs" />
+    <Compile Include="IS3View3D.cs" />
+    <Compile Include="IS3ViewBase.cs" />
+    <Compile Include="MainFrame.xaml.cs">
+      <DependentUpon>MainFrame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectView.xaml.cs">
+      <DependentUpon>ObjectView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PlanView.xaml.cs">
+      <DependentUpon>PlanView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileView.xaml.cs">
+      <DependentUpon>ProfileView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectListPage.xaml.cs">
+      <DependentUpon>ProjectListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IS3Tree.cs" />
+    <Compile Include="ToolsPanel.xaml.cs">
+      <DependentUpon>ToolsPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TreePanel.xaml.cs">
+      <DependentUpon>TreePanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="U3DView.xaml.cs">
+      <DependentUpon>U3DView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\LayersWindow.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>LayersWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DrawToolControl.xaml.cs">
+      <DependentUpon>DrawToolControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\EditELayerWindow.xaml.cs">
+      <DependentUpon>EditELayerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\EditEMapWindow.xaml.cs">
+      <DependentUpon>EditEMapWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MapTip.xaml.cs">
+      <DependentUpon>MapTip.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ProgressBarWindow.xaml.cs">
+      <DependentUpon>ProgressBarWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RaisedText.xaml.cs">
+      <DependentUpon>RaisedText.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SelectionToolbar.xaml.cs">
+      <DependentUpon>SelectionToolbar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserLoginPage.xaml.cs">
+      <DependentUpon>UserLoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserPreferences.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="IS3DataGrid.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainFrame.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="IS3MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IS3MainWindow.xaml.cs">
+      <DependentUpon>IS3MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="ObjectView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PlanView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProfileView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProjectListPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\MenuStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ToolsPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TreePanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="U3DView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\LayersWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\DrawToolControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\EditELayerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\EditEMapWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\MapTip.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\ProgressBarWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\RaisedText.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\SelectionToolbar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserLoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Data\TPKs\Empty.tpk" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\window_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\applications.png" />
+    <Resource Include="Images\applications_engineering-large.png" />
+    <Resource Include="Images\applications_engineering.png" />
+    <Resource Include="Images\attachment.png" />
+    <Resource Include="Images\binary-digital-globe.jpg" />
+    <Resource Include="Images\blue_globe.png" />
+    <Resource Include="Images\category.png" />
+    <Resource Include="Images\char-curve-control-icon.png" />
+    <Resource Include="Images\chart-curve-add-icon.png" />
+    <Resource Include="Images\chart-curve-icon.png" />
+    <Resource Include="Images\Clear.png" />
+    <Resource Include="Images\Clear_selection.png" />
+    <Resource Include="Images\clock_green.png" />
+    <Resource Include="Images\clock_red.png" />
+    <Resource Include="Images\collapse.png" />
+    <Resource Include="Images\construction-firm-icon.png" />
+    <Resource Include="Images\cube-48.png" />
+    <Resource Include="Images\cube.png" />
+    <Resource Include="Images\dismiss.png" />
+    <Resource Include="Images\DrawArrow.PNG" />
+    <Resource Include="Images\DrawCircle.png" />
+    <Resource Include="Images\DrawEllipse.png" />
+    <Resource Include="Images\DrawFreehand.png" />
+    <Resource Include="Images\DrawPoint.png" />
+    <Resource Include="Images\DrawPolygon.png" />
+    <Resource Include="Images\DrawPolyline.png" />
+    <Resource Include="Images\DrawRectangle.png" />
+    <Resource Include="Images\DrawTriangle.PNG" />
+    <Resource Include="Images\earth2.jpg" />
+    <Resource Include="Images\edit_clear.png" />
+    <Resource Include="Images\Element.png" />
+    <Resource Include="Images\engineering_128_hot.png" />
+    <Resource Include="Images\expand.png" />
+    <Resource Include="Images\export-excel-icon.png" />
+    <Resource Include="Images\Fullscreen-32.png" />
+    <Resource Include="Images\Geology-32.png" />
+    <Resource Include="Images\GeologyAnalysis-32.png" />
+    <Resource Include="Images\GeologyProfile.png" />
+    <Resource Include="Images\get_info.png" />
+    <Resource Include="Images\Home-48.png" />
+    <Resource Include="Images\HorizontalProjection.png" />
+    <Resource Include="Images\house-48.png" />
+    <Resource Include="Images\i_about.png" />
+    <Resource Include="Images\i_clickglobe.png" />
+    <Resource Include="Images\i_globe.png" />
+    <Resource Include="Images\i_legend.png" />
+    <Resource Include="Images\i_magnifyglass.png" />
+    <Resource Include="Images\i_nav.png" />
+    <Resource Include="Images\i_options.png" />
+    <Resource Include="Images\i_overview.png" />
+    <Resource Include="Images\i_tools.png" />
+    <Resource Include="Images\i_widget.png" />
+    <Resource Include="Images\i_zoomin.png" />
+    <Resource Include="Images\i_zoomout.png" />
+    <Resource Include="Images\kruler.png" />
+    <Resource Include="Images\Layers-32.png" />
+    <Resource Include="Images\layers-48.png" />
+    <Resource Include="Images\light-16.png" />
+    <Resource Include="Images\light.png" />
+    <Resource Include="Images\logo.png" />
+    <Resource Include="Images\maintenace-32.png" />
+    <Resource Include="Images\maintenace-48.png" />
+    <Resource Include="Images\MLayer-Settings-icon.png" />
+    <Resource Include="Images\Monitoring-48.png" />
+    <Resource Include="Images\Monitoring.png" />
+    <Resource Include="Images\My-world-icon.png" />
+    <Resource Include="Images\Node.png" />
+    <Resource Include="Images\Objects.png" />
+    <Resource Include="Images\package_graphics.png" />
+    <Resource Include="Images\pin_red.png" />
+    <Resource Include="Images\ProjectMapLayer.png" />
+    <Resource Include="Images\projects-16.png" />
+    <Resource Include="Images\projects-32.png" />
+    <Resource Include="Images\projects_folder_16.png" />
+    <Resource Include="Images\projects_folder_32.png" />
+    <Resource Include="Images\projects_folder_48.png" />
+    <Resource Include="Images\properties.png" />
+    <Resource Include="Images\selection.png" />
+    <Resource Include="Images\Setting-icon.png" />
+    <Resource Include="Images\Settlement.png" />
+    <Resource Include="Images\StopDraw.png" />
+    <Resource Include="Images\Subcategory.png" />
+    <Resource Include="Images\TBM.png" />
+    <Resource Include="Images\Tunnel-32.png" />
+    <Resource Include="Images\TunnelAnalysis-32.png" />
+    <Resource Include="Images\TunnelAxis-32.png" />
+    <Resource Include="Images\TunnelConstruction.png" />
+    <Resource Include="Images\TunnelCrossLine-32.png" />
+    <Resource Include="Images\TunnelCrossSection-32.png" />
+    <Resource Include="Images\TunnelDepth.png" />
+    <Resource Include="Images\TunnelDistToSt.png" />
+    <Resource Include="Images\TunnelFaceStab.png" />
+    <Resource Include="Images\TunnelGeology.png" />
+    <Resource Include="Images\TunnelGeology1.png" />
+    <Resource Include="Images\TunnelLoad1.png" />
+    <Resource Include="Images\TunnelLoad2.png" />
+    <Resource Include="Images\TunnelLongProf.png" />
+    <Resource Include="Images\TunnelProfile-32.png" />
+    <Resource Include="Images\TunnelSoilDepth.png" />
+    <Resource Include="Images\VerticalProjection.png" />
+    <Resource Include="Images\window-full-screen-icon.png" />
+    <Resource Include="Images\window-no-full-screen-icon.png" />
+    <Resource Include="Images\Windows-Table-icon.png" />
+    <Resource Include="Images\xcode_project_icon-1306152857.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Geology-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\house-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\folder_add.png" />
+    <Resource Include="Images\folder_delete.png" />
+    <Resource Include="Images\folder_edit.png" />
+    <Resource Include="Images\folder_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\pen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\loginback.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Python-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\rotate_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\IS3-ArcGIS\IS3-ArcGIS.csproj">
+      <Project>{3e9a8ded-38b8-4050-849c-08957aeb5fbf}</Project>
+      <Name>IS3-ArcGIS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\IS3-Core\IS3-Core\IS3-Core.csproj">
+      <Project>{4b8b162c-3658-4fcc-ab41-c0c85a7db281}</Project>
+      <Name>IS3-Core</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\IS3-Python\IS3-Python\IS3-Python.csproj">
+      <Project>{e6f7f4ad-0e87-45d7-bd80-d66c99379692}</Project>
+      <Name>IS3-Python</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\U3DPlayerAxLib\U3DPlayerAxLib\U3DPlayerAxLib.csproj">
+      <Project>{a13c6a7f-e975-409f-a611-fcc107289f32}</Project>
+      <Name>U3DPlayerAxLib</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,141 @@
+﻿<UserControl x:Class="IS3.Desktop.UserControls.SelectionToolbar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="320">
+    <UserControl.Resources>
+        <Style x:Key="PointImage" TargetType="Image" >
+            <Setter Property="Source" 
+                    Value="/IS3.Desktop;component/Images/DrawPoint.png" />
+        </Style>
+        <Style x:Key="PolylineImage" TargetType="Image" >
+            <Setter Property="Source" 
+                    Value="/IS3.Desktop;component/Images/DrawPolyline.png" />
+        </Style>
+        <Style x:Key="PolygonImage" TargetType="Image" >
+            <Setter Property="Source" 
+                    Value="/IS3.Desktop;component/Images/DrawPolyline.png" />
+        </Style>
+        <Style x:Key="RectangleImage" TargetType="Image" >
+            <Setter Property="Source" 
+                    Value="/IS3.Desktop;component/Images/DrawRectangle.png" />
+        </Style>
+        <Style x:Key="StopImage" TargetType="Image" >
+            <Setter Property="Source" 
+                    Value="/IS3.Desktop;component/Images/StopDraw.png" />
+        </Style>
+        <Style x:Key="ClearImage" TargetType="Image" >
+            <Setter Property="Source" 
+                    Value="/IS3.Desktop;component/Images/Clear_selection.png" />
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <StackPanel  x:Name="EditorToolStrip" Margin="0,5,5,0" >
+            <Border Background="White" 
+                    BorderBrush="Black" BorderThickness="1"
+                    HorizontalAlignment="Right"  VerticalAlignment="Top"
+                    Padding="5" >
+                <Border.Effect>
+                    <DropShadowEffect Color="Black" Direction="-45"
+                                      BlurRadius="20" Opacity=".75" />
+                </Border.Effect>
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock x:Name="TB_Title"
+                                   Text="Select on the layer:"
+                                   Foreground="Black"
+                                   TextAlignment="Center"
+                                   HorizontalAlignment="Left"
+                                    />
+                        <ComboBox x:Name="LayerList"
+                                 DisplayMemberPath="Name"
+                                 Width="180"
+                                 Margin="10,0,0,0"
+                                 AllowDrop="True"
+                                 HorizontalAlignment="Right"
+                                 />
+                    </StackPanel>
+                    
+                    <StackPanel x:Name="ButtonsHolder"
+                                Orientation="Horizontal"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Top"
+                                Margin="0,5,5,0">
+                        <Button x:Name="Btn_Point"
+                            Style="{StaticResource MenuToolbarButton}"
+                            Height="32" Width="32" Margin="0,0,4,0"
+                            HorizontalContentAlignment="Left" 
+                            Padding="0"
+                            Click="Button_Click"
+                            ToolTipService.ToolTip="Select by a point">
+                            <Image Style="{StaticResource PointImage}"
+                           Margin="2" />
+                        </Button>
+                        <Button x:Name="Btn_Polyline"
+                            Style="{StaticResource MenuToolbarButton}"
+                            Height="32" Width="32" Margin="0,0,4,0"
+                            HorizontalContentAlignment="Left" 
+                            Padding="0"
+                            Click="Button_Click"
+                            ToolTipService.ToolTip="Select by a polyline">
+                            <Image Style="{StaticResource PolylineImage}"
+                           Margin="2" />
+                        </Button>
+                        <Button x:Name="Btn_Polygon"
+                            Style="{StaticResource MenuToolbarButton}"
+                            Height="32" Width="32" Margin="0,0,4,0"
+                            HorizontalContentAlignment="Left" 
+                            Padding="0"
+                            Click="Button_Click"
+                            ToolTipService.ToolTip="Select by a polygon">
+                            <Image Style="{StaticResource PolygonImage}"
+                           Margin="2" />
+                        </Button>
+                        <Button x:Name="Btn_Rectangle"
+                            Style="{StaticResource MenuToolbarButton}"
+                            Height="32" Width="32" Margin="0,0,4,0"
+                            HorizontalContentAlignment="Left" 
+                            Padding="0"
+                            Click="Button_Click"
+                            ToolTipService.ToolTip="Select by a rectangle">
+                            <Image Style="{StaticResource RectangleImage}"
+                           Margin="2" />
+                        </Button>
+                        <Button x:Name="Btn_Stop"
+                            Style="{StaticResource MenuToolbarButton}"
+                            Height="32" Width="32" Margin="0,0,4,0"
+                            HorizontalContentAlignment="Left" 
+                            Padding="0"
+                            Click="Button_Click"
+                            ToolTipService.ToolTip="Stop selection">
+                            <Image Style="{StaticResource StopImage}"
+                           Margin="2" />
+                        </Button>
+                        <Button x:Name="Btn_Clear"
+                            Style="{StaticResource MenuToolbarButton}"
+                            Height="32" Width="32" Margin="0,0,4,0"
+                            HorizontalContentAlignment="Left" 
+                            Padding="0"
+                            Click="Button_Click"
+                            ToolTipService.ToolTip="Clear selection">
+                            <Image Style="{StaticResource ClearImage}"
+                           Margin="2" />
+                        </Button>
+                        <Button x:Name="OK" Content="OK"
+                            Width="60" Height="25" Margin="10,0,10,0"
+                            Click="OK_Click"/>
+                    </StackPanel>
+                    <TextBlock x:Name="TB_Status"
+                               Text="" Canvas.Left="0" Canvas.Top="60"
+                               TextAlignment="Center" Width="300"/>
+
+                </StackPanel>
+            </Border>
+        </StackPanel>
+
+
+
+    </Grid>
+</UserControl>

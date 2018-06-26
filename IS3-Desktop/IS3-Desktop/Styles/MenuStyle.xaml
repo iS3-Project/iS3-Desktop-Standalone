@@ -1,0 +1,433 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    >
+
+    <LinearGradientBrush x:Key="CommonBackgroundBrush" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Offset="0" Color="#ee76a8d3"/>
+        <GradientStop Offset="0.25" Color="#ee5b8cb5"/>
+        <GradientStop Offset="0.75" Color="#ee4b7ba7"/>
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="CommonBorderBrush" Color="White" />
+    <SolidColorBrush x:Key="BaseColor" Color="#66FFFFFF" />
+
+    <DropShadowEffect x:Key="dropShadow" BlurRadius="10" ShadowDepth="10" Direction="-45" Color="Black" Opacity="0.5" />
+    <DropShadowEffect x:Key="darkDropShadow" BlurRadius="10" ShadowDepth="10" Direction="-45" Color="Black" Opacity="1" />
+
+    <Style x:Name="border" TargetType="Border">
+        <Setter Property="BorderBrush" Value="White" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Background" Value="{StaticResource BaseColor}" />
+    </Style>
+    <Style x:Key="CommonBorder" TargetType="Border">
+        <Setter Property="BorderBrush" Value="{StaticResource CommonBorderBrush}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="Background" Value="{StaticResource CommonBackgroundBrush}" />
+        <Setter Property="Opacity" Value="1" />
+        <Setter Property="Effect" Value="{StaticResource dropShadow}" />
+    </Style>
+    <Style x:Name="menuBorder" TargetType="Border" BasedOn="{StaticResource border}">
+        <Setter Property="Margin" Value="5,0,0,0" />
+        <Setter Property="Padding" Value="3" />
+        <Setter Property="CornerRadius" Value="10" />
+    </Style>
+
+    <!-- Main Menu Images -->
+    <Style x:Key="geologyImage-48" TargetType="Image" >
+        <Setter Property="Source" Value="/IS3.Desktop;component/Images/Geology-48.png" />
+    </Style>
+    <Style x:Key="monitoringImage" TargetType="Image" >
+        <Setter Property="Source" Value="/IS3.Desktop;component/Images/Monitoring-48.png" />
+    </Style>
+    <Style x:Key="analysisImage" TargetType="Image" >
+        <Setter Property="Source" Value="/IS3.Desktop;component/Images/light.png" />
+    </Style>
+    <Style x:Key="projectMapsImage" TargetType="Image" >
+        <Setter Property="Source" Value="/IS3.Desktop;component/Images/cube-48.png" />
+    </Style>
+    <Style x:Key="projectMapLayersImage" TargetType="Image" >
+        <Setter Property="Source" Value="/IS3.Desktop;component/Images/ProjectMapLayer.png" />
+    </Style>
+
+    <!-- Images -->
+    <Style x:Key="overviewImage" TargetType="Image" >
+        <Setter Property="Source" Value="/IS3.Desktop;component/Images/i_overview.png" />
+    </Style>
+    <Style x:Key="compassImage" TargetType="Image" >
+        <Setter Property="Source" Value="/IS3.Desktop;component/Images/i_nav.png" />
+    </Style>
+    <Style x:Key="aboutImage" TargetType="Image" >
+        <Setter Property="Source" Value="/IS3.Desktop;component/Images/i_about.png" />
+    </Style>
+    <Style x:Key="fullScreenImage" TargetType="Image" >
+        <Setter Property="Source" Value="/IS3.Desktop;component/Images/Fullscreen-32.png" />
+    </Style>
+    <Style x:Key="globeImage" TargetType="Image" >
+        <Setter Property="Source" Value="/IS3.Desktop;component/Images/blue_globe.png" />
+    </Style>
+    <Style x:Key="layersImage" TargetType="Image" >
+        <Setter Property="Source" Value="/IS3.Desktop;component/Images/Layers-48.png" />
+    </Style>
+    <Style x:Key="homeImage" TargetType="Image" >
+        <Setter Property="Source" Value="/IS3.Desktop;component/Images/Home-48.png" />
+    </Style>
+
+    <Style x:Key="MenuToolbarButton" TargetType="Button">
+        <Setter Property="Template" Value="{StaticResource MenuWhiteBackGlowButton}" />
+        <Setter Property="Margin" Value="5" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Width" Value="30" />
+        <Setter Property="Height" Value="30" />
+    </Style>
+    <Style x:Key="MenuItem" TargetType="Button">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal">
+                                    <Storyboard>
+                                        <DoubleAnimation To="0" FillBehavior="HoldEnd" 
+																 Storyboard.TargetName="menuItemHighlight" 
+																 Storyboard.TargetProperty="Opacity" 
+																 Duration="0:0:0.3" />
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="MouseOver">
+                                    <Storyboard>
+                                        <DoubleAnimation To="0.15" FillBehavior="HoldEnd" 
+																 Storyboard.TargetName="menuItemHighlight" 
+																 Storyboard.TargetProperty="Opacity" 
+																 Duration="0:0:0.3" />
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+
+                        <Rectangle x:Name="menuItemHighlight" Fill="#FFFFFFFF" Opacity="0" Margin="0" />
+                        <ContentPresenter x:Name="contentPresenter"
+												  Content="{TemplateBinding Content}"
+												  ContentTemplate="{TemplateBinding ContentTemplate}"
+												  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+												  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+												  Margin="{TemplateBinding Padding}"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ToolbarButton" TargetType="Button">
+        <Setter Property="Template" Value="{StaticResource WhiteBackGlowButton}" />
+        <Setter Property="Margin" Value="5" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Width" Value="35" />
+        <Setter Property="Height" Value="30" />
+    </Style>
+    <Style x:Key="MenuButton" TargetType="Button">
+        <Setter Property="Template" Value="{StaticResource WhiteBackGlowButton}" />
+        <Setter Property="Margin" Value="5" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Width" Value="40" />
+        <Setter Property="Height" Value="35" />
+    </Style>
+
+
+    <Style x:Name="radioButton" TargetType="RadioButton">
+        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="Background" Value="{StaticResource BaseColor}" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Padding" Value="5" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Height" Value="30" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="RadioButton">
+                    <Grid>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal"/>
+                                <VisualState x:Name="MouseOver">
+                                    <Storyboard>
+                                        <DoubleAnimation Duration="0:0:0.25" Storyboard.TargetName="HoverGlow" Storyboard.TargetProperty="Opacity" To=".5" />
+                                        <DoubleAnimation Storyboard.TargetName="BackgroundOverlay" Storyboard.TargetProperty="Opacity" Duration="0" To="1"/>
+                                        <DoubleAnimation Storyboard.TargetName="BoxMiddleBackground" Storyboard.TargetProperty="Opacity" Duration="0" To="1"/>
+                                        <ColorAnimation Storyboard.TargetName="BoxMiddle" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[3].(GradientStop.Color)" Duration="0" To="#7FFFFFFF"/>
+                                        <ColorAnimation Storyboard.TargetName="BoxMiddle" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Color)" Duration="0" To="#CCFFFFFF"/>
+                                        <ColorAnimation Storyboard.TargetName="BoxMiddle" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Duration="0" To="#F2FFFFFF"/>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="BackgroundOverlay" Storyboard.TargetProperty="Opacity" Duration="0" To="1"/>
+                                        <DoubleAnimation Storyboard.TargetName="BoxMiddleBackground" Storyboard.TargetProperty="Opacity" Duration="0" To="1"/>
+                                        <ColorAnimation Storyboard.TargetName="BoxMiddle" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[3].(GradientStop.Color)" Duration="0" To="#6BFFFFFF"/>
+                                        <ColorAnimation Storyboard.TargetName="BoxMiddle" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[2].(GradientStop.Color)" Duration="0" To="#C6FFFFFF"/>
+                                        <ColorAnimation Storyboard.TargetName="BoxMiddle" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Duration="0" To="#EAFFFFFF"/>
+                                        <ColorAnimation Storyboard.TargetName="BoxMiddle" Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Duration="0" To="#F4FFFFFF"/>
+                                        <ColorAnimation Storyboard.TargetName="BoxMiddle" Storyboard.TargetProperty="(Shape.Stroke).(GradientBrush.GradientStops)[3].(GradientStop.Color)" Duration="0" To="#FF6DBDD1"/>
+                                        <ColorAnimation Storyboard.TargetName="BoxMiddle" Storyboard.TargetProperty="(Shape.Stroke).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Duration="0" To="#FF6DBDD1"/>
+                                        <ColorAnimation Storyboard.TargetName="BoxMiddle" Storyboard.TargetProperty="(Shape.Stroke).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Duration="0" To="#FF6DBDD1"/>
+                                        <ColorAnimation Storyboard.TargetName="BoxMiddle" Storyboard.TargetProperty="(Shape.Stroke).(GradientBrush.GradientStops)[2].(GradientStop.Color)" Duration="0" To="#FF6DBDD1"/>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Disabled">
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="contentPresenter" Storyboard.TargetProperty="(UIElement.Opacity)" Duration="0" To=".55"/>
+                                        <DoubleAnimation Storyboard.TargetName="DisabledVisualElement" Storyboard.TargetProperty="(UIElement.Opacity)" Duration="0" To="0.55"/>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="CheckStates">
+                                <VisualState x:Name="Checked">
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="CheckIcon" Storyboard.TargetProperty="(UIElement.Opacity)" Duration="0" To="1"/>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Unchecked"/>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="FocusStates">
+                                <VisualState x:Name="Focused">
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="ContentFocusVisualElement" Storyboard.TargetProperty="Opacity" Duration="0" To="1"/>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Unfocused" />
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <!--Main color of the button-->
+                        <Rectangle RadiusY="3" RadiusX="3" Grid.ColumnSpan="2" Fill="{TemplateBinding Background}" />
+                        <Rectangle x:Name="HoverGlow" RadiusY="3" RadiusX="3" Grid.ColumnSpan="2" Opacity="0" >
+                            <Rectangle.Fill>
+                                <RadialGradientBrush x:Name="brushLight" Center="0.5, 0.5" RadiusX="0.65">
+                                    <GradientStop Offset="0" Color="#FF9999FF" />
+                                    <GradientStop Offset="0.98" Color="#009999FF" />
+                                </RadialGradientBrush>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                        <!--<Rectangle x:Name="BackgroundGradient" 
+										RadiusY="3" RadiusX="3" 
+									    Grid.ColumnSpan="2"
+									   Opacity=".5" Stroke="{TemplateBinding Background}"
+										StrokeThickness=".75" StrokeLineJoin="Round" Fill="{StaticResource ReflectionGradient}">
+                            </Rectangle>-->
+                        <StackPanel Orientation="Horizontal" >
+                            <Grid HorizontalAlignment="Left" VerticalAlignment="Center"  Margin="{TemplateBinding Padding}">
+                                <Ellipse x:Name="Background" Width="14" Height="14" Stroke="{TemplateBinding BorderBrush}" StrokeThickness="{TemplateBinding BorderThickness}" Fill="#FFFFFFFF" Margin="1"/>
+                                <Ellipse x:Name="BackgroundOverlay" Fill="#FFC4DBEE" Opacity="0" Width="14" Height="14" StrokeThickness="1" Margin="1" Stroke="#00000000"/>
+                                <Ellipse x:Name="BoxMiddleBackground" Width="10" Height="10" Fill="{TemplateBinding Background}" Stroke="#00000000" StrokeThickness="1"/>
+                                <Ellipse x:Name="BoxMiddle" Width="10" Height="10" StrokeThickness="1" >
+                                    <Ellipse.Stroke>
+                                        <LinearGradientBrush EndPoint=".5,1" StartPoint=".5,0">
+                                            <GradientStop Color="#FFFFFFFF" Offset="1"/>
+                                            <GradientStop Color="#FFFFFFFF" Offset="0"/>
+                                            <GradientStop Color="#FFFFFFFF" Offset="0.375"/>
+                                            <GradientStop Color="#FFFFFFFF" Offset="0.375"/>
+                                        </LinearGradientBrush>
+                                    </Ellipse.Stroke>
+                                    <Ellipse.Fill>
+                                        <LinearGradientBrush StartPoint="0.62,0.15" EndPoint="0.64,0.88">
+                                            <GradientStop Color="#FFFFFFFF" Offset="0.013" />
+                                            <GradientStop Color="#F9FFFFFF" Offset="0.375" />
+                                            <GradientStop Color="#EAFFFFFF" Offset="0.603" />
+                                            <GradientStop Color="#D8FFFFFF" Offset="1" />
+                                        </LinearGradientBrush>
+                                    </Ellipse.Fill>
+                                </Ellipse>
+                                <Ellipse x:Name="BoxMiddleLine" Width="10" Height="10" Stroke="#FF333333" StrokeThickness="1" Opacity=".2"/>
+                                <Ellipse x:Name="CheckIcon" Fill="#FF333333" Width="4" Height="4" Opacity="0"/>
+                                <Ellipse x:Name="DisabledVisualElement" Width="14" Height="14" Opacity="0" Fill="#FFFFFFFF"/>
+                                <Ellipse x:Name="ContentFocusVisualElement" Stroke="#FF6DBDD1" StrokeThickness="1" Opacity="0" IsHitTestVisible="false" Width="16" Height="16" />
+                            </Grid>
+
+                            <ContentPresenter
+									Grid.Column="1"
+									x:Name="contentPresenter"
+									Content="{TemplateBinding Content}"
+									ContentTemplate="{TemplateBinding ContentTemplate}"
+									HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+									VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+									Margin="{TemplateBinding Padding}"/>
+                        </StackPanel>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ToolbarToggleButton" TargetType="ToggleButton">
+        <Setter Property="Template" Value="{StaticResource WhiteBackGlowButton}" />
+        <Setter Property="Margin" Value="5" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Width" Value="35" />
+        <Setter Property="Height" Value="30" />
+    </Style>
+
+    <Style x:Key="Panel" TargetType="Rectangle">
+        <Setter Property="RadiusX" Value="6" />
+        <Setter Property="RadiusY" Value="6" />
+        <Setter Property="Stroke" Value="White" />
+        <Setter Property="Fill" Value="{StaticResource CommonBackgroundBrush}" />
+        <Setter Property="Opacity" Value="1" />
+    </Style>
+
+    <Style x:Key="Title" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalAlignment" Value="Bottom" />
+    </Style>
+    <Style x:Key="Subtitle" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalAlignment" Value="Bottom" />
+    </Style>
+
+    <ControlTemplate x:Key="WhiteBackGlowButton" TargetType="ButtonBase">
+        <Grid Cursor="Hand" Background="Transparent" Margin="2,0,2,0">
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <Storyboard>
+                            <DoubleAnimation To="0" FillBehavior="HoldEnd" 
+													 Storyboard.TargetName="brushLight" 
+													 Storyboard.TargetProperty="Opacity" 
+													 Duration="0:0:0.4" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="MouseOver">
+                        <Storyboard>
+                            <DoubleAnimation To="0.75" FillBehavior="HoldEnd" 
+													 Storyboard.TargetName="brushLight" 
+													 Storyboard.TargetProperty="Opacity" 
+													 Duration="0:0:0.1" />
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+            <!-- The background white glow effect -->
+            <Canvas Width="80" Height="40" Margin="-25,-20,0,0" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <Rectangle x:Name="backGlow" RenderTransformOrigin="0.5,1" IsHitTestVisible="False" 
+								   Width="80" Height="40" Canvas.Left="0" Canvas.Top="0">
+                    <Rectangle.Fill>
+                        <RadialGradientBrush x:Name="brushLight" Center="0.5, 0.75" RadiusY="0.65">
+                            <GradientStop Offset="0" Color="#ffFFFFFF" />
+                            <GradientStop Offset="0.98" Color="#00FFFFFF" />
+                        </RadialGradientBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+            </Canvas>
+            <!-- Content of the menu/tool -->
+            <ContentPresenter x:Name="contentPresenter"
+									  Content="{TemplateBinding Content}"
+									  ContentTemplate="{TemplateBinding ContentTemplate}"
+									  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+									  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+									  Margin="{TemplateBinding Padding}"/>
+        </Grid>
+    </ControlTemplate>
+    <ControlTemplate x:Key="MenuWhiteBackGlowButton" TargetType="Button">
+        <Grid Cursor="Hand" Background="Transparent" Margin="2,0,2,0" RenderTransformOrigin="0.5,0.5">
+            <Grid.RenderTransform>
+                <ScaleTransform x:Name="handScale" />
+            </Grid.RenderTransform>
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <Storyboard>
+                            <DoubleAnimation To="0" FillBehavior="HoldEnd" 
+													 Storyboard.TargetName="brushLight" 
+													 Storyboard.TargetProperty="Opacity" 
+													 Duration="0:0:0.4" />
+                            <DoubleAnimation To="1" Storyboard.TargetName="handScale" BeginTime="0:0:0" Storyboard.TargetProperty="ScaleX" Duration="0:0:0.1" />
+                            <DoubleAnimation To="1" Storyboard.TargetName="handScale" BeginTime="0:0:0" Storyboard.TargetProperty="ScaleY" Duration="0:0:0.1" />
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="MouseOver">
+                        <Storyboard>
+                            <DoubleAnimation To="0.75" FillBehavior="HoldEnd" 
+													 Storyboard.TargetName="brushLight" 
+													 Storyboard.TargetProperty="Opacity" 
+													 Duration="0:0:0.1" />
+                            <DoubleAnimation To="1.5" Storyboard.TargetName="handScale" BeginTime="0:0:0" Storyboard.TargetProperty="ScaleX" Duration="0:0:0.1" />
+                            <DoubleAnimation To="1.5" Storyboard.TargetName="handScale" BeginTime="0:0:0" Storyboard.TargetProperty="ScaleY" Duration="0:0:0.1" />
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+            <!-- The background white glow effect -->
+            <Canvas Width="60" Height="30" Margin="-20,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <Rectangle x:Name="backGlow" RenderTransformOrigin="0.5,1" IsHitTestVisible="False" 
+									   Width="60" Height="30" Canvas.Left="0" Canvas.Top="0">
+                    <Rectangle.Fill>
+                        <RadialGradientBrush x:Name="brushLight" Center="0.5, 0.75" RadiusY="0.65">
+                            <GradientStop Offset="0" Color="#FFFFFFFF" />
+                            <GradientStop Offset="0.98" Color="#00FFFFFF" />
+                        </RadialGradientBrush>
+                    </Rectangle.Fill>
+                </Rectangle>
+            </Canvas>
+            <!-- Content of the menu/tool -->
+            <ContentPresenter
+							x:Name="contentPresenter"
+							Content="{TemplateBinding Content}"
+							ContentTemplate="{TemplateBinding ContentTemplate}"
+							VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+							HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+							Margin="{TemplateBinding Padding}"/>
+        </Grid>
+    </ControlTemplate>
+    
+    <!-- Map Legend Style -->
+    <!--<Style TargetType="esri:Legend">
+        <Setter Property="LayerItemsMode" Value="Flat" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="esri:Legend">
+                    <ScrollViewer Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" 
+										  BorderThickness="{TemplateBinding BorderThickness}" Padding="{TemplateBinding Padding}">
+                        <ItemsControl ItemsSource="{TemplateBinding LayerItemsSource}" 
+											  HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Vertical" Margin="5">
+                                        --><!--Layer Item--><!--
+                                        <ContentPresenter Content="{Binding}" ContentTemplate="{Binding Template}" />
+                                        --><!--Legend Items--><!--
+                                        <ItemsControl ItemsSource="{Binding LegendItems}">
+                                            <ItemsControl.ItemTemplate>
+                                                <DataTemplate>
+                                                    <ContentPresenter Content="{Binding}" ContentTemplate="{Binding Template}" />
+                                                </DataTemplate>
+                                            </ItemsControl.ItemTemplate>
+                                        </ItemsControl>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                            <ItemsPresenter/>
+                        </ItemsControl>
+                    </ScrollViewer>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>-->
+
+    <!--<Style TargetType="IS3Controls:WindowPanel">
+        <Setter Property="Effect" Value="{StaticResource dropShadow}" />
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        <Setter Property="VerticalContentAlignment" Value="Stretch" />
+        <Setter Property="Background" Value="{StaticResource CommonBackgroundBrush}" />
+    </Style>-->
+
+</ResourceDictionary>

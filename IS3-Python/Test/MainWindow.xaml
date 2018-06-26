@@ -1,0 +1,13 @@
+﻿<Window x:Class="Test.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:is3python="clr-namespace:IS3.Python;assembly=IS3.Python"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <is3python:IronPythonControl x:Name="ipcHost" />
+        <!--<StackPanel Orientation="Vertical">
+            <Button Height="20" Width="60" Content="WriteLine" Click="WriteLine_Click"  />
+            <Button Height="20" Width="60" Content="Prompt" Click="Prompt_Click"  />
+        </StackPanel>-->
+    </Grid>
+</Window>

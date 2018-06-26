@@ -1,0 +1,78 @@
+﻿<Project>
+  <is3:ProjectDefinition xmlns="http://schemas.microsoft.com/client/2007"
+                         xmlns:is3="clr-namespace:IS3.Core;assembly=IS3.Core"
+                         GeometryServiceUrl="http://sampleserver3.arcgisonline.com/ArcGIS/rest/services/Geometry/GeometryServer"
+                         ID="IS3" ProjectTitle="IS3" DefaultMapID="BaseMap"
+                         LocalFilePath="D:\IS3\Data\SHL12_TT"
+                         LocalDatabaseName="SH_MetroL12.mdb">
+    <is3:ProjectDefinition.EngineeringMaps>
+      <is3:EngineeringMap MapID="BaseMap"
+                    LocalTileFileName1="Shanghai_LOD16_CityBlocks.tpk"
+                    MinimumResolution="0.1"
+                    MapType="FootPrintMap"
+                    XMin="13501500" YMin="3658000"
+                    XMax="13520000" YMax="3665000">
+      </is3:EngineeringMap>
+    </is3:ProjectDefinition.EngineeringMaps>
+  </is3:ProjectDefinition>
+  
+  <Domain Name="Geology" Type="Geology">
+    <ObjsDefinition>
+      <Borehole HasGeometry="true" Name="Allboreholes" GISLayerName="GEO_BHL"
+                TableNameSQL="Boreholes,BoreholeStrataInfo" OrderSQL="[Name]"/>
+      <Stratum HasGeometry="true" Name="AllStratum" GISLayerName="GEO_STR"
+                TableNameSQL="Strata" />
+      <SoilProperty Name="AllSoilProperties" TableNameSQL="SoilProperties"/>
+      <PhreaticWater Name="AllPhreaticWaters" TableNameSQL="PhreaticWater"/>
+      <ConfinedWater Name="AllConfinedWaters" TableNameSQL="ConfinedWater"/>
+      <WaterProperty Name="AllWaterProperties" TableNameSQL="WaterProperties"/>
+    </ObjsDefinition>
+    <TreeDefinition>
+      <Geology  DisplayName="Geology" Desc="See geology report for complete information.">
+        <EngineeringGeology DisplayName="Engineering Geology" Desc="Engineering geology information">
+          <Borehole DisplayName="Boreholes" Desc="Select a borehole for detail."
+                    RefDomainName="Geology" RefObjsName="Allboreholes" />
+          <Stratum DisplayName="Stratum" Desc="Select a strata for detail."
+                    RefDomainName="Geology" RefObjsName="AllStratum" />
+          <SoilProperty DisplayName="Soil Properties" Desc="Select a soil for detail."
+                        RefDomainName="Geology" RefObjsName="AllSoilProperties"/>
+        </EngineeringGeology>
+        <Hydrology DisplayName="Hydrology" Desc="Hydrology information">
+          <PhreaticWater DisplayName="PhreaticWater" Desc="Phreatic water information" HasObj="true"
+                         RefDomainName="Geology" RefObjsName="AllPhreaticWaters"/>
+          <ConfinedWater DisplayName="ConfinedWater" Desc="Confined water information" HasObj="true"
+                         RefDomainName="Geology" RefObjsName="AllConfinedWaters"/>
+          <WaterProperty DisplayName="WaterProperties" Desc="Water properties" HasObj="true"
+                         RefDomainName="Geology" RefObjsName="AllWaterProperties"/>
+        </Hydrology>
+      </Geology>
+    </TreeDefinition>
+  </Domain>
+
+  <Domain Name="Structure" Type="Structure">
+    <ObjsDefinition>
+      <Tunnel HasGeometry="true" Name="AllTunnels" GISLayerName="DES_TUN"
+                TableNameSQL="Tunnels"/>
+      <SegmentLining HasGeometry="true" Name="AllSegmentLinings" GISLayerName="DES_RIN"
+                TableNameSQL="SegmentLinings" OrderSQL="[ID]" />
+      <TunnelAxis HasGeometry="true" Name="AllTunnelAxes"
+                  GISLayerName="DES_AXP" TableNameSQL="TunnelAxesPoints" />
+    </ObjsDefinition>
+    <TreeDefinition>
+      <Structure DisplayName="Structure" Desc="Shanghai Metro Line No. 12 Structures">
+        <Tunnel DisplayName="Tunnel" Desc="Tunnels"
+                RefDomainName="Structure" RefObjsName="AllTunnels" >
+          <BoredTunnel DisplayName="UpGoing" Desc="Upgoing tunnel">
+            <SegmentLining DisplayName="Segmentlining" Desc="Select a segment lining for detail."
+                           RefDomainName="Structure" RefObjsName="AllSegmentLinings" Filter="[LineNo]=1"/>
+          </BoredTunnel>
+          <BoredTunnel DisplayName="DownDoing" Desc="Downgoing tunnel">
+            <SegmentLining DisplayName="Segmentlining" Desc="Select a segment lining for detail."
+                           RefDomainName="Structure" RefObjsName="AllSegmentLinings" Filter="[LineNo]=2"/>
+          </BoredTunnel>
+        </Tunnel>
+      </Structure>
+    </TreeDefinition>
+  </Domain>
+
+</Project>

@@ -1,0 +1,443 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:esri="http://schemas.esri.com/arcgis/client/2009">
+    <!-- 
+        Description: 
+        This symbol set contains basic fill symbols. 
+    -->
+    <!--
+    BasicFillSymbol_Black
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Black" Fill="#FF000000" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Gray_1
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Gray_1" Fill="#FF111111" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Gray_2
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Gray_2" Fill="#FF333333" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Gray_3
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Gray_3" Fill="#FF555555" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Gray_4
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Gray_4" Fill="#FF777777" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Gray_5
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Gray_5" Fill="#FF999999" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Gray_6
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Gray_6" Fill="#FFBBBBBB" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Gray_7
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Gray_7" Fill="#FFDDDDDD" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_White
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_White" Fill="#FFFFFFFF" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Red
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Red" Fill="#FFFF0000" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Red_1
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Red_1" Fill="#FFDD0000" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Red_2
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Red_2" Fill="#FFBB0000" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Red_3
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Red_3" Fill="#FF990000" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Red_4
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Red_4" Fill="#FF770000" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Red_5
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Red_5" Fill="#FF550000" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Red_6
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Red_6" Fill="#FF330000" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Green
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Green" Fill="#FF00FF00" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Green_1
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Green_1" Fill="#FF00DD00" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Green_2
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Green_2" Fill="#FF00BB00" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Green_3
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Green_3" Fill="#FF009900" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Green_4
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Green_4" Fill="#FF007700" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Green_5
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Green_5" Fill="#FF005500" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Green_6
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Green_6" Fill="#FF003300" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Blue
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Blue" Fill="#FF0000FF" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Blue_1
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Blue_1" Fill="#FF0000DD" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Blue_2
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Blue_2" Fill="#FF0000BB" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Blue_3
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Blue_3" Fill="#FF000099" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Blue_4
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Blue_4" Fill="#FF000077" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Blue_5
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Blue_5" Fill="#FF000055" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Blue_6
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Blue_6" Fill="#FF000033" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Yellow
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Yellow" Fill="#FFFFFF00" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Yellow_1
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Yellow_1" Fill="#FFDDDD00" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Yellow_2
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Yellow_2" Fill="#FFBBBB00" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Yellow_3
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Yellow_3" Fill="#FF999900" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Yellow_4
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Yellow_4" Fill="#FF777700" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Yellow_5
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Yellow_5" Fill="#FF555500" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Yellow_6
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Yellow_6" Fill="#FF333300" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Cyan
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Cyan" Fill="#FF00FFFF" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Cyan_1
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Cyan_1" Fill="#FF00DDDD" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Cyan_2
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Cyan_2" Fill="#FF00BBBB" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Cyan_3
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Cyan_3" Fill="#FF009999" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Cyan_4
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Cyan_4" Fill="#FF007777" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Cyan_5
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Cyan_5" Fill="#FF005555" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Cyan_6
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Cyan_6" Fill="#FF003333" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Magenta
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Magenta" Fill="#FFFF00FF" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Magenta_1
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Magenta_1" Fill="#FFDD00DD" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Magenta_2
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Magenta_2" Fill="#FFBB00BB" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Magenta_3
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Magenta_3" Fill="#FF990099" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Magenta_4
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Magenta_4" Fill="#FF770077" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Magenta_5
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Magenta_5" Fill="#FF550055" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Magenta_6
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Magenta_6" Fill="#FF330033" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Orange
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Orange" Fill="Orange" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Purple
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Purple" Fill="Purple" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_YellowGreen
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_YellowGreen" Fill="YellowGreen" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Violet
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Violet" Fill="Violet" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Black_Trans_1
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Black_Trans_1" Fill="#DD000000" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Black_Trans_2
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Black_Trans_2" Fill="#BB000000" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Black_Trans_3
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Black_Trans_3" Fill="#99000000" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Black_Trans_4
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Black_Trans_4" Fill="#77000000" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Black_Trans_5
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Black_Trans_5" Fill="#55000000" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Black_Trans_6
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Black_Trans_6" Fill="#33000000" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_White_Trans_1
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_White_Trans_1" Fill="#DDFFFFFF" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_White_Trans_2
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_White_Trans_2" Fill="#BBFFFFFF" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_White_Trans_3
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_White_Trans_3" Fill="#99FFFFFF" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_White_Trans_4
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_White_Trans_4" Fill="#77FFFFFF" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_White_Trans_5
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_White_Trans_5" Fill="#55FFFFFF" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_White_Trans_6
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_White_Trans_6" Fill="#33FFFFFF" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Red_Trans_1
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Red_Trans_1" Fill="#DDFF0000" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Red_Trans_2
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Red_Trans_2" Fill="#BBFF0000" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Red_Trans_3
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Red_Trans_3" Fill="#99FF0000" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Red_Trans_4
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Red_Trans_4" Fill="#77FF0000" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Red_Trans_5
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Red_Trans_5" Fill="#55FF0000" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Red_Trans_6
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Red_Trans_6" Fill="#33FF0000" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Green_Trans_1
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Green_Trans_1" Fill="#DD00FF00" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Green_Trans_2
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Green_Trans_2" Fill="#BB00FF00" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Green_Trans_3
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Green_Trans_3" Fill="#9900FF00" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Green_Trans_4
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Green_Trans_4" Fill="#7700FF00" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Green_Trans_5
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Green_Trans_5" Fill="#5500FF00" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Green_Trans_6
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Green_Trans_6" Fill="#3300FF00" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Blue_Trans_1
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Blue_Trans_1" Fill="#DD0000FF" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Blue_Trans_2
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Blue_Trans_2" Fill="#BB0000FF" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Blue_Trans_3
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Blue_Trans_3" Fill="#990000FF" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Blue_Trans_4
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Blue_Trans_4" Fill="#770000FF" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Blue_Trans_5
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Blue_Trans_5" Fill="#550000FF" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Blue_Trans_6
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Blue_Trans_6" Fill="#330000FF" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Yellow_Trans_1
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Yellow_Trans_1" Fill="#DDFFFF00" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Yellow_Trans_2
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Yellow_Trans_2" Fill="#BBFFFF00" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Yellow_Trans_3
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Yellow_Trans_3" Fill="#99FFFF00" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Yellow_Trans_4
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Yellow_Trans_4" Fill="#77FFFF00" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Yellow_Trans_5
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Yellow_Trans_5" Fill="#55FFFF00" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Yellow_Trans_6
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Yellow_Trans_6" Fill="#33FFFF00" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Cyan_Trans_1
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Cyan_Trans_1" Fill="#DD00FFFF" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Cyan_Trans_2
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Cyan_Trans_2" Fill="#BB00FFFF" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Cyan_Trans_3
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Cyan_Trans_3" Fill="#9900FFFF" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Cyan_Trans_4
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Cyan_Trans_4" Fill="#7700FFFF" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Cyan_Trans_5
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Cyan_Trans_5" Fill="#5500FFFF" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Cyan_Trans_6
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Cyan_Trans_6" Fill="#3300FFFF" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Magenta_Trans_1
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Magenta_Trans_1" Fill="#DDFF00FF" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Magenta_Trans_2
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Magenta_Trans_2" Fill="#BBFF00FF" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Magenta_Trans_3
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Magenta_Trans_3" Fill="#99FF00FF" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Magenta_Trans_4
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Magenta_Trans_4" Fill="#77FF00FF" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Magenta_Trans_5
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Magenta_Trans_5" Fill="#55FF00FF" BorderBrush="Black" BorderThickness="1" />
+    <!--
+    BasicFillSymbol_Magenta_Trans_6
+    -->
+    <esri:FillSymbol x:Name="BasicFillSymbol_Magenta_Trans_6" Fill="#33FF00FF" BorderBrush="Black" BorderThickness="1" />
+
+    <esri:FillSymbol x:Key="CustomFadeInMagentaFillSymbol">
+        <esri:FillSymbol.ControlTemplate>
+            <ControlTemplate xmlns:vsm="clr-namespace:System.Windows;assembly=System.Windows">
+                <Grid>
+                    <vsm:VisualStateManager.VisualStateGroups>
+                        <vsm:VisualStateGroup x:Name="CommonStates">
+                            <vsm:VisualState x:Name="MouseOver">
+                                <Storyboard>
+                                    <DoubleAnimation BeginTime="0" Storyboard.TargetName="Element" Storyboard.TargetProperty="(Shape.Opacity)" To="0.75" Duration="00:00:01" />
+                                </Storyboard>
+                            </vsm:VisualState>
+                            <vsm:VisualState x:Name="Normal">
+                                <Storyboard>
+                                    <DoubleAnimation BeginTime="0" Storyboard.TargetName="Element" Storyboard.TargetProperty="(Shape.Opacity)" To="0.15" Duration="00:00:01" />
+                                </Storyboard>
+                            </vsm:VisualState>
+                        </vsm:VisualStateGroup>
+                    </vsm:VisualStateManager.VisualStateGroups>
+                    <Path x:Name="Element" Fill="Magenta" Opacity="0.15" Stroke="Black" StrokeThickness="1"></Path>
+                </Grid>
+            </ControlTemplate>
+        </esri:FillSymbol.ControlTemplate>
+    </esri:FillSymbol>
+
+</ResourceDictionary>

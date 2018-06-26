@@ -1,0 +1,6 @@
+1. Microsoft: Windows, Visual Studio, SQL Sever, Access, ...
+2. ESRI: ArcGIS Server, ArcGIS Desktop, ArcGIS Runtime SDK, ...
+3. XCEED: Extended WPF Toolkit, http://wpftoolkit.codeplex.com/
+4. WpfPageTransitions by Aron Weiler: http://www.codeproject.com/Articles/197132/Simple-WPF-Page-Transitions
+5. Save and Restore WPF Window State by Jeremy Hutchinson: http://www.codeproject.com/Articles/50761/Save-and-Restore-WPF-Window-Size-Position-and-or-S
+6. WPF Progress Bar using Threads by rcarty: http://www.codeproject.com/Articles/265748/WPF-Progress-Bar-using-Threads
