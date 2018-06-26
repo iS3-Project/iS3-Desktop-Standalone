@@ -30,7 +30,7 @@ Choose Project named ”IS3-Desktop”, Build it, then you will generate “IS3-
 Run the execute file ”\Output\IS3-Desktop.exe”, then you need a username and a password to sign in. The username:”iS3Guest”.
 The password:”iS3Guest”.
 
-     ![image](https://github.com/iS3-Project/iS3-Desktop-Standalone/blob/master/images/Login.jpg)
+![image](https://github.com/iS3-Project/iS3-Desktop-Standalone/blob/master/images/Login.jpg)
 
 #### 2.4 Some Problem during Install and Using
 Read the file"Read Me For Installation.pdf"
