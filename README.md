@@ -11,6 +11,7 @@ The standalone version of iS3 application for Desktop
 
 ## 2. Installer
 -------------
+No Chinese characters in the installer path!!
 After downloading the stand-alone version from GitHub, we need to finish some preparations .
 
 #### 2.1 Install 3 necessary plug-ins
