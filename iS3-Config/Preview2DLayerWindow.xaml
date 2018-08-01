@@ -1,0 +1,38 @@
+﻿<Window x:Class="iS3.Config.Preview2DLayerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:esri="http://schemas.esri.com/arcgis/runtime/2013"
+       xmlns:local="clr-namespace:iS3.Config"
+        mc:Ignorable="d"
+        Title="Preview 2D Layer" Height="400" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+        <!-- Row 1 -->
+        <esri:MapView x:Name="MyMapView"
+                      WrapAround="True" Grid.Column="1">
+            <esri:Map x:Name="Map" >
+            </esri:Map>
+        </esri:MapView>
+
+        <ComboBox x:Name="MapsCB" Margin="20,20,0,0" Width="150" Height="25"
+                  HorizontalAlignment="Left" VerticalAlignment="Top"
+                  IsEditable="False" Visibility="Hidden"
+                  SelectionChanged="MapsCB_SelectionChanged">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding MapID}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+        <!-- Row 2 -->
+        <Button Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Right" VerticalAlignment="Center"
+                Margin="0,0,10,0"
+                Width="80" Content="OK" Click="OKBtn_Click" />
+    </Grid>
+</Window>

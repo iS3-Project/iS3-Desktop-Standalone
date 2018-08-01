@@ -1,0 +1,62 @@
+﻿<Window x:Class="iS3.Config.Proj3DViewDefWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:iS3.Config"
+        mc:Ignorable="d"
+        Title="Preview 3D model" Height="400" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="200" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Col 1 -->
+        <Grid x:Name="View3DHolder">
+        </Grid>
+
+        <!-- Col 2 -->
+        <Grid Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="70" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            
+            <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"
+                   Margin="5,0,0,0" Text="3D Model" />
+            <TextBox x:Name="Model3DTB" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center"
+                     Margin="0,0,5,0" IsEnabled="False"/>
+
+            <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"
+                   Margin="5,0,0,0" Text="Layers:"  />
+            <!--<Button x:Name="LyrSetting" Grid.Row="1" Grid.Column="2" Content="Layer Setting..." 
+                    Width="100" HorizontalAlignment="Right" Click="LyrSetting_Click"/>-->
+            <TreeView x:Name="treeView" Grid.Row="2" Grid.ColumnSpan="2"  Margin="5,0,5,0">
+                <TreeView.ItemTemplate>
+                    <HierarchicalDataTemplate ItemsSource="{Binding childs}">
+                        <TextBlock Text="{Binding Name}"/>
+                    </HierarchicalDataTemplate>
+                </TreeView.ItemTemplate>
+            </TreeView>
+        </Grid>
+    
+        <!-- Row 2 -->
+        <TextBlock x:Name="PromptTB" Grid.Row="2" Grid.ColumnSpan="3"
+                   VerticalAlignment="Center" HorizontalAlignment="Left"
+                   Text="" Foreground="Red" />
+        <Button x:Name="OKBtn" Grid.Row="2" Grid.Column="2" Margin="0,0,10,0"
+                Content="OK" VerticalAlignment="Center" HorizontalAlignment="Right" Width="100" Height="20"
+                Click="OK_Click"/>
+
+    </Grid>
+</Window>

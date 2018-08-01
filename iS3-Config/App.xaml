@@ -1,0 +1,9 @@
+﻿<Application x:Class="iS3.Config.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:iS3.Config">
+    <Application.Resources>
+        <!-- Note: Do not put resources here! -->
+        <!-- Please put resources in ResourceDictionary.xaml. -->
+    </Application.Resources>
+</Application>
