@@ -139,14 +139,18 @@ namespace iS3.Config
             Layer lyr = Map.Layers[gdbLyr.Name];
             lyr.IsVisible = chkBox.IsChecked.Value;
 
+           
+
             // Update layer definition
             EngineeringMap emap = EMapsLB.SelectedItem as EngineeringMap;
             if (emap == null)
                 return;
             LayerDef lyrDef = emap.LocalGdbLayersDef.Find(x => x.Name == gdbLyr.Name);
+          
             if (lyrDef == null)
                 return;
             lyrDef.IsVisible = chkBox.IsChecked.Value;
+           
         }
 
         private void LayrCB_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -317,7 +321,6 @@ namespace iS3.Config
                 }
                 GeoDBLayrLB.ItemsSource = null;
             }
-
             // Load new
             string file = _projDef.LocalFilePath + "\\" + emap.LocalGeoDbFileName;
             if (File.Exists(file))

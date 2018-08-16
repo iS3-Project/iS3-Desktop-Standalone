@@ -17,8 +17,6 @@
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <TargetFrameworkProfile />
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -31,8 +29,10 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -55,13 +55,17 @@
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>is3_64.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="AxInterop.UnityWebPlayerAXLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Output\libs\AxInterop.UnityWebPlayerAXLib.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Esri.ArcGISRuntime">
+    <Reference Include="Esri.ArcGISRuntime, Version=10.2.5.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Output\libs\arcgis\Esri.ArcGISRuntime.dll</HintPath>
       <Private>False</Private>
     </Reference>
@@ -74,6 +78,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Output\bin\IS3.ArcGIS.dll</HintPath>
       <Private>False</Private>
+    </Reference>
+    <Reference Include="IS3.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Output\bin\IS3.Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -151,7 +159,6 @@
     </Compile>
     <Compile Include="IS3ProfileView.cs" />
     <Compile Include="IS3View.cs" />
-    <Compile Include="IS3View3D.cs" />
     <Compile Include="IS3ViewBase.cs" />
     <Compile Include="MainFrame.xaml.cs">
       <DependentUpon>MainFrame.xaml</DependentUpon>
@@ -174,9 +181,6 @@
     </Compile>
     <Compile Include="TreePanel.xaml.cs">
       <DependentUpon>TreePanel.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="U3DView.xaml.cs">
-      <DependentUpon>U3DView.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\LayersWindow.xaml.cs">
       <SubType>Code</SubType>
@@ -257,10 +261,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="U3DView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="UserControls\LayersWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -335,7 +335,7 @@
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.5 %28x86 和 x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -487,21 +487,18 @@
       <Project>{3e9a8ded-38b8-4050-849c-08957aeb5fbf}</Project>
       <Name>IS3-ArcGIS</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\IS3-Core\IS3-Core\IS3-Core.csproj">
-      <Project>{4b8b162c-3658-4fcc-ab41-c0c85a7db281}</Project>
-      <Name>IS3-Core</Name>
-      <Private>False</Private>
-    </ProjectReference>
     <ProjectReference Include="..\..\IS3-Python\IS3-Python\IS3-Python.csproj">
       <Project>{e6f7f4ad-0e87-45d7-bd80-d66c99379692}</Project>
       <Name>IS3-Python</Name>
       <Private>False</Private>
     </ProjectReference>
-    <ProjectReference Include="..\..\U3DPlayerAxLib\U3DPlayerAxLib\U3DPlayerAxLib.csproj">
-      <Project>{a13c6a7f-e975-409f-a611-fcc107289f32}</Project>
-      <Name>U3DPlayerAxLib</Name>
-      <Private>False</Private>
+    <ProjectReference Include="..\..\IS3-Unity-Webplayer\IS3-Unity-Webplayer.csproj">
+      <Project>{9d38c271-eb97-46d0-862e-8dd70d3f13d1}</Project>
+      <Name>IS3-Unity-Webplayer</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="is3_64.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

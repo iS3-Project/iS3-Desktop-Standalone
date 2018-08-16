@@ -41,11 +41,11 @@
                 </Border>
                 <StackPanel Grid.Row="1" VerticalAlignment="Center" Orientation="Horizontal" Margin="40 0 0 0">
                     <TextBlock  Text="账　户" Padding="10 3 10 3"  Foreground="#FFABB9C5" FontSize="15" VerticalAlignment="Center"></TextBlock>
-                    <TextBox Foreground="#FFABB9C5" VerticalContentAlignment="Center" Background="Transparent"  Width="200"  Name="LoginNameTB"/>
+                    <TextBox Foreground="#FFABB9C5" Text="iS3Guest"   VerticalContentAlignment="Center" Background="Transparent"  Width="200"  Name="LoginNameTB"/>
                 </StackPanel>
                 <StackPanel Grid.Row="2" VerticalAlignment="Center" Orientation="Horizontal" Margin="40 0 0 0">
                     <TextBlock  Text="密　码" Padding="10 3 10 3"  Foreground="#FFABB9C5" FontSize="15" VerticalAlignment="Center"></TextBlock>
-                    <PasswordBox Foreground="#FFABB9C5" VerticalContentAlignment="Center" Background="Transparent" Width="200" Name="LoginPasswordTB"/>
+                    <PasswordBox Foreground="#FFABB9C5" Password="iS3Guest" VerticalContentAlignment="Center" Background="Transparent" Width="200" Name="LoginPasswordTB"/>
                 </StackPanel>
                 <WrapPanel Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center">
                     <Button Name="LoginButton" 

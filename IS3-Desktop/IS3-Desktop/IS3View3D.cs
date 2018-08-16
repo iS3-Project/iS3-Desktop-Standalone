@@ -194,7 +194,7 @@ namespace IS3.Desktop
                                     {
                                         foreach (DGObject _obj in objs.values)
                                         {
-                                            if (_obj.fullName == id.ToString())
+                                            if (_obj.id == id)
                                             {
                                                 obj = _obj;
                                                 break;

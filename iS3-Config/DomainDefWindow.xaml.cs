@@ -232,7 +232,7 @@ namespace iS3.Config
                 DGObjectsDefinition dObjDef = new DGObjectsDefinition();
                 dObjDef.Name = name;
                 objsDefinitions.Add(name, dObjDef);
-
+                
                 // force update UI
                 int index = DObjsLB.SelectedIndex;
                 DObjsLB.ItemsSource = null;
@@ -281,7 +281,7 @@ namespace iS3.Config
 
         private void Preview3DLayerBtn_Click(object sender, RoutedEventArgs e)
         {
-            Proj3DViewDefWindow proj3DViewDefWnd = new Proj3DViewDefWindow(_prjDef);
+            Proj3DViewDefWindow proj3DViewDefWnd = new Proj3DViewDefWindow(_prjDef,Layer3DNameTB.Text);
             proj3DViewDefWnd.Model3dLoaded += (send, args)=>
             {
                 _u3dLayer = args;

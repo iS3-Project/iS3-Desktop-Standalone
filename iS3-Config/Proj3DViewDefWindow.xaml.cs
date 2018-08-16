@@ -30,13 +30,14 @@ namespace iS3.Config
         string _u3dFile;
         string _u3dFilePath;
         UnityLayer _u3dLayer;
-
+        U3DView view3d;
+        string _nowLayer;
         public EventHandler<UnityLayer> Model3dLoaded;
 
-        public Proj3DViewDefWindow(ProjectDefinition prjDef)
+        public Proj3DViewDefWindow(ProjectDefinition prjDef,string nowLayer)
         {
             InitializeComponent();
-
+            _nowLayer = nowLayer;
             _prjDef = prjDef;
 
             _dataPath = _prjDef.LocalFilePath;
@@ -54,7 +55,7 @@ namespace iS3.Config
             if (File.Exists(_u3dFilePath))
             {
                 //u3dPlayerControl.LoadScence(_u3dFilePath);
-                U3DView view3d = Load3DModel(_u3dFile);
+                view3d = Load3DModel(_u3dFile);
                 View3DHolder.Children.Add(view3d);
             }
             else
@@ -82,15 +83,117 @@ namespace iS3.Config
         {
             _u3dLayer = unityLayer;
             treeView.ItemsSource = unityLayer.UnityLayerModel.childs;
+            SetInitLayerVisible();
 
             if (Model3dLoaded != null)
                 Model3dLoaded(this, unityLayer);
         }
-
-
+        string[] layerNames;
+        public void SetInitLayerVisible()
+        {
+            layerNames = _nowLayer.Split('/');
+            SetVisible(_u3dLayer.UnityLayerModel.childs, 1);
+        }
+        public void SetVisible(List<UnityTreeModel> model,int level)
+        {
+            if (level == layerNames.Count()) return;
+            foreach (UnityTreeModel _model in model)
+            {
+                if (_model.Name==layerNames[level])
+                {
+                    SetVisible(_model.childs, level + 1);
+                }
+                else
+                {
+                    SetChildVisble(_model);
+                    SetObjShowStateMessage message = new SetObjShowStateMessage();
+                    message.path = GetFullPath(_model);
+                    message.iSShow = false;
+                    (view3d.view as U3dViewModel).ExcuteCommand(message);
+                }
+            }
+        }
+        public void SetChildVisble(UnityTreeModel model)
+        {
+            model.visible = false;
+            if (model.childs!=null)
+            {
+                foreach (UnityTreeModel _model in model.childs)
+                {
+                    SetChildVisble(_model);
+                }
+            }
+        }
         private void OK_Click(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+        //图层显示开关
+        private void CheckBox_Click(object sender, RoutedEventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            DependencyObject parent = VisualTreeHelper.GetParent(VisualTreeHelper.GetParent(checkBox));  //找到chkbox的ContentPresenter
+            ContentPresenter tvi = parent as ContentPresenter;
+            if (tvi != null)
+            {
+                List<UnityTreeModel> list = treeView.ItemsSource as List<UnityTreeModel>;
+                UnityTreeModel node = tvi.DataContext as UnityTreeModel;
+                TreeViewItem tvitem = FindTreeViewItemContainer(treeView, node);
+                tvitem.IsSelected = true;
+
+                SetModelVisible(node, checkBox.IsChecked.Value);
+                SetObjShowStateMessage message = new SetObjShowStateMessage();
+                message.path = GetFullPath(node);
+                message.iSShow = checkBox.IsChecked.Value;
+                (view3d.view as U3dViewModel).ExcuteCommand(message);
+            }
+        }
+        public string GetFullPath(UnityTreeModel model)
+        {
+            if (model.parent==null)
+            {
+                return model.Name;
+            }
+            else
+            {
+                return GetFullPath(model.parent) + "/" + model.Name;
+            }
+        }
+        //找到checkbox对应的父TreeViewItem
+        public static TreeViewItem FindTreeViewItemContainer(ItemsControl root, object info)
+        {
+            if (root == null) { return null; }
+
+            TreeViewItem tvi = root.ItemContainerGenerator.ContainerFromItem(info) as TreeViewItem;
+            if (tvi == null)
+            {
+                if (root.Items != null)
+                {
+                    foreach (var item in root.Items)
+                    {
+                        tvi = FindTreeViewItemContainer(root.ItemContainerGenerator.ContainerFromItem(item) as TreeViewItem, info);
+
+                        if (tvi != null)
+                        {
+                            break;
+                        }
+                    }
+                }
+            }
+
+            return tvi;
+        }
+        //设置子节点的可见性，checkbox
+        public void SetModelVisible(UnityTreeModel root,bool visible)
+        {
+            root.visible = visible;
+            if (root.childs!=null)
+            {
+                foreach (UnityTreeModel model in root.childs)
+                {
+                    SetModelVisible(model, visible);
+                }
+            }
         }
     }
 }

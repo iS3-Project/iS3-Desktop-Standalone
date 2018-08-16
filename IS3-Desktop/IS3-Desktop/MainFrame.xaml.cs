@@ -500,7 +500,7 @@ namespace IS3.Desktop
             }
             else if (eMap.MapType == EngineeringMapType.Map3D)
             {
-                U3DView u3dView = new U3DView(this, _prj, eMap);
+                IS3.Unity.Webplayer.U3DView u3dView = new IS3.Unity.Webplayer.U3DView(_prj, eMap);
                 LayoutDoc.Content = u3dView;
                 view = u3dView.view;
             }

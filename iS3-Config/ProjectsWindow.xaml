@@ -21,9 +21,10 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="120" />
-            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="25*" />
+            <ColumnDefinition Width="311*"/>
         </Grid.ColumnDefinitions>
-        
+
         <!-- Row 1 -->
         <StackPanel Orientation="Vertical">
             <TextBlock Text="Available projects:" />
@@ -48,9 +49,9 @@
                 <ListBoxItem Content="Location"/>
             </ListBox>
         </StackPanel>
-        <esri:MapView x:Name="MyMapView" WrapAround="True" Grid.Column="1">
+        <esri:MapView x:Name="MyMapView" WrapAround="True" Grid.Column="1" Grid.ColumnSpan="2">
             <esri:Map x:Name="Map" InitialViewpoint="{StaticResource China}">
-                <esri:ArcGISLocalTiledLayer ID="BaseMap" Path="Data\TPKs\Topographic.tpk"/>
+                <esri:ArcGISLocalTiledLayer ID="BaseMap" Path="..\Output\Data\TPKs\Topographic.tpk"/>
                 <esri:GraphicsLayer x:Name="ProjectGraphicsLayer" ID="ProjectGraphicsLayer"/>
             </esri:Map>
         </esri:MapView>
@@ -59,13 +60,13 @@
             HorizontalAlignment="Left" VerticalAlignment="Top"
             Margin="10,40,0,0" Visibility="Hidden"
             TextChanged="ProjectTitleTB_TextChanged" IsReadOnly="True"
-            Height="35" FontSize="24" Foreground="Red" Background="Yellow"/>
+            Height="35" FontSize="24" Foreground="Red" Background="Yellow" Grid.ColumnSpan="2"/>
 
         <!-- Row 2 -->
-        <TextBlock x:Name="PromptTB" Grid.Row="2" Grid.ColumnSpan="2"
+        <TextBlock x:Name="PromptTB" Grid.Row="1" Grid.ColumnSpan="2"
                    VerticalAlignment="Center" HorizontalAlignment="Left"
-                   Text="Select project from the list" Foreground="Red" />
-        <Button x:Name="NextBtn" Grid.Row="2" Grid.Column="1" Margin="0,0,10,0"
+                   Text="Select project from the list" Foreground="Red" Margin="0,7" />
+        <Button x:Name="NextBtn" Grid.Row="1" Grid.Column="2" Margin="0,5,10,5"
                 Content="Next" VerticalAlignment="Center" HorizontalAlignment="Right" Width="100" Height="20"
                 Click="Next_Click"/>
     </Grid>

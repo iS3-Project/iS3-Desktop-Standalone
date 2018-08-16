@@ -38,6 +38,10 @@
       <HintPath>..\Output\libs\arcgis\Esri.ArcGISRuntime.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="IS3.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Output\bin\IS3.Core.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -60,13 +64,6 @@
     <Compile Include="Graphics\IS3Renderer.cs" />
     <Compile Include="Graphics\IS3Symbol.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\IS3-Core\IS3-Core\IS3-Core.csproj">
-      <Project>{4b8b162c-3658-4fcc-ab41-c0c85a7db281}</Project>
-      <Name>IS3-Core</Name>
-      <Private>False</Private>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

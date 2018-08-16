@@ -26,8 +26,8 @@
             <RowDefinition Height="30" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="120" />
-            <ColumnDefinition MinWidth="400" Width="*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition MinWidth="400" />
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
         <!-- Col 1 -->
@@ -50,7 +50,7 @@
                 <Button Content="-" Width="25" Margin="5,0,5,0" Click="RemoveEMap_Click"/>
             </StackPanel>
         </Grid>
-        
+
         <!-- Col 2 -->
         <esri:MapView x:Name="MyMapView" ExtentChanged="MyMapView_ExtentChanged"
                       WrapAround="True" Grid.Column="1">
