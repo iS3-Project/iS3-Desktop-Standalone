@@ -1,25 +1,33 @@
-<Project>
-<ProjectDefinition ID="iS3DemoTest" ProjectTitle="iS3测试Demo" DefaultMapID="BaseMap" LocalFilePath="C:\Users\Administrator\Desktop\iS3-Standalone-V1.0\Output\Data\iS3DemoTest" LocalTilePath="C:\Users\Administrator\Desktop\iS3-Standalone-V1.0\Output\Data\TPKs" LocalDatabaseName="iS3DemoTest.mdb" DataServiceUrl="{assembly:Null}" GeometryServiceUrl="{assembly:Null}" xmlns="clr-namespace:IS3.Core;assembly=IS3.Core" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-  <ProjectDefinition.EngineeringMaps>
-<EngineeringMap MapType="FootPrintMap" Calibrated="False" Scale="1" ScaleX="1" ScaleY="1" ScaleZ="1" MapID="Map0" LocalTileFileName1="iS3DemoTest.tpk" LocalTileFileName2="{assembly:Null}" LocalMapFileName="{assembly:Null}" LocalGeoDbFileName="iS3DemoTest.geodatabase" MapUrl="{assembly:Null}" XMax="12915908.175577117" XMin="12592322.111738326" YMax="69484.328910589858" YMin="-208916.29358134302" MinimumResolution="0" MapRotation="0" xmlns="clr-namespace:IS3.Core;assembly=IS3.Core" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-  <EngineeringMap.LocalGdbLayersDef><LayerDef Name="Pillar" GeometryType="Polygon" IsVisible="True" Color="#FF0000FF" SelectionColor="#FFFF0000" MarkerSize="12" MarkerStyle="Circle" LineStyle="Solid" FillStyle="Solid" OutlineColor="#FF0000FF" LineWidth="1" RendererDef="{assembly:Null}" EnableLabel="False" LabelTextExpression="{assembly:Null}" LabelWhereClause="{assembly:Null}" LabelColor="#FF000000" LabelBackgroundColor="#00000000" LabelBorderLineColor="#00000000" LabelBorderLineWidth="0" LabelFontFamily="Arial" LabelFontSize="12" LabelFontStyle="Normal" LabelFontWeight="Normal" LabelTextDecoration="None" xmlns="clr-namespace:IS3.Core;assembly=IS3.Core" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" />
-<LayerDef Name="MonPoint" GeometryType="Point" IsVisible="True" Color="#FFFF0000" SelectionColor="#FFFF0000" MarkerSize="12" MarkerStyle="Circle" LineStyle="Solid" FillStyle="Solid" OutlineColor="#FF000000" LineWidth="1" RendererDef="{assembly:Null}" EnableLabel="True" LabelTextExpression="[Name]" LabelWhereClause="{assembly:Null}" LabelColor="#FF000000" LabelBackgroundColor="#00000000" LabelBorderLineColor="#00000000" LabelBorderLineWidth="0" LabelFontFamily="Arial" LabelFontSize="12" LabelFontStyle="Normal" LabelFontWeight="Normal" LabelTextDecoration="None" xmlns="clr-namespace:IS3.Core;assembly=IS3.Core" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" />
-<LayerDef Name="BaseMap" GeometryType="Polyline" IsVisible="True" Color="#FF008000" SelectionColor="#FFFF0000" MarkerSize="12" MarkerStyle="Circle" LineStyle="Solid" FillStyle="Solid" OutlineColor="#FF008000" LineWidth="1" RendererDef="{assembly:Null}" EnableLabel="False" LabelTextExpression="{assembly:Null}" LabelWhereClause="{assembly:Null}" LabelColor="#FF000000" LabelBackgroundColor="#00000000" LabelBorderLineColor="#00000000" LabelBorderLineWidth="0" LabelFontFamily="Arial" LabelFontSize="12" LabelFontStyle="Normal" LabelFontWeight="Normal" LabelTextDecoration="None" xmlns="clr-namespace:IS3.Core;assembly=IS3.Core" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" />
-</EngineeringMap.LocalGdbLayersDef>
-</EngineeringMap>
-</ProjectDefinition.EngineeringMaps>
-</ProjectDefinition>
-
-  <Domain Name="Monitoring" Type="Monitoring">
+﻿<Project>
+  <is3:ProjectDefinition xmlns="http://schemas.microsoft.com/client/2007"
+                        xmlns:is3="clr-namespace:IS3.Core;assembly=IS3.Core"
+                        xmlns:g="clr-namespace:IS3.Core.Graphics;assembly=IS3.Core"
+                        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                        ID="iS3DemoTest"
+                        ProjectTitle="iS3测试Demo"
+                        LocalDatabaseName="iS3DemoTest.mdb"
+                        DefaultMapID="BaseMap">
+  </is3:ProjectDefinition>
+<Domain Name="Monitoring" Type="Monitoring">
     <ObjsDefinition>
-      <MonPoint Name="AllMonPoint" TableNameSQL="Mon_Test,Mon_TestData" HasGeometry="true" GISLayerName="Pillar" Has3D="true" Layer3DName="iS3Project/监测点/监测点" />
+      <MonPoint Name="AllMonPoint" 
+      	        TableNameSQL="Mon_Test,Mon_TestData"  
+      	        HasGeometry="true"      GISLayerName="MonPoint"
+                Has3D="true"  Layer3DName="iS3Project/监测点/监测点"/>
     </ObjsDefinition>
     <TreeDefinition>
       <Root>
         <Monitoring DisplayName="监测记录">
-          <MonPoint DisplayName="监测点" RefDomainName="Monitoring" RefObjsName="AllMonPoint" />
+          <MonPoint DisplayName="监测点"
+                    RefDomainName="Monitoring"
+                    RefObjsName="AllMonPoint"/>
         </Monitoring>
       </Root>
     </TreeDefinition>
-  </Domain>
+  </Domain> 
+
 </Project>
+
+
+
+
