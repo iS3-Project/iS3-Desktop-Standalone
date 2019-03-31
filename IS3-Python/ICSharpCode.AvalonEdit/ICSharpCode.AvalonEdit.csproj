@@ -49,8 +49,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <Prefer32Bit>false</Prefer32Bit>
-    <OutputPath>..\..\Output\bin\</OutputPath>
-    <DocumentationFile>..\..\Output\bin\ICSharpCode.AvalonEdit.xml</DocumentationFile>
+    <OutputPath>..\..\Output\libs\</OutputPath>
+    <DocumentationFile>..\..\Output\libs\ICSharpCode.AvalonEdit.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
     <Prefer32Bit>false</Prefer32Bit>

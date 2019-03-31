@@ -187,7 +187,7 @@ namespace IS3.Unity.Webplayer
                                     {
                                         foreach (DGObject _obj in objs.values)
                                         {
-                                            if (_obj.id == id)
+                                            if ((_obj.id == id)||(_obj.name==id.ToString()))
                                             {
                                                 obj = _obj;
                                                 break;

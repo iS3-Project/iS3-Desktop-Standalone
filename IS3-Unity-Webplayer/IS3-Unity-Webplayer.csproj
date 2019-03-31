@@ -32,11 +32,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AxInterop.UnityWebPlayerAXLib">
-      <HintPath>E:\0-Development\iS3\iS3-Standalone-V1.0\Output\bin\AxInterop.UnityWebPlayerAXLib.dll</HintPath>
-    </Reference>
-    <Reference Include="IS3.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Output\bin\IS3.Core.dll</HintPath>
+      <HintPath>..\Output\libs\AxInterop.UnityWebPlayerAXLib.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -50,8 +47,10 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="U3DPlayerAxLib">
-      <HintPath>E:\0-Development\iS3\iS3-Standalone-V1.0\Output\bin\U3DPlayerAxLib.dll</HintPath>
+    <Reference Include="U3DPlayerAxLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Output\libs\U3DPlayerAxLib.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="WindowsFormsIntegration" />
@@ -80,6 +79,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IS3-Core\IS3-Core.csproj">
+      <Project>{4b8b162c-3658-4fcc-ab41-c0c85a7db281}</Project>
+      <Name>IS3-Core</Name>
+      <Private>False</Private>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
