@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media;
 
-using IS3.Core.Geometry;
+using iS3.Core.Geometry;
 
-namespace IS3.Core.Graphics
+namespace iS3.Core.Graphics
 {
     public enum ColorRampEnum { Default };
 
@@ -116,7 +116,7 @@ namespace IS3.Core.Graphics
                 {
                     ISimpleFillSymbol symbol = Runtime.graphicEngine.newSimpleFillSymbol(
                         defaultColors[i], 
-                        IS3.Core.Graphics.SimpleFillStyle.Solid,
+                        iS3.Core.Graphics.SimpleFillStyle.Solid,
                         lineSymbol);
                     _defaultFillSymbols[i] = symbol;
                 }
@@ -292,7 +292,7 @@ namespace IS3.Core.Graphics
 
             return null;
         }
-        #region from IS3.Core ArcGISMappingUtility.cs
+        #region from iS3.Core ArcGISMappingUtility.cs
         // Draw vertical distributed load
         // Note: y1<y2, (x1,y1)-(x1,y2) is a vertical line, (x3,y1)-(x2,y2) is a oblique line
         //

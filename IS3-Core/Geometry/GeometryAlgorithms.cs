@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IS3.Core.Geometry
+namespace iS3.Core.Geometry
 {
     public enum ExtendOption { None, This, Other, Both }
     public enum AngleDirection { Clockwise, CounterClockwise }

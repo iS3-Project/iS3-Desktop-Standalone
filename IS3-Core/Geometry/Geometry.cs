@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Serialization;
 
-namespace IS3.Core.Geometry
+namespace iS3.Core.Geometry
 {
     public class Point2D
     {

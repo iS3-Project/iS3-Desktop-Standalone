@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
 
-using IS3.Core;
+using iS3.Core;
 
 namespace iS3.Config
 {

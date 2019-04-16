@@ -15,10 +15,10 @@ using System.Windows.Shapes;
 using System.IO;
 using System.Threading;
 
-using IS3.Core;
-using IS3.Core.Serialization;
+using iS3.Core;
+using iS3.Core.Serialization;
 
-namespace IS3.Desktop
+namespace iS3.Desktop
 {
 //************************  Notice  **********************************
 //** This file is part of iS3

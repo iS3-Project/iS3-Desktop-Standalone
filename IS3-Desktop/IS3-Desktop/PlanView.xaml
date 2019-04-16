@@ -1,10 +1,10 @@
-﻿<UserControl x:Class="IS3.Desktop.PlanView"
+﻿<UserControl x:Class="iS3.Desktop.PlanView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:esri="http://schemas.esri.com/arcgis/runtime/2013"
-             xmlns:IS3Controls="clr-namespace:IS3.Desktop.UserControls"
+             xmlns:IS3Controls="clr-namespace:iS3.Desktop.UserControls"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="400">
     <Grid>
@@ -12,23 +12,23 @@
             <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
             <Style x:Key="LayersImage" TargetType="Image">
                 <Setter Property="Source"
-                    Value="/IS3.Desktop;component/Images/Layers-32.png" />
+                    Value="/iS3.Desktop;component/Images/Layers-32.png" />
             </Style>
             <Style x:Key="RotateImage" TargetType="Image">
                 <Setter Property="Source"
-                    Value="/IS3.Desktop;component/Images/rotate_left.png" />
+                    Value="/iS3.Desktop;component/Images/rotate_left.png" />
             </Style>
             <Style x:Key="PinImage" TargetType="Image" >
                 <Setter Property="Source"
-                    Value="/IS3.Desktop;component/Images/pin_red.png" />
+                    Value="/iS3.Desktop;component/Images/pin_red.png" />
             </Style>
             <Style x:Key="SelectionImage" TargetType="Image">
                 <Setter Property="Source"
-                    Value="/IS3.Desktop;component/Images/selection.png" />
+                    Value="/iS3.Desktop;component/Images/selection.png" />
             </Style>
             <Style x:Key="DrawImage" TargetType="Image">
                 <Setter Property="Source"
-                    Value="/IS3.Desktop;component/Images/pen.png" />
+                    Value="/iS3.Desktop;component/Images/pen.png" />
             </Style>
         </Grid.Resources>
         <Grid.RowDefinitions>

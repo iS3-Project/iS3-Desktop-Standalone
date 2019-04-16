@@ -10,9 +10,9 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 
-using IS3.Core;
+using iS3.Core;
 
-namespace IS3.Geology.UserControls
+namespace iS3.Geology.UserControls
 {
     public partial class BoreholeCollectionView : UserControl
     {

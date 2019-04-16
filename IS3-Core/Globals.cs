@@ -1,7 +1,7 @@
 ﻿using System.Threading;
 using System.Windows;
 
-namespace IS3.Core
+namespace iS3.Core
 {
     #region Copyright Notice
     //************************  Notice  **********************************
@@ -27,7 +27,7 @@ namespace IS3.Core
     #endregion
 
     // Summary:
-    //     IS3 global variables
+    //     iS3 global variables
     // Remarks:
     //     project:
     //          project data
@@ -42,7 +42,7 @@ namespace IS3.Core
     //     isThreadUnsafe():
     //          Checks if the current thread is different from UI thread.
     //          This is very useful to diagnose problem such as Python functions
-    //          call to functions in IS3 classes failed.
+    //          call to functions in iS3 classes failed.
     //
     public static class Globals
     {

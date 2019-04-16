@@ -3,10 +3,10 @@ using System.Data;
 using System.Collections.Generic;
 using System.Windows;
 
-using IS3.Core.Serialization;
-using IS3.Core.Shape;
+using iS3.Core.Serialization;
+using iS3.Core.Shape;
 
-namespace IS3.Core
+namespace iS3.Core
 {
     #region Copyright Notice
     //************************  Notice  **********************************
@@ -88,25 +88,25 @@ namespace IS3.Core
         }
 
         [DataMember]
-        public int id 
+        public int ID 
         {
             get { return _id; }
             set { _id = value; }
         }
         [DataMember]
-        public string name 
+        public string Name 
         {
             get { return _name; }
             set { _name = value; }
         }
         [DataMember]
-        public string fullName 
+        public string FullName 
         {
             get { return _fullname; }
             set { _fullname = value; }
         }
         [DataMember]
-        public string description 
+        public string Description 
         {
             get { return _desc; }
             set { _desc = value; }
@@ -128,7 +128,7 @@ namespace IS3.Core
 
         public override string ToString()
         {
-            return string.Format("id={0}, name={1}", id, name);
+            return string.Format("id={0}, name={1}", ID, Name);
         }
 
         // Summary:
@@ -154,7 +154,7 @@ namespace IS3.Core
             string sql = "ID in (";
             foreach (var obj in objs)
             {
-                sql += obj.id.ToString();
+                sql += obj.ID.ToString();
                 sql += ",";
             }
             sql += ")";

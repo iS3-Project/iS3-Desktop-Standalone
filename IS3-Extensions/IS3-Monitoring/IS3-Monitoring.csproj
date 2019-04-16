@@ -7,8 +7,8 @@
     <ProjectGuid>{3077F2B4-1DF8-48B3-83F5-629FD727FA23}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>IS3.Monitoring</RootNamespace>
-    <AssemblyName>IS3.Monitoring</AssemblyName>
+    <RootNamespace>iS3.Monitoring</RootNamespace>
+    <AssemblyName>iS3.Monitoring</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,8 +30,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="IS3.Core">
-      <HintPath>..\..\Output\bin\IS3.Core.dll</HintPath>
+    <Reference Include="iS3.Core">
+      <HintPath>..\..\Output\bin\iS3.Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="PresentationCore" />

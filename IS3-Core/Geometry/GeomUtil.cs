@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using IS3.Core;
+using iS3.Core;
 
-namespace IS3.Core.Geometry
+namespace iS3.Core.Geometry
 {
     public class GeomUtil
     {
@@ -68,7 +68,7 @@ namespace IS3.Core.Geometry
             return false;
         }
 
-        #region from IS3.Core ArcGISMappingUtility.cs
+        #region from iS3.Core ArcGISMappingUtility.cs
         public static IMapPoint Center(IPolygon polygon)
         {
             IEnumerable<IMapPoint> pc = polygon.GetPoints();

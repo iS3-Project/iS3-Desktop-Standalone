@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="IS3.Desktop.UserControls.SelectionToolbar"
+﻿<UserControl x:Class="iS3.Desktop.UserControls.SelectionToolbar"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -8,27 +8,27 @@
     <UserControl.Resources>
         <Style x:Key="PointImage" TargetType="Image" >
             <Setter Property="Source" 
-                    Value="/IS3.Desktop;component/Images/DrawPoint.png" />
+                    Value="/iS3.Desktop;component/Images/DrawPoint.png" />
         </Style>
         <Style x:Key="PolylineImage" TargetType="Image" >
             <Setter Property="Source" 
-                    Value="/IS3.Desktop;component/Images/DrawPolyline.png" />
+                    Value="/iS3.Desktop;component/Images/DrawPolyline.png" />
         </Style>
         <Style x:Key="PolygonImage" TargetType="Image" >
             <Setter Property="Source" 
-                    Value="/IS3.Desktop;component/Images/DrawPolyline.png" />
+                    Value="/iS3.Desktop;component/Images/DrawPolyline.png" />
         </Style>
         <Style x:Key="RectangleImage" TargetType="Image" >
             <Setter Property="Source" 
-                    Value="/IS3.Desktop;component/Images/DrawRectangle.png" />
+                    Value="/iS3.Desktop;component/Images/DrawRectangle.png" />
         </Style>
         <Style x:Key="StopImage" TargetType="Image" >
             <Setter Property="Source" 
-                    Value="/IS3.Desktop;component/Images/StopDraw.png" />
+                    Value="/iS3.Desktop;component/Images/StopDraw.png" />
         </Style>
         <Style x:Key="ClearImage" TargetType="Image" >
             <Setter Property="Source" 
-                    Value="/IS3.Desktop;component/Images/Clear_selection.png" />
+                    Value="/iS3.Desktop;component/Images/Clear_selection.png" />
         </Style>
     </UserControl.Resources>
     <Grid>

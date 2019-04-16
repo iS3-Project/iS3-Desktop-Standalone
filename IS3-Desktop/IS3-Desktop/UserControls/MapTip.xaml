@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="IS3.Desktop.UserControls.MapTip"
+﻿<UserControl x:Class="iS3.Desktop.UserControls.MapTip"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -15,8 +15,8 @@
                     <TextBlock x:Name="className" FontWeight="Bold" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="{Binding id, StringFormat='ID={0}, '}" />
-                    <TextBlock Text="{Binding name, StringFormat='Name={0}'}"/>
+                    <TextBlock Text="{Binding ID, StringFormat='ID={0}, '}" />
+                    <TextBlock Text="{Binding Name, StringFormat='Name={0}'}"/>
                 </StackPanel>
             </StackPanel>
         </Border>

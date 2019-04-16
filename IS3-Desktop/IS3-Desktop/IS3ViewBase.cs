@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.ComponentModel;
 
-using IS3.Core;
+using iS3.Core;
 
-namespace IS3.Desktop
+namespace iS3.Desktop
 {
     //************************  Notice  **********************************
     //** This file is part of iS3

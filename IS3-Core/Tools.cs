@@ -2,7 +2,7 @@
 using System.Collections.ObjectModel;
 using System.Linq;
 
-namespace IS3.Core
+namespace iS3.Core
 {
     #region Copyright Notice
     //************************  Notice  **********************************

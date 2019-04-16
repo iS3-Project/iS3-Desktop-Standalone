@@ -8,11 +8,11 @@ using System.Data;
 using System.Data.Common;
 using System.Data.Odbc;
 
-using IS3.Core;
-using IS3.Core.Serialization;
-using IS3.Geology;
+using iS3.Core;
+using iS3.Core.Serialization;
+using iS3.Geology;
 
-namespace IS3.Geology.Serialization
+namespace iS3.Geology.Serialization
 {
     #region Copyright Notice
     //************************  Notice  **********************************
@@ -87,10 +87,10 @@ namespace IS3.Geology.Serialization
                     continue;
 
                 Borehole bh = new Borehole(row);
-                bh.id = ReadInt(row, "ID").Value;
-                bh.name = ReadString(row, "Name");
-                bh.fullName = ReadString(row, "FullName");
-                bh.description = ReadString(row, "Description");
+                bh.ID = ReadInt(row, "ID").Value;
+                bh.Name = ReadString(row, "Name");
+                bh.FullName = ReadString(row, "FullName");
+                bh.Description = ReadString(row, "Description");
                 bh.shape = ReadShape(row);
 
                 bh.Type = ReadString(row, "BoreholeType");
@@ -109,7 +109,7 @@ namespace IS3.Geology.Serialization
             foreach (Borehole bh in objs.values)
             {
                 var rows = from row in dt.AsEnumerable()
-                           where (int)row["BoreholeID"] == bh.id
+                           where (int)row["BoreholeID"] == bh.ID
                            orderby row["ElevationOfStratumBottom"] descending
                            select row;
 
@@ -188,8 +188,8 @@ namespace IS3.Geology.Serialization
             foreach (Borehole bh in objs.values)
             {
                 List<BoreholeGeology> geo = null;
-                if (strata_dict.ContainsKey(bh.id))
-                    geo = strata_dict[bh.id];
+                if (strata_dict.ContainsKey(bh.ID))
+                    geo = strata_dict[bh.ID];
                 else
                     continue;
 
@@ -238,11 +238,11 @@ namespace IS3.Geology.Serialization
                     continue;
 
                 Stratum st = new Stratum(row);
-                st.name = ReadString(row, "Name");
-                st.fullName = ReadString(row, "FullName");
-                st.description = ReadString(row, "Description");
+                st.Name = ReadString(row, "Name");
+                st.FullName = ReadString(row, "FullName");
+                st.Description = ReadString(row, "Description");
 
-                st.id = ReadInt(row, "ID").Value;
+                st.ID = ReadInt(row, "ID").Value;
                 st.GeologyAge = ReadString(row, "GeologicalAge");
                 st.FormationType = ReadString(row, "FormationType");
                 st.Compaction = ReadString(row, "Compaction");
@@ -290,8 +290,8 @@ namespace IS3.Geology.Serialization
                     continue;
 
                 SoilProperty soilProp = new SoilProperty(reader);
-                soilProp.id = ReadInt(reader, "ID").Value;
-                soilProp.name = ReadString(reader, "Name");
+                soilProp.ID = ReadInt(reader, "ID").Value;
+                soilProp.Name = ReadString(reader, "Name");
                 soilProp.StratumID = ReadInt(reader, "StratumID").Value;
                 soilProp.StratumSectionID = ReadInt(reader, "StratumSectionID");
 
@@ -369,8 +369,8 @@ namespace IS3.Geology.Serialization
                 if (IsDbNull(reader, "ID"))
                     continue;
                 StratumSection sec = new StratumSection(reader);
-                sec.id = ReadInt(reader, "ID").Value;
-                sec.name = ReadString(reader, "Name");
+                sec.ID = ReadInt(reader, "ID").Value;
+                sec.Name = ReadString(reader, "Name");
                 sec.StartMileage = ReadDouble(reader, "StartMileage");
                 sec.EndMileage = ReadDouble(reader, "EndMileage");
                 objs[sec.key] = sec;
@@ -411,7 +411,7 @@ namespace IS3.Geology.Serialization
                 if (IsDbNull(reader, "ID"))
                     continue;
                 RiverWater rw = new RiverWater(reader);
-                rw.id = ReadInt(reader, "ID").Value;
+                rw.ID = ReadInt(reader, "ID").Value;
                 rw.ObservationLocation = ReadString(reader, "ObservationLocation");
                 rw.HighestTidalLevel = ReadDouble(reader, "HighestTidalLevel");
                 rw.HighestTidalLevelDate = ReadDateTime(reader, "HighestTidalLevelDate");
@@ -460,7 +460,7 @@ namespace IS3.Geology.Serialization
                 if (IsDbNull(reader, "ID"))
                     continue;
                 PhreaticWater pw = new PhreaticWater(reader);
-                pw.id = ReadInt(reader, "ID").Value;
+                pw.ID = ReadInt(reader, "ID").Value;
                 pw.SiteName = ReadString(reader, "SiteName");
                 pw.AvBuriedDepth = ReadDouble(reader, "AvBuriedDepth");
                 pw.AvElevation = ReadDouble(reader, "AvElevation");
@@ -502,7 +502,7 @@ namespace IS3.Geology.Serialization
                 if (IsDbNull(reader, "ID"))
                     continue;
                 ConfinedWater cw = new ConfinedWater(reader);
-                cw.id = ReadInt(reader, "ID").Value;
+                cw.ID = ReadInt(reader, "ID").Value;
                 cw.BoreholeName = ReadString(reader, "BoreholeName");
                 cw.SiteName = ReadString(reader, "SiteName");
                 cw.TopElevation = ReadDouble(reader, "TopElevation");
@@ -549,7 +549,7 @@ namespace IS3.Geology.Serialization
                 if (IsDbNull(reader, "ID"))
                     continue;
                 WaterProperty wp = new WaterProperty(reader);
-                wp.id = ReadInt(reader, "ID").Value;
+                wp.ID = ReadInt(reader, "ID").Value;
                 wp.BoreholeName = ReadString(reader, "BoreholeName");
                 wp.Cl = ReadDouble(reader, "Cl");
                 wp.SO4 = ReadDouble(reader, "SO4");

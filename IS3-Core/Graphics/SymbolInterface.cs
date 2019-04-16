@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media;
 
-namespace IS3.Core.Graphics
+namespace iS3.Core.Graphics
 {
     // Represents the style of a ISimpleLineSymbol
     public enum SimpleLineStyle

@@ -1,10 +1,10 @@
 ﻿using System.Reflection;
 using System.IO;
 
-using IS3.Core.Graphics;
-using IS3.Core.Geometry;
+using iS3.Core.Graphics;
+using iS3.Core.Geometry;
 
-namespace IS3.Core
+namespace iS3.Core
 {
     #region Copyright Notice
     //************************  Notice  **********************************
@@ -64,7 +64,7 @@ namespace IS3.Core
             Runtime.rootPath = rootPath;
             Runtime.dataPath = dataPath;
             Runtime.tilePath = tilePath;
-            Runtime.configurationPath = rootPath + "\\IS3-Configuration\\DBconfig.xml";
+            Runtime.configurationPath = rootPath + "\\iS3-Configuration\\DBconfig.xml";
         }
 
         public static void initializeEngines(IGraphicEngine graphicEngine,

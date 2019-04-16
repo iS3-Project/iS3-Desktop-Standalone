@@ -14,7 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Collections;
 
-namespace IS3.Desktop.UserControls
+namespace iS3.Desktop.UserControls
 {
     public enum SelectionButtonEnum
     {

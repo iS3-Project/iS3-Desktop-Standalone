@@ -15,7 +15,7 @@ using System.IO;
 using System.Xml.Linq;
 using System.Windows.Markup;
 using System.Windows.Forms;
-using IS3.Core;
+using iS3.Core;
 
 namespace iS3.Config
 {

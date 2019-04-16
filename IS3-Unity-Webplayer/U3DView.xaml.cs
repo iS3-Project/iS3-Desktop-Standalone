@@ -13,10 +13,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-using IS3.Core;
-using IS3.Unity.Webplayer.UnityCore;
+using iS3.Core;
+using iS3.Unity.Webplayer.UnityCore;
 
-namespace IS3.Unity.Webplayer
+namespace iS3.Unity.Webplayer
 {
     //************************  Notice  **********************************
     //** This file is part of iS3

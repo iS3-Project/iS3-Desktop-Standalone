@@ -5,11 +5,11 @@ using System.Web;
 
 using System.Data;
 
-using IS3.Core;
-using IS3.Core.Serialization;
-using IS3.Geology.Serialization;
+using iS3.Core;
+using iS3.Core.Serialization;
+using iS3.Geology.Serialization;
 
-namespace IS3.Geology
+namespace iS3.Geology
 {
     #region Copyright Notice
     //************************  Notice  **********************************
@@ -68,7 +68,7 @@ namespace IS3.Geology
         {
             get
             {
-                return StratumSectionID.ToString() + ":" + name;
+                return StratumSectionID.ToString() + ":" + Name;
             }
         }
 

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 using Esri.ArcGISRuntime.Geometry;
 
-using IS3.Core.Geometry;
+using iS3.Core.Geometry;
 
-namespace IS3.ArcGIS.Geometry
+namespace iS3.ArcGIS.Geometry
 {
     #region Copyright Notice
     //************************  Notice  **********************************

@@ -1,4 +1,4 @@
-﻿using IS3.Unity.Webplayer.UnityCore;
+﻿using iS3.Unity.Webplayer.UnityCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;

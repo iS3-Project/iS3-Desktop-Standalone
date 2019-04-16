@@ -11,7 +11,7 @@ using Microsoft.Scripting.Hosting;
 using IronPython.Hosting;
 using IronPython.Runtime.Exceptions;
 
-namespace IS3.Python
+namespace iS3.Python
 {
     #region Copyright Notice
     //************************  Notice  **********************************

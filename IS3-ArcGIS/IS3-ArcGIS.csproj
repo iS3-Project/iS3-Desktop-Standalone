@@ -7,8 +7,8 @@
     <ProjectGuid>{3E9A8DED-38B8-4050-849C-08957AEB5FBF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>IS3.ArcGIS</RootNamespace>
-    <AssemblyName>IS3.ArcGIS</AssemblyName>
+    <RootNamespace>iS3.ArcGIS</RootNamespace>
+    <AssemblyName>iS3.ArcGIS</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -62,9 +62,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\IS3-Core\IS3-Core.csproj">
+    <ProjectReference Include="..\IS3-Core\iS3-Core.csproj">
       <Project>{4b8b162c-3658-4fcc-ab41-c0c85a7db281}</Project>
-      <Name>IS3-Core</Name>
+      <Name>iS3-Core</Name>
       <Private>False</Private>
     </ProjectReference>
   </ItemGroup>

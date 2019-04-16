@@ -11,9 +11,9 @@ using System.Windows.Controls;
 //
 //using System.Windows.Controls.DataVisualization.Charting;
 
-using IS3.Core;
+using iS3.Core;
 
-namespace IS3.Monitoring
+namespace iS3.Monitoring
 {
     // Summary:
     //     Charting using System.Windows.Controls.DataVisualization.Charting

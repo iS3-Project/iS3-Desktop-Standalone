@@ -8,7 +8,7 @@ using System.Data.Common;
 using System.Data.Odbc;
 using System.Data.OleDb;
 
-namespace IS3.Core.Serialization
+namespace iS3.Core.Serialization
 {
     public enum DbType { Unknown, MDB, XLS, SQLServer };
 

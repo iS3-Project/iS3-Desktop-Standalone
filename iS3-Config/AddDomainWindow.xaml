@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:System="clr-namespace:System;assembly=mscorlib"
-        xmlns:iS3Core="clr-namespace:IS3.Core;assembly=IS3.Core"
+        xmlns:iS3Core="clr-namespace:iS3.Core;assembly=iS3.Core"
         xmlns:local="clr-namespace:iS3.Config"
         mc:Ignorable="d"
         Title="Input domain information" Height="130" Width="350">

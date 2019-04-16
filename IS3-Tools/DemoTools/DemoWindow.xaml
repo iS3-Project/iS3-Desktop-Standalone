@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-        Title="Draw Segment Linings" Height="420" Width="400"
+        Title="Draw Rectangle" Height="420" Width="410"
         Topmost="True"
         ResizeMode="NoResize">
     <Grid>
@@ -11,23 +11,39 @@
                     Orientation="Vertical" Margin="5,5,5,0">
             <TextBlock Text="Input view:" Margin="0,5,5,0"/>
             <ComboBox x:Name="InputCB" Margin="0,5,5,0"
-                              DisplayMemberPath="eMap.MapID" SelectionChanged="InputCB_SelectionChanged"
+                              DisplayMemberPath="eMap.MapID" 
                               AllowDrop="True"/>
-            <TextBlock Text="Segment Linings:" Margin="0,5,5,0"/>
-            <ListBox x:Name="SLLB" Margin="0,5,5,0"
-                             DisplayMemberPath="name" IsEnabled="False"
-                             Height="100"/>
+            <TextBlock Text="Input the limit of the value:" Margin="0,5,5,0"/>
+            <TextBox x:Name="MPTB" Margin="0,5,5,0" Text="0.002"/>
+            <Button  Width="100" Click="reanalyze" Height="22" Margin="0,5,5,0" HorizontalAlignment="Left" Content="Reanalyze"/>
+            <TextBlock Text="Results:" Margin="0,5,5,0"/>
+            <ListBox x:Name="MPLB" Margin="0,5,5,0" 
+                              IsEnabled="True"
+                             Height="168" DataContext="binding "/>
+            <TextBlock Margin="0,5,5,0"><Run Text="Remark: Different color "/><Run Text="-&gt;"/><Run Text="amounts of"/><Run Text=" data"/><Run Text=" which"/><Run Text=" exceeds the limit"/></TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Width="10" Background="green" Margin="5,0,5,0"/>
+                <TextBlock Text="0-50"/>
+                <TextBlock Width="10" Background="LightGreen" Margin="5,0,5,0"/>
+                <TextBlock Text="51-150"/>
+                <TextBlock Width="10" Background="Yellow" Margin="5,0,5,0"/>
+                <TextBlock Text="151-250"/>
+                <TextBlock Width="10" Background="Orange" Margin="5,0,5,0"/>
+                <TextBlock Text="251-350"/>
+                <TextBlock Width="10" Background="Red" Margin="5,0,5,0"/>
+                <TextBlock Text=">350"/>
+            </StackPanel>
         </StackPanel>
 
         <StackPanel Orientation="Horizontal"
                     HorizontalAlignment="Right"
                     VerticalAlignment="Bottom"
                     Margin="0,0,10,10">
-            <Button Content="Start"
-                    Click="Start_Click"
+            <Button Content="Draw"
+                    Click="Start_click"
                     Width="100"/>
             <Button Content="Cancel"
-                    Click="Cancel_Click"
+                    Click="cancel_click"
                     Width="100"
                     Margin="20,0,0,0"/>
         </StackPanel>

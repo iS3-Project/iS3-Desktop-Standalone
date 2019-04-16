@@ -50,22 +50,7 @@
   <ItemGroup>
     <Reference Include="Esri.ArcGISRuntime, Version=10.2.5.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Output\libs\arcgis\Esri.ArcGISRuntime.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="IS3.ArcGIS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Output\bin\IS3.ArcGIS.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="IS3.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Output\bin\IS3.Core.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="IS3.Unity.Webplayer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Output\bin\IS3.Unity.Webplayer.dll</HintPath>
+      <HintPath>..\Output\libs\Esri.ArcGISRuntime.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -266,6 +251,23 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IS3-ArcGIS\iS3-ArcGIS.csproj">
+      <Project>{3e9a8ded-38b8-4050-849c-08957aeb5fbf}</Project>
+      <Name>iS3-ArcGIS</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\IS3-Core\iS3-Core.csproj">
+      <Project>{4b8b162c-3658-4fcc-ab41-c0c85a7db281}</Project>
+      <Name>iS3-Core</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\IS3-Unity-Webplayer\iS3-Unity-Webplayer.csproj">
+      <Project>{9d38c271-eb97-46d0-862e-8dd70d3f13d1}</Project>
+      <Name>iS3-Unity-Webplayer</Name>
+      <Private>False</Private>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

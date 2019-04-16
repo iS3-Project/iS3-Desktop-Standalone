@@ -5,12 +5,12 @@ using System.Web;
 using System.Data;
 using System.Windows;
 
-using IS3.Core;
-using IS3.Core.Serialization;
-using IS3.Geology.Serialization;
-using IS3.Geology.UserControls;
+using iS3.Core;
+using iS3.Core.Serialization;
+using iS3.Geology.Serialization;
+using iS3.Geology.UserControls;
 
-namespace IS3.Geology
+namespace iS3.Geology
 {
     #region Copyright Notice
     //************************  Notice  **********************************
@@ -105,7 +105,7 @@ namespace IS3.Geology
             string sql = "BoreholeID in (";
             foreach (var obj in objs)
             {
-                sql += obj.id.ToString();
+                sql += obj.ID.ToString();
                 sql += ",";
             }
             sql += ")";

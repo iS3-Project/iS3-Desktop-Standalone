@@ -12,9 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-using IS3.Core;
+using iS3.Core;
 
-namespace IS3.Desktop.UserControls
+namespace iS3.Desktop.UserControls
 {
     /// <summary>
     /// Interaction logic for EditELayerWindow.xaml

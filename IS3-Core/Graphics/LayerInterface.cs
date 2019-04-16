@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using System.Collections;
 using System.Windows.Media;
 
-using IS3.Core.Geometry;
+using iS3.Core.Geometry;
 
-namespace IS3.Core.Graphics
+namespace iS3.Core.Graphics
 {
     // interface for graphics layer
     public interface IGraphicsLayer

@@ -7,8 +7,8 @@
     <ProjectGuid>{C88A7984-B96D-49A7-80A9-23AB3D0B5EF4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>IS3.Geology</RootNamespace>
-    <AssemblyName>IS3.Geology</AssemblyName>
+    <RootNamespace>iS3.Geology</RootNamespace>
+    <AssemblyName>iS3.Geology</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>
@@ -34,8 +34,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="IS3.Core">
-      <HintPath>..\..\Output\bin\IS3.Core.dll</HintPath>
+    <Reference Include="iS3.Core">
+      <HintPath>..\..\Output\bin\iS3.Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="PresentationCore" />

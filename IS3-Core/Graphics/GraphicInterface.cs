@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
 
-using IS3.Core.Geometry;
+using iS3.Core.Geometry;
 
-namespace IS3.Core.Graphics
+namespace iS3.Core.Graphics
 {
     // interface for graphic
     public interface IGraphic

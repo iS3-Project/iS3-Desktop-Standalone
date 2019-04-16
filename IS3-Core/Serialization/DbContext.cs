@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.Common;
 
-namespace IS3.Core.Serialization
+namespace iS3.Core.Serialization
 {
     // Provide a ready-use database context.
     // 

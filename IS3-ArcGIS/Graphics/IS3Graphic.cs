@@ -8,12 +8,12 @@ using System.Collections;
 using Esri.ArcGISRuntime.Layers;
 using Esri.ArcGISRuntime.Symbology;
 
-using IS3.Core;
-using IS3.Core.Geometry;
-using IS3.Core.Graphics;
-using IS3.ArcGIS.Geometry;
+using iS3.Core;
+using iS3.Core.Geometry;
+using iS3.Core.Graphics;
+using iS3.ArcGIS.Geometry;
 
-namespace IS3.ArcGIS.Graphics
+namespace iS3.ArcGIS.Graphics
 {
     #region Copyright Notice
     //************************  Notice  **********************************

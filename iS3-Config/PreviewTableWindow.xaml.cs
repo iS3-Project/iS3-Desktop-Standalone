@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Data;
-using IS3.Core;
+using iS3.Core;
 
 namespace iS3.Config
 {

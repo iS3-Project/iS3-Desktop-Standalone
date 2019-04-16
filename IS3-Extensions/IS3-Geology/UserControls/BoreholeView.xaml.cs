@@ -10,9 +10,9 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 
-using IS3.Core;
+using iS3.Core;
 
-namespace IS3.Geology.UserControls
+namespace iS3.Geology.UserControls
 {
     public partial class BoreholeView : UserControl
     {
@@ -50,7 +50,7 @@ namespace IS3.Geology.UserControls
             //
             TextBlock tbName = new TextBlock();
             tbName.Foreground = redBrush;
-            tbName.Text = Borehole.name;
+            tbName.Text = Borehole.Name;
             tbName.FontWeight = FontWeights.Bold;
             Canvas.SetLeft(tbName, 0);
             Canvas.SetTop(tbName, -20);
@@ -81,7 +81,7 @@ namespace IS3.Geology.UserControls
                 if (Strata != null)
                 {
                     Stratum stratum = Strata[bhGeo.StratumID] as Stratum;
-                    tbStratumName.Text = stratum.name;
+                    tbStratumName.Text = stratum.Name;
                 }
                 else
                     tbStratumName.Text = bhGeo.StratumID.ToString();

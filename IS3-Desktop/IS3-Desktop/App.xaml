@@ -1,4 +1,4 @@
-﻿<Application x:Class="IS3.Desktop.App"
+﻿<Application x:Class="iS3.Desktop.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:esri="http://schemas.esri.com/arcgis/runtime/2013"

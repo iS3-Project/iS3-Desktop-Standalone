@@ -12,9 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.IO;
-using IS3.Core;
-using IS3.Unity.Webplayer;
-using IS3.Unity.Webplayer.UnityCore;
+using iS3.Core;
+using iS3.Unity.Webplayer;
+using iS3.Unity.Webplayer.UnityCore;
 
 namespace iS3.Config
 {

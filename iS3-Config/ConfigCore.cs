@@ -9,7 +9,7 @@ using System.Windows.Markup;
 using System.Xml;
 using System.Xml.Serialization;
 using System.Xml.Linq;
-using IS3.Core;
+using iS3.Core;
 
 namespace iS3.Config
 {
@@ -80,7 +80,7 @@ namespace iS3.Config
                 XmlRoot = new XmlRootAttribute()
                 {
                     ElementName = "ProjectList",
-                    Namespace = "clr-namespace:IS3.Core;assembly=IS3.Core"
+                    Namespace = "clr-namespace:iS3.Core;assembly=iS3.Core"
                 }
             });
 
@@ -130,17 +130,20 @@ namespace iS3.Config
                 if (root == null || root.Name != "Project")
                     return null;
 
-                XNamespace is3 = "clr-namespace:IS3.Core;assembly=IS3.Core";
-                XElement node = root.Element(is3 + "ProjectDefinition");
+                XNamespace iS3 = "clr-namespace:iS3.Core;assembly=iS3.Core";
+                XElement node = root.Element(iS3 + "ProjectDefinition");
                 if (node != null)
                 {
                     object obj = XamlReader.Parse(node.ToString());
                     projDef = (ProjectDefinition)obj;
 
-                    if (projDef.LocalFilePath == null || projDef.LocalFilePath.Length == 0)
-                        projDef.LocalFilePath = projPath + "\\" + projID;
-                    if (projDef.LocalTilePath == null || projDef.LocalTilePath.Length == 0)
-                        projDef.LocalTilePath = projPath + "\\" + "TPKs";
+                    projDef.LocalFilePath = AppDomain.CurrentDomain.BaseDirectory + @"Data\" + projID;
+                    projDef.LocalTilePath = AppDomain.CurrentDomain.BaseDirectory + @"Data\TPKs";
+
+                    //if (projDef.LocalFilePath == null || projDef.LocalFilePath.Length == 0)
+                    //    projDef.LocalFilePath = projPath + "\\" + projID;
+                    //if (projDef.LocalTilePath == null || projDef.LocalTilePath.Length == 0)
+                    //    projDef.LocalTilePath = projPath + "\\" + "TPKs";
                 }
 
                 reader.Close();
@@ -192,7 +195,7 @@ namespace iS3.Config
             XElement root = XElement.Parse(strEmap);
 
             // Find the <EngineeringMap.LocalGdbLayersDef> element
-            XNamespace xns = "clr-namespace:IS3.Core;assembly=IS3.Core";
+            XNamespace xns = "clr-namespace:iS3.Core;assembly=iS3.Core";
             XName xname = xns + "EngineeringMap.LocalGdbLayersDef";
             XElement xelm = root.Element(xname);
 
@@ -231,7 +234,7 @@ namespace iS3.Config
             XElement root = XElement.Parse(strPrjDef);
 
             // Find the <ProjectDefinition.EngineeringMap> element and remove it because we don't use it.
-            XNamespace xns = "clr-namespace:IS3.Core;assembly=IS3.Core";
+            XNamespace xns = "clr-namespace:iS3.Core;assembly=iS3.Core";
             XName xname = xns + "ProjectDefinition.SubProjectInfos";
             XElement xelm = root.Element(xname);
             xelm.Remove();
@@ -337,6 +340,9 @@ namespace iS3.Config
             ProjectDefinition prjDef, Project prj)
         {
             string fileName = projPath + "\\" + projID + ".xml";
+            prjDef.LocalFilePath = @"Data\" + projID;
+            prjDef.LocalTilePath = @"Data\TPKs";
+
 
             string strPrjDef = ProjectDefinition2string(prjDef);
             strPrjDef = "\r\n" + strPrjDef + "\r\n";
@@ -426,18 +432,19 @@ namespace iS3.Config
             string template = 
                 "# -*- coding:gb2312 -*-\r\n"+
                 "import is3\r\n"+
-                "is3.mainframe.LoadProject('{0}')\r\n"+
-                "is3.prj = is3.mainframe.prj\r\n"+
-                "is3.MainframeWrapper.loadDomainPanels()\r\n"+
-                "for emap in is3.prj.projDef.EngineeringMaps:\r\n"+
-                "    is3.MainframeWrapper.addView(emap)\r\n"+
+                "is3.mainframe.LoadProject('{0}')\r\n" +
+                "is3.prj = is3.mainframe.prj\r\n" +
+                "is3.MainframeWrapper.loadDomainPanels()\r\n" +
+                "for emap in is3.prj.projDef.EngineeringMaps:\r\n" +
+                "    is3.MainframeWrapper.addView(emap)\r\n" +
                 "{1}\r\n";
 
-            string pyPath = iS3Path + "\\IS3Py\\";
+            string pyPath = iS3Path + "\\Data\\"+ projID+"\\";
             string templateFile = "__template__.py";
             string pyFile = pyPath + projID + ".py";
             string unityFile = projID + ".unity3d";
             string xmlFile = projID + ".xml";
+
 
             string templateFilePath = pyPath + templateFile;
             if (File.Exists(templateFilePath))

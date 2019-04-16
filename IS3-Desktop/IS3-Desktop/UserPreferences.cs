@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.ComponentModel;
 
-namespace IS3.Desktop
+namespace iS3.Desktop
 {
     public class UserPreferences
     {

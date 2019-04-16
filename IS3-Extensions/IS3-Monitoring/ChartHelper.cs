@@ -31,7 +31,7 @@ using System.Windows;
 using System.Windows.Forms.Integration;
 using System.Windows.Forms.DataVisualization.Charting;
 
-namespace IS3.Monitoring
+namespace iS3.Monitoring
 {
     public static class ChartHelper
     {

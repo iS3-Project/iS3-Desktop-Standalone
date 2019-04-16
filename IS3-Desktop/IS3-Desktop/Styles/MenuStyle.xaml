@@ -36,42 +36,42 @@
 
     <!-- Main Menu Images -->
     <Style x:Key="geologyImage-48" TargetType="Image" >
-        <Setter Property="Source" Value="/IS3.Desktop;component/Images/Geology-48.png" />
+        <Setter Property="Source" Value="/iS3.Desktop;component/Images/Geology-48.png" />
     </Style>
     <Style x:Key="monitoringImage" TargetType="Image" >
-        <Setter Property="Source" Value="/IS3.Desktop;component/Images/Monitoring-48.png" />
+        <Setter Property="Source" Value="/iS3.Desktop;component/Images/Monitoring-48.png" />
     </Style>
     <Style x:Key="analysisImage" TargetType="Image" >
-        <Setter Property="Source" Value="/IS3.Desktop;component/Images/light.png" />
+        <Setter Property="Source" Value="/iS3.Desktop;component/Images/light.png" />
     </Style>
     <Style x:Key="projectMapsImage" TargetType="Image" >
-        <Setter Property="Source" Value="/IS3.Desktop;component/Images/cube-48.png" />
+        <Setter Property="Source" Value="/iS3.Desktop;component/Images/cube-48.png" />
     </Style>
     <Style x:Key="projectMapLayersImage" TargetType="Image" >
-        <Setter Property="Source" Value="/IS3.Desktop;component/Images/ProjectMapLayer.png" />
+        <Setter Property="Source" Value="/iS3.Desktop;component/Images/ProjectMapLayer.png" />
     </Style>
 
     <!-- Images -->
     <Style x:Key="overviewImage" TargetType="Image" >
-        <Setter Property="Source" Value="/IS3.Desktop;component/Images/i_overview.png" />
+        <Setter Property="Source" Value="/iS3.Desktop;component/Images/i_overview.png" />
     </Style>
     <Style x:Key="compassImage" TargetType="Image" >
-        <Setter Property="Source" Value="/IS3.Desktop;component/Images/i_nav.png" />
+        <Setter Property="Source" Value="/iS3.Desktop;component/Images/i_nav.png" />
     </Style>
     <Style x:Key="aboutImage" TargetType="Image" >
-        <Setter Property="Source" Value="/IS3.Desktop;component/Images/i_about.png" />
+        <Setter Property="Source" Value="/iS3.Desktop;component/Images/i_about.png" />
     </Style>
     <Style x:Key="fullScreenImage" TargetType="Image" >
-        <Setter Property="Source" Value="/IS3.Desktop;component/Images/Fullscreen-32.png" />
+        <Setter Property="Source" Value="/iS3.Desktop;component/Images/Fullscreen-32.png" />
     </Style>
     <Style x:Key="globeImage" TargetType="Image" >
-        <Setter Property="Source" Value="/IS3.Desktop;component/Images/blue_globe.png" />
+        <Setter Property="Source" Value="/iS3.Desktop;component/Images/blue_globe.png" />
     </Style>
     <Style x:Key="layersImage" TargetType="Image" >
-        <Setter Property="Source" Value="/IS3.Desktop;component/Images/Layers-48.png" />
+        <Setter Property="Source" Value="/iS3.Desktop;component/Images/Layers-48.png" />
     </Style>
     <Style x:Key="homeImage" TargetType="Image" >
-        <Setter Property="Source" Value="/IS3.Desktop;component/Images/Home-48.png" />
+        <Setter Property="Source" Value="/iS3.Desktop;component/Images/Home-48.png" />
     </Style>
 
     <Style x:Key="MenuToolbarButton" TargetType="Button">

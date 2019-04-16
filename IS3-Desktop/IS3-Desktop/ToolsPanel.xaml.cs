@@ -14,9 +14,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-using IS3.Core;
+using iS3.Core;
 
-namespace IS3.Desktop
+namespace iS3.Desktop
 {
     //************************  Notice  **********************************
     //** This file is part of iS3

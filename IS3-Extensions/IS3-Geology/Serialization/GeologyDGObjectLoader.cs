@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using IS3.Core;
-using IS3.Core.Serialization;
+using iS3.Core;
+using iS3.Core.Serialization;
 
-namespace IS3.Geology.Serialization
+namespace iS3.Geology.Serialization
 {
     #region Copyright Notice
     //************************  Notice  **********************************

@@ -36,9 +36,9 @@ using System.Windows.Shapes;
 using System.Windows.Forms.Integration;
 using System.Windows.Forms.DataVisualization.Charting;
 
-using IS3.Core;
+using iS3.Core;
 
-namespace IS3.Monitoring
+namespace iS3.Monitoring
 {
     public partial class MonGroupChartLinearX : MonGroupChart
     {
@@ -107,7 +107,7 @@ namespace IS3.Monitoring
                     series1.ChartType = SeriesChartType.Line;
                     series1.ChartArea = "ChartArea1";
                     series1.Name = string.Format("{0}: {1} ({2:d})",
-                        monGroup.name, key, time);
+                        monGroup.Name, key, time);
                     series1.BorderWidth = 2;
                     series1.MarkerStyle = (MarkerStyle)(markStyle++ % 9);
                     series1.MarkerSize = 8;
@@ -123,7 +123,7 @@ namespace IS3.Monitoring
                         double y = reading.value * _sign;
                         DataPoint dataPoint = new DataPoint(x, y);
                         if (_showName)
-                            dataPoint.Label = monPoint.name;
+                            dataPoint.Label = monPoint.Name;
                         dataPoint.ToolTip = "#VALY";
                         series1.Points.Add(dataPoint);
                     }

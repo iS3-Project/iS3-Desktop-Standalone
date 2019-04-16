@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IS3.Core.Geometry
+namespace iS3.Core.Geometry
 {
     // Interface for geometry engine: generate geometry objects
     public interface IGeometryEngine

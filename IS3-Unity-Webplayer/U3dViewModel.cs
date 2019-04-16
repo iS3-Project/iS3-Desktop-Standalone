@@ -4,12 +4,12 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Controls;
-using IS3.Core;
-using IS3.Core.Geometry;
-using IS3.Core.Graphics;
-using IS3.Unity.Webplayer.UnityCore;
+using iS3.Core;
+using iS3.Core.Geometry;
+using iS3.Core.Graphics;
+using iS3.Unity.Webplayer.UnityCore;
 
-namespace IS3.Unity.Webplayer
+namespace iS3.Unity.Webplayer
 {
     public class U3dViewModel : IView
     {
@@ -35,10 +35,16 @@ namespace IS3.Unity.Webplayer
             if (obj == null || obj.parent == null || (obj.parent.definition.Has3D == false))
                 return;
 
-            SetObjSelectStateMessage message = new SetObjSelectStateMessage();
-            message.path = obj.parent.definition.Layer3DName + "/" + obj.fullName;
-            message.iSSelected = on;
-            ExcuteCommand(message);
+            //id or name related
+            SetObjSelectStateMessage messageByID = new SetObjSelectStateMessage();
+            messageByID.path = obj.parent.definition.Layer3DName + "/" + obj.ID;
+            messageByID.iSSelected = on;
+            ExcuteCommand(messageByID);
+
+            SetObjSelectStateMessage messageByName = new SetObjSelectStateMessage();
+            messageByName.path = obj.parent.definition.Layer3DName + "/" + obj.Name;
+            messageByName.iSSelected = on;
+            ExcuteCommand(messageByName);
         }
         public void highlightObjects(IEnumerable<DGObject> objs, bool on = true)
         {
@@ -140,7 +146,7 @@ namespace IS3.Unity.Webplayer
         public void Load3DScene()
         {
             // check file exists
-            string filePath = prj.projDef.LocalFilePath + "\\"
+            string filePath = Runtime.rootPath+"\\"+ prj.projDef.LocalFilePath + "\\"
                 + eMap.LocalMapFileName;
             if (File.Exists(filePath))
             {
@@ -187,7 +193,7 @@ namespace IS3.Unity.Webplayer
                                     {
                                         foreach (DGObject _obj in objs.values)
                                         {
-                                            if ((_obj.id == id)||(_obj.name==id.ToString()))
+                                            if ((_obj.ID == id)||(_obj.Name==id.ToString()))
                                             {
                                                 obj = _obj;
                                                 break;
@@ -293,7 +299,7 @@ namespace IS3.Unity.Webplayer
         #region send function
         public string TurnObjToName(DGObject obj)
         {
-            string result = obj.name;
+            string result = obj.Name;
             result = obj.parent.definition.Name + "+" + result;
             result = obj.parent.parent.name + "+" + result;
             result = Globals.project.projDef.ID + "+" + result;

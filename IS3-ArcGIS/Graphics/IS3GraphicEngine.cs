@@ -8,14 +8,14 @@ using System.Windows;
 using System.Windows.Media;
 using System.Collections.ObjectModel;
 
-using IS3.Core;
-using IS3.Core.Graphics;
-using IS3.Core.Geometry;
-using IS3.ArcGIS.Geometry;
+using iS3.Core;
+using iS3.Core.Graphics;
+using iS3.Core.Geometry;
+using iS3.ArcGIS.Geometry;
 
 using Esri.ArcGISRuntime.Symbology;
 
-namespace IS3.ArcGIS.Graphics
+namespace iS3.ArcGIS.Graphics
 {
     #region Copyright Notice
     //************************  Notice  **********************************
@@ -192,7 +192,7 @@ namespace IS3.ArcGIS.Graphics
             return new IS3SimpleLineSymbol();
         }
         public ISimpleLineSymbol newSimpleLineSymbol(Color color,
-            IS3.Core.Graphics.SimpleLineStyle style, double width)
+            iS3.Core.Graphics.SimpleLineStyle style, double width)
         {
             IS3SimpleLineSymbol symbol = new IS3SimpleLineSymbol();
             symbol.Color = color;
@@ -207,7 +207,7 @@ namespace IS3.ArcGIS.Graphics
             return new IS3SimpleFillSymbol();
         }
         public ISimpleFillSymbol newSimpleFillSymbol(Color color,
-            IS3.Core.Graphics.SimpleFillStyle style,
+            iS3.Core.Graphics.SimpleFillStyle style,
             ISimpleLineSymbol outline)
         {
             IS3SimpleFillSymbol symbol = new IS3SimpleFillSymbol();
@@ -223,7 +223,7 @@ namespace IS3.ArcGIS.Graphics
             return new IS3SimpleMarkerSymbol();
         }
         public ISimpleMarkerSymbol newSimpleMarkerSymbol(Color color,
-            double size, IS3.Core.Graphics.SimpleMarkerStyle style)
+            double size, iS3.Core.Graphics.SimpleMarkerStyle style)
         {
             IS3SimpleMarkerSymbol symbol = new IS3SimpleMarkerSymbol();
             symbol.Color = color;
@@ -232,8 +232,8 @@ namespace IS3.ArcGIS.Graphics
             return symbol;
         }
         public ISimpleMarkerSymbol newSimpleMarkerSymbol(Color color,
-            double angle, IS3.Core.Graphics.MarkerAngleAlignment angleAlignment,
-            double size, IS3.Core.Graphics.SimpleMarkerStyle style,
+            double angle, iS3.Core.Graphics.MarkerAngleAlignment angleAlignment,
+            double size, iS3.Core.Graphics.SimpleMarkerStyle style,
             ISimpleLineSymbol outline,
             double xOffset, double yOffset)
         {

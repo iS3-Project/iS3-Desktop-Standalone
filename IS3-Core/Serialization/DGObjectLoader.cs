@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IS3.Core.Serialization
+namespace iS3.Core.Serialization
 {
     // This is a default object loader for DGObject.
     // You are encouraged to write your object loader for each 

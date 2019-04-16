@@ -19,9 +19,9 @@ using Esri.ArcGISRuntime.Layers;
 using Esri.ArcGISRuntime.Geometry;
 using Esri.ArcGISRuntime.Symbology;
 
-using IS3.Core;
+using iS3.Core;
 
-namespace IS3.Desktop
+namespace iS3.Desktop
 {
     //************************  Notice  **********************************
     //** This file is part of iS3
@@ -75,7 +75,7 @@ namespace IS3.Desktop
             try
             {
                 await _pinMarkerSymbol.SetSourceAsync(
-                    new Uri("pack://application:,,,/IS3.Desktop;component/Images/pin_red.png"));
+                    new Uri("pack://application:,,,/iS3.Desktop;component/Images/pin_red.png"));
             }
             catch (Exception ex)
             {

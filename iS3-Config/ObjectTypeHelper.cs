@@ -64,7 +64,7 @@ namespace iS3.Config
             {
                 // call init() function in the loaded assembly
                 var types = from type in assembly.GetTypes()
-                            where type.IsSubclassOf(typeof(IS3.Core.DGObject))
+                            where type.IsSubclassOf(typeof(iS3.Core.DGObject))
                             select type;
                 foreach (var type in types)
                 {

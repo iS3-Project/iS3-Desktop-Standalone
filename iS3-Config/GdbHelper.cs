@@ -8,10 +8,10 @@ using Esri.ArcGISRuntime.Data;
 using Esri.ArcGISRuntime.Controls;
 using Esri.ArcGISRuntime.Geometry;
 using Esri.ArcGISRuntime.Layers;
-using IS3.Core;
-using IS3.Core.Graphics;
-using IS3.ArcGIS.Graphics;
-using IS3.ArcGIS.Geometry;
+using iS3.Core;
+using iS3.Core.Graphics;
+using iS3.ArcGIS.Graphics;
+using iS3.ArcGIS.Geometry;
 
 namespace iS3.Config
 {
@@ -110,7 +110,7 @@ namespace iS3.Config
             IS3GraphicsLayer gLayer = new IS3GraphicsLayer();
             gLayer.DisplayName = table.Name;
             gLayer.GraphicsSource = graphics;
-            gLayer.geometryType = (IS3.Core.Geometry.GeometryType)(int)table.GeometryType;
+            gLayer.geometryType = (iS3.Core.Geometry.GeometryType)(int)table.GeometryType;
             //gLayer.FullExtent = table.Extent;
 
             return gLayer;
@@ -151,7 +151,7 @@ namespace iS3.Config
         //     which is specified in the LayerDef
         //
         static AttributeLabelClass generateLayerAttributeLable(LayerDef layerDef,
-            IS3.Core.Geometry.GeometryType geometryType)
+            iS3.Core.Geometry.GeometryType geometryType)
         {
             if (layerDef == null)
                 return generateDefaultLayerAttributeLable(geometryType);
@@ -175,7 +175,7 @@ namespace iS3.Config
             labelClass.WhereClause = layerDef.LabelWhereClause;
             labelClass.Symbol = textSymbol;
 
-            if (geometryType == IS3.Core.Geometry.GeometryType.Polygon)
+            if (geometryType == iS3.Core.Geometry.GeometryType.Polygon)
                 labelClass.LabelPlacement = LabelPlacement.PolygonAlwaysHorizontal;
 
             return labelClass;
@@ -186,7 +186,7 @@ namespace iS3.Config
         //     Generate a default label attributes according to the GeometryType
         //     The default labelling property of a feature is [Name]
         //
-        static AttributeLabelClass generateDefaultLayerAttributeLable(IS3.Core.Geometry.GeometryType geometryType)
+        static AttributeLabelClass generateDefaultLayerAttributeLable(iS3.Core.Geometry.GeometryType geometryType)
         {
             IS3TextSymbol textSymbol = new IS3TextSymbol();
             textSymbol.Color = System.Windows.Media.Colors.Black;
@@ -196,35 +196,35 @@ namespace iS3.Config
             labelClass.TextExpression = "[Name]";
             labelClass.Symbol = textSymbol;
 
-            if (geometryType == IS3.Core.Geometry.GeometryType.Polygon)
+            if (geometryType == iS3.Core.Geometry.GeometryType.Polygon)
                 labelClass.LabelPlacement = LabelPlacement.PolygonAlwaysHorizontal;
 
             return labelClass;
         }
 
-        public static LayerDef GenerateDefaultLayerDef(string name, IS3.Core.Geometry.GeometryType geomType)
+        public static LayerDef GenerateDefaultLayerDef(string name, iS3.Core.Geometry.GeometryType geomType)
         {
             LayerDef lyrDef = new LayerDef();
             lyrDef.Name = name;
             lyrDef.IsVisible = true;
-            if (geomType == IS3.Core.Geometry.GeometryType.Point)
+            if (geomType == iS3.Core.Geometry.GeometryType.Point)
             {
-                lyrDef.GeometryType = IS3.Core.Geometry.GeometryType.Point;
+                lyrDef.GeometryType = iS3.Core.Geometry.GeometryType.Point;
                 lyrDef.Color = Colors.Red;
                 lyrDef.FillStyle = SimpleFillStyle.Solid;
                 lyrDef.EnableLabel = true;
                 lyrDef.LabelTextExpression = "[Name]";
             }
-            else if (geomType == IS3.Core.Geometry.GeometryType.Polyline)
+            else if (geomType == iS3.Core.Geometry.GeometryType.Polyline)
             {
-                lyrDef.GeometryType = IS3.Core.Geometry.GeometryType.Polyline;
+                lyrDef.GeometryType = iS3.Core.Geometry.GeometryType.Polyline;
                 lyrDef.OutlineColor = Colors.Green;
                 lyrDef.Color = Colors.Green;
                 lyrDef.FillStyle = SimpleFillStyle.Solid;
             }
-            else if (geomType == IS3.Core.Geometry.GeometryType.Polygon)
+            else if (geomType == iS3.Core.Geometry.GeometryType.Polygon)
             {
-                lyrDef.GeometryType = IS3.Core.Geometry.GeometryType.Polygon;
+                lyrDef.GeometryType = iS3.Core.Geometry.GeometryType.Polygon;
                 lyrDef.OutlineColor = Colors.Blue;
                 lyrDef.Color = Colors.Blue;
                 lyrDef.FillStyle = SimpleFillStyle.Solid;
@@ -235,18 +235,18 @@ namespace iS3.Config
 
         public static LayerDef GenerateDefaultLayerDef(GeodatabaseFeatureTable table)
         {
-            IS3.Core.Geometry.GeometryType geomType = IS3.Core.Geometry.GeometryType.Point;
+            iS3.Core.Geometry.GeometryType geomType = iS3.Core.Geometry.GeometryType.Point;
             if (table.GeometryType == GeometryType.Point)
             {
-                geomType = IS3.Core.Geometry.GeometryType.Point;
+                geomType = iS3.Core.Geometry.GeometryType.Point;
             }
             else if (table.GeometryType == GeometryType.Polyline)
             {
-                geomType = IS3.Core.Geometry.GeometryType.Polyline;
+                geomType = iS3.Core.Geometry.GeometryType.Polyline;
             }
             else if (table.GeometryType == GeometryType.Polygon)
             {
-                geomType = IS3.Core.Geometry.GeometryType.Polygon;
+                geomType = iS3.Core.Geometry.GeometryType.Polygon;
             }
             return GenerateDefaultLayerDef(table.Name, geomType);
         }

@@ -9,7 +9,7 @@ using System.Windows.Media;
 //     All classes in this file are intended for symbol definiton only,
 //     e.g., in XML definition.
 
-namespace IS3.Core.Graphics
+namespace iS3.Core.Graphics
 {
     public class SymbolDef { }
 

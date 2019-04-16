@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-namespace IS3.Unity.Webplayer.UnityCore
+namespace iS3.Unity.Webplayer.UnityCore
 {
     public class LoadingCompleteMessage :iS3UnityMessage
     {

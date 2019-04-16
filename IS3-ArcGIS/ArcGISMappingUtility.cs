@@ -9,9 +9,9 @@ using Esri.ArcGISRuntime.Layers;
 using Esri.ArcGISRuntime.Geometry;
 using Esri.ArcGISRuntime.Symbology;
 
-using IS3.Core.Geometry;
+using iS3.Core.Geometry;
 
-namespace IS3.ArcGIS
+namespace iS3.ArcGIS
 {
     #region Copyright Notice
     //************************  Notice  **********************************

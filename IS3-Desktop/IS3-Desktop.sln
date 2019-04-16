@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IS3-Desktop", "IS3-Desktop\IS3-Desktop.csproj", "{27E8435C-B314-434A-BB39-57CB53AC3A09}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iS3-Desktop", "IS3-Desktop\iS3-Desktop.csproj", "{27E8435C-B314-434A-BB39-57CB53AC3A09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IS3-ArcGIS", "..\IS3-ArcGIS\IS3-ArcGIS.csproj", "{3E9A8DED-38B8-4050-849C-08957AEB5FBF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iS3-ArcGIS", "..\IS3-ArcGIS\iS3-ArcGIS.csproj", "{3E9A8DED-38B8-4050-849C-08957AEB5FBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IS3-Python", "..\IS3-Python\IS3-Python\IS3-Python.csproj", "{E6F7F4AD-0E87-45D7-BD80-D66C99379692}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iS3-Python", "..\IS3-Python\IS3-Python\iS3-Python.csproj", "{E6F7F4AD-0E87-45D7-BD80-D66C99379692}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IS3-Unity-Webplayer", "..\IS3-Unity-Webplayer\IS3-Unity-Webplayer.csproj", "{9D38C271-EB97-46D0-862E-8DD70D3F13D1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iS3-Unity-Webplayer", "..\IS3-Unity-Webplayer\iS3-Unity-Webplayer.csproj", "{9D38C271-EB97-46D0-862E-8DD70D3F13D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IS3-Core", "..\IS3-Core\IS3-Core.csproj", "{4B8B162C-3658-4FCC-AB41-C0C85A7DB281}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iS3-Core", "..\IS3-Core\iS3-Core.csproj", "{4B8B162C-3658-4FCC-AB41-C0C85A7DB281}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iS3-Config", "..\iS3-Config\iS3-Config.csproj", "{0BE067F5-8C03-4C1C-AAB4-90691D562334}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{4B8B162C-3658-4FCC-AB41-C0C85A7DB281}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B8B162C-3658-4FCC-AB41-C0C85A7DB281}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B8B162C-3658-4FCC-AB41-C0C85A7DB281}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BE067F5-8C03-4C1C-AAB4-90691D562334}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BE067F5-8C03-4C1C-AAB4-90691D562334}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BE067F5-8C03-4C1C-AAB4-90691D562334}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BE067F5-8C03-4C1C-AAB4-90691D562334}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

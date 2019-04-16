@@ -4,11 +4,11 @@ using System.Windows;
 using System.Windows.Media;
 using System.Collections.Generic;
 
-using IS3.Core;
-using IS3.Core.Serialization;
-using IS3.Monitoring.Serialization;
+using iS3.Core;
+using iS3.Core.Serialization;
+using iS3.Monitoring.Serialization;
 
-namespace IS3.Monitoring
+namespace iS3.Monitoring
 {
     #region Copyright Notice
     //************************  Notice  **********************************

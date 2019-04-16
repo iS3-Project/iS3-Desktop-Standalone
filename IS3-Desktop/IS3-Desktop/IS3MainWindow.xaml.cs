@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace IS3.Desktop
+namespace iS3.Desktop
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

@@ -27,7 +27,7 @@ using ICSharpCode.AvalonEdit.Folding;
 using ICSharpCode.AvalonEdit.Highlighting;
 
 
-namespace IS3.Python
+namespace iS3.Python
 {
     #region Copyright Notice
     //************************  Notice  **********************************
@@ -66,7 +66,7 @@ namespace IS3.Python
         {
             // Load our custom highlighting definition:
             IHighlightingDefinition pythonHighlighting;
-            using (Stream s = typeof(IronPythonControl).Assembly.GetManifestResourceStream("IS3.Python.Resources.Python.xshd"))
+            using (Stream s = typeof(IronPythonControl).Assembly.GetManifestResourceStream("iS3.Python.Resources.Python.xshd"))
             {
                 if (s == null)
                     throw new InvalidOperationException("Could not find embedded resource");
@@ -132,7 +132,7 @@ namespace IS3.Python
         {
             // Load our custom highlighting definition:
             IHighlightingDefinition pythonHighlighting;
-            using (Stream s = typeof(IronPythonControl).Assembly.GetManifestResourceStream("IS3.Python.Resources.Python.xshd"))
+            using (Stream s = typeof(IronPythonControl).Assembly.GetManifestResourceStream("iS3.Python.Resources.Python.xshd"))
             {
                 if (s == null)
                     throw new InvalidOperationException("Could not find embedded resource");

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Collections;
 
-namespace IS3.Core
+namespace iS3.Core
 {
     #region Copyright Notice
     //************************  Notice  **********************************

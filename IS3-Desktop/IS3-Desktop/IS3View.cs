@@ -15,15 +15,15 @@ using Esri.ArcGISRuntime.LocalServices;
 using Esri.ArcGISRuntime.Geometry;
 using Esri.ArcGISRuntime.Data;
 
-using IS3.Core;
-using IS3.Core.Graphics;
-using IS3.Core.Geometry;
-using IS3.ArcGIS;
-using IS3.ArcGIS.Graphics;
-using IS3.ArcGIS.Geometry;
-using IS3.Desktop.UserControls;
+using iS3.Core;
+using iS3.Core.Graphics;
+using iS3.Core.Geometry;
+using iS3.ArcGIS;
+using iS3.ArcGIS.Graphics;
+using iS3.ArcGIS.Geometry;
+using iS3.Desktop.UserControls;
 
-namespace IS3.Desktop
+namespace iS3.Desktop
 {
     //************************  Notice  **********************************
     //** This file is part of iS3
@@ -578,7 +578,7 @@ namespace IS3.Desktop
             IS3GraphicsLayer gLayer = new IS3GraphicsLayer();
             gLayer.DisplayName = table.Name;
             gLayer.GraphicsSource = graphics;
-            gLayer.geometryType = (IS3.Core.Geometry.GeometryType)(int)table.GeometryType;
+            gLayer.geometryType = (iS3.Core.Geometry.GeometryType)(int)table.GeometryType;
 
             return gLayer;
         }
@@ -692,11 +692,11 @@ namespace IS3.Desktop
 
                 if (bFirst == false)
                 {
-                    str += " OR ID=" + obj.id;
+                    str += " OR ID=" + obj.ID;
                 }
                 else
                 {
-                    str = "ID=" + obj.id;
+                    str = "ID=" + obj.ID;
                     bFirst = false;
                 }
             }

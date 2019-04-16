@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 
-namespace IS3.Core.Graphics
+namespace iS3.Core.Graphics
 {
     public interface IRenderer
     {

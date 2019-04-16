@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 using Esri.ArcGISRuntime.Symbology;
 
-using IS3.Core.Graphics;
+using iS3.Core.Graphics;
 
-namespace IS3.ArcGIS.Graphics
+namespace iS3.ArcGIS.Graphics
 {
     #region Copyright Notice
     //************************  Notice  **********************************
@@ -38,16 +38,16 @@ namespace IS3.ArcGIS.Graphics
 
     public class IS3SimpleLineSymbol : SimpleLineSymbol, ISimpleLineSymbol
     {
-        public new IS3.Core.Graphics.SimpleLineStyle Style
+        public new iS3.Core.Graphics.SimpleLineStyle Style
         {
-            get { return (IS3.Core.Graphics.SimpleLineStyle)base.Style; }
+            get { return (iS3.Core.Graphics.SimpleLineStyle)base.Style; }
             set { base.Style = (Esri.ArcGISRuntime.Symbology.SimpleLineStyle)value; }
         }
     }
 
     public class IS3SimpleFillSymbol : SimpleFillSymbol, ISimpleFillSymbol
     { 
-        public new IS3.Core.Graphics.SimpleFillStyle Style
+        public new iS3.Core.Graphics.SimpleFillStyle Style
         {
             get { return (Core.Graphics.SimpleFillStyle)base.Style; }
             set { base.Style = (Esri.ArcGISRuntime.Symbology.SimpleFillStyle)value; }

@@ -34,9 +34,9 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data;
 
-using IS3.Core;
+using iS3.Core;
 
-namespace IS3.Desktop
+namespace iS3.Desktop
 {
     /// <summary>
     /// Interaction logic for ObjectView.xaml
@@ -159,7 +159,7 @@ namespace IS3.Desktop
             string names = string.Empty;
             DGObject firstObj = objs.First();
             foreach (DGObject obj in objs)
-                names += obj.name + ",";
+                names += obj.Name + ",";
 
             Window window = new Window();
             window.Width = SystemParameters.PrimaryScreenWidth /2 ;

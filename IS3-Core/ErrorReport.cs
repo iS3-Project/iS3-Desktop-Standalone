@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows;
 
-namespace IS3.Core
+namespace iS3.Core
 {
     #region Copyright Notice
     //************************  Notice  **********************************

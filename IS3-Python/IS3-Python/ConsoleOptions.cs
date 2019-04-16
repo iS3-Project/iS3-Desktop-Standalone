@@ -9,7 +9,7 @@ using ICSharpCode.AvalonEdit;
 using System.Windows.Media;
 using PythonConsoleControl;
 
-namespace IS3.Python
+namespace iS3.Python
 {
     public class ConsoleOptions
     {

@@ -9,10 +9,10 @@ using System.Xml.Linq;
 using System.Xml;
 using System.Runtime.Serialization;
 
-using IS3.Core;
-using IS3.Core.Graphics;
+using iS3.Core;
+using iS3.Core.Graphics;
 
-namespace IS3.Core.Serialization
+namespace iS3.Core.Serialization
 {
     public class IS3XmlProjectSerializer
     {
@@ -24,8 +24,8 @@ namespace IS3.Core.Serialization
             if (root.Name != "Project")
                 return;
 
-            XNamespace is3 = "clr-namespace:IS3.Core;assembly=IS3.Core";
-            XElement node = root.Element(is3 + "ProjectDefinition");
+            XNamespace iS3 = "clr-namespace:iS3.Core;assembly=iS3.Core";
+            XElement node = root.Element(iS3 + "ProjectDefinition");
             if (node != null)
             {
                 object obj = XamlReader.Parse(node.ToString());

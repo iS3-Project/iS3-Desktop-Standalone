@@ -12,7 +12,7 @@ using System.Windows.Shapes;
 
 using System.Collections.ObjectModel;
 
-namespace IS3.Desktop.UserControls
+namespace iS3.Desktop.UserControls
 {
     public class LayerItem
     {

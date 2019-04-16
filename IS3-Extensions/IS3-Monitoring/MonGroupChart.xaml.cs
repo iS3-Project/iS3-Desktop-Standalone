@@ -36,9 +36,9 @@ using System.Windows.Shapes;
 using System.Windows.Forms.Integration;
 using System.Windows.Forms.DataVisualization.Charting;
 
-using IS3.Core;
+using iS3.Core;
 
-namespace IS3.Monitoring
+namespace iS3.Monitoring
 {
     /// <summary>
     /// Interaction logic for MonGroupChart.xaml

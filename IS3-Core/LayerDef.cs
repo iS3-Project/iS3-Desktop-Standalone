@@ -1,7 +1,7 @@
-﻿using IS3.Core.Graphics;
-using IS3.Core.Geometry;
+﻿using iS3.Core.Graphics;
+using iS3.Core.Geometry;
 
-namespace IS3.Core
+namespace iS3.Core
 {
     #region Copyright Notice
     //************************  Notice  **********************************

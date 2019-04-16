@@ -7,8 +7,8 @@
     <ProjectGuid>{4B8B162C-3658-4FCC-AB41-C0C85A7DB281}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>IS3.Core</RootNamespace>
-    <AssemblyName>IS3.Core</AssemblyName>
+    <RootNamespace>iS3.Core</RootNamespace>
+    <AssemblyName>iS3.Core</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>

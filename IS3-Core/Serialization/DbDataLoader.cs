@@ -6,10 +6,10 @@ using System.Web;
 using System.Data;
 using System.Data.Common;
 
-using IS3.Core;
-using IS3.Core.Shape;
+using iS3.Core;
+using iS3.Core.Shape;
 
-namespace IS3.Core.Serialization
+namespace iS3.Core.Serialization
 {
     public class DbDataLoader
     {
@@ -519,16 +519,16 @@ namespace IS3.Core.Serialization
                 try
                 {
                     if (table.Columns.Contains("ID"))
-                        dgObj.id = Convert.ToInt32(row["ID"]);
+                        dgObj.ID = Convert.ToInt32(row["ID"]);
 
                     if (table.Columns.Contains("Name"))
-                        dgObj.name = Convert.ToString(row["Name"]);
+                        dgObj.Name = Convert.ToString(row["Name"]);
 
                     if (table.Columns.Contains("FullName"))
-                        dgObj.fullName = ReadString(row, "FullName");
+                        dgObj.FullName = ReadString(row, "FullName");
 
                     if (table.Columns.Contains("Description"))
-                        dgObj.description = ReadString(row, "Description");
+                        dgObj.Description = ReadString(row, "Description");
                     
                     dgObj.shape = ReadShape(row);
                 }
@@ -538,7 +538,7 @@ namespace IS3.Core.Serialization
                     ErrorReport.Report(str);
                     continue;
                 }
-                objs[dgObj.id.ToString() + ":" + dgObj.name] = dgObj;
+                objs[dgObj.ID.ToString() + ":" + dgObj.Name] = dgObj;
             }
 
             return true;

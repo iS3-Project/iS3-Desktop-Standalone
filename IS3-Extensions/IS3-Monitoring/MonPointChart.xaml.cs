@@ -37,9 +37,9 @@ using System.Windows.Shapes;
 using System.Windows.Forms.Integration;
 using System.Windows.Forms.DataVisualization.Charting;
 
-using IS3.Core;
+using iS3.Core;
 
-namespace IS3.Monitoring
+namespace iS3.Monitoring
 {
     /// <summary>
     /// Interaction logic for MonPointChart.xaml
@@ -118,7 +118,7 @@ namespace IS3.Monitoring
                         continue;
 
                     Series series1 = new Series();
-                    series1.Name = monPnt.name + ":" + key;
+                    series1.Name = monPnt.Name + ":" + key;
                     series1.ChartType = SeriesChartType.FastLine;
                     series1.ChartArea = "ChartArea1";
                     series1.Points.DataBind(readings, "time", "value", null);

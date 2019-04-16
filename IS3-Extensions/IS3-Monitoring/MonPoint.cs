@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Windows;
 
-using IS3.Core;
-using IS3.Core.Serialization;
-using IS3.Monitoring.Serialization;
+using iS3.Core;
+using iS3.Core.Serialization;
+using iS3.Monitoring.Serialization;
 
-namespace IS3.Monitoring
+namespace iS3.Monitoring
 {
     #region Copyright Notice
     //************************  Notice  **********************************
@@ -147,7 +147,7 @@ namespace IS3.Monitoring
             string sql = "monPointName in (";
             foreach (var obj in objs)
             {
-                sql += '\'' + obj.name + '\'';
+                sql += '\'' + obj.Name + '\'';
                 sql += ",";
             }
             sql += ")";

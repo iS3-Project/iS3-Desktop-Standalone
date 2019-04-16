@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using IS3.Core;
+using iS3.Core;
 
-namespace IS3.Monitoring
+namespace iS3.Monitoring
 {
     #region Copyright Notice
     //************************  Notice  **********************************
@@ -85,7 +85,7 @@ namespace IS3.Monitoring
                 MonPoint monPnt = findMonPoint(monPntName, domainMon);
                 if (monPnt == null)
                     continue;
-                group.monPntDict[monPnt.name] = monPnt;
+                group.monPntDict[monPnt.Name] = monPnt;
             }
         }
 

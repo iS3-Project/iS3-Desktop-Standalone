@@ -11,18 +11,18 @@ using System.IO;
 using System.Windows.Media;
 using System.Reflection;
 
-using IS3.Core;
-using IS3.Core.Serialization;
-using IS3.ArcGIS.Graphics;
-using IS3.ArcGIS.Geometry;
+using iS3.Core;
+using iS3.Core.Serialization;
+using iS3.ArcGIS.Graphics;
+using iS3.ArcGIS.Geometry;
 
 // For test
-using IS3.Core.Graphics;
-using IS3.Core.Geometry;
+using iS3.Core.Graphics;
+using iS3.Core.Geometry;
 
 
 
-namespace IS3.Desktop
+namespace iS3.Desktop
 {
     /// <summary>
     /// Interaction logic for App.xaml

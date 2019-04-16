@@ -11,7 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace IS3.Desktop
+namespace iS3.Desktop
 {
     /// <summary>
     /// Interaction logic for ProgressBarWindow.xaml

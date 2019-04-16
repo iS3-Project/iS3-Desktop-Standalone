@@ -13,7 +13,7 @@ using System.Runtime.InteropServices;
 /// 4. ESRI File Geodatabase API 1.4 version for Windows (Visual Studio 2013)
 /// Written by Lixiaojun, 2015.
 
-namespace IS3.Core.Shape
+namespace iS3.Core.Shape
 {
     /// <summary>
     /// Shape type enumeration

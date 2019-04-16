@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System;
 
-namespace IS3.Unity.Webplayer.UnityCore
+namespace iS3.Unity.Webplayer.UnityCore
 {
     public class SendUnityLayerMessage : iS3UnityMessage
     {

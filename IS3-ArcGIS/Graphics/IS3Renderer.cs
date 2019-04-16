@@ -7,9 +7,9 @@ using System.Collections.ObjectModel;
 
 using Esri.ArcGISRuntime.Symbology;
 
-using IS3.Core.Graphics;
+using iS3.Core.Graphics;
 
-namespace IS3.ArcGIS.Graphics
+namespace iS3.ArcGIS.Graphics
 {
     #region Copyright Notice
     //************************  Notice  **********************************

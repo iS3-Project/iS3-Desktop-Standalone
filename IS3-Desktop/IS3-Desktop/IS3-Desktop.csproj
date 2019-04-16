@@ -7,8 +7,8 @@
     <ProjectGuid>{27E8435C-B314-434A-BB39-57CB53AC3A09}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>IS3.Desktop</RootNamespace>
-    <AssemblyName>IS3.Desktop</AssemblyName>
+    <RootNamespace>iS3.Desktop</RootNamespace>
+    <AssemblyName>iS3.Desktop</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -467,24 +467,24 @@
     <Resource Include="is3_64.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\IS3-ArcGIS\IS3-ArcGIS.csproj">
+    <ProjectReference Include="..\..\IS3-ArcGIS\iS3-ArcGIS.csproj">
       <Project>{3e9a8ded-38b8-4050-849c-08957aeb5fbf}</Project>
-      <Name>IS3-ArcGIS</Name>
+      <Name>iS3-ArcGIS</Name>
       <Private>False</Private>
     </ProjectReference>
-    <ProjectReference Include="..\..\IS3-Core\IS3-Core.csproj">
+    <ProjectReference Include="..\..\IS3-Core\iS3-Core.csproj">
       <Project>{4b8b162c-3658-4fcc-ab41-c0c85a7db281}</Project>
-      <Name>IS3-Core</Name>
+      <Name>iS3-Core</Name>
       <Private>False</Private>
     </ProjectReference>
-    <ProjectReference Include="..\..\IS3-Python\IS3-Python\IS3-Python.csproj">
+    <ProjectReference Include="..\..\IS3-Python\IS3-Python\iS3-Python.csproj">
       <Project>{e6f7f4ad-0e87-45d7-bd80-d66c99379692}</Project>
-      <Name>IS3-Python</Name>
+      <Name>iS3-Python</Name>
       <Private>False</Private>
     </ProjectReference>
-    <ProjectReference Include="..\..\IS3-Unity-Webplayer\IS3-Unity-Webplayer.csproj">
+    <ProjectReference Include="..\..\IS3-Unity-Webplayer\iS3-Unity-Webplayer.csproj">
       <Project>{9d38c271-eb97-46d0-862e-8dd70d3f13d1}</Project>
-      <Name>IS3-Unity-Webplayer</Name>
+      <Name>iS3-Unity-Webplayer</Name>
       <Private>False</Private>
     </ProjectReference>
   </ItemGroup>

@@ -11,7 +11,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Effects;
 using System.Windows.Shapes;
 
-namespace IS3.Desktop.UserControls
+namespace iS3.Desktop.UserControls
 {
     public partial class RaisedText : UserControl
     {

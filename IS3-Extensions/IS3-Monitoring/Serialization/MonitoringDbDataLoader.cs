@@ -7,10 +7,10 @@ using System.Data;
 using System.Data.Common;
 using System.Data.Odbc;
 
-using IS3.Core;
-using IS3.Core.Serialization;
+using iS3.Core;
+using iS3.Core.Serialization;
 
-namespace IS3.Monitoring.Serialization
+namespace iS3.Monitoring.Serialization
 {
     #region Copyright Notice
     //************************  Notice  **********************************
@@ -106,10 +106,10 @@ namespace IS3.Monitoring.Serialization
                     continue;
 
                 MonPoint obj = new MonPoint(row);
-                obj.id = ReadInt(row, "ID").Value;
-                obj.name = ReadString(row, "Name");
-                obj.fullName = ReadString(row, "FullName");
-                obj.description = ReadString(row, "Description");
+                obj.ID = ReadInt(row, "ID").Value;
+                obj.Name = ReadString(row, "Name");
+                obj.FullName = ReadString(row, "FullName");
+                obj.Description = ReadString(row, "Description");
                 obj.shape = ReadShape(row);
 
                 obj.refPointName = ReadString(row, "refPointName");
@@ -227,10 +227,10 @@ namespace IS3.Monitoring.Serialization
                     continue;
 
                 MonGroup obj = new MonGroup(row);
-                obj.id = ReadInt(row, "ID").Value;
-                obj.name = ReadString(row, "Name");
-                obj.fullName = ReadString(row, "FullName");
-                obj.description = ReadString(row, "Description");
+                obj.ID = ReadInt(row, "ID").Value;
+                obj.Name = ReadString(row, "Name");
+                obj.FullName = ReadString(row, "FullName");
+                obj.Description = ReadString(row, "Description");
                 obj.shape = ReadShape(row);
 
                 obj.groupShape = ReadString(row, "groupShape");

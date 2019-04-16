@@ -17,10 +17,10 @@ using Xceed.Wpf.AvalonDock;
 using Xceed.Wpf.AvalonDock.Layout;
 using Xceed.Wpf.AvalonDock.Layout.Serialization;
 
-using IS3.Core;
-using IS3.Python;
+using iS3.Core;
+using iS3.Python;
 
-namespace IS3.Desktop
+namespace iS3.Desktop
 {
     //************************  Notice  **********************************
     //** This file is part of iS3
@@ -500,7 +500,7 @@ namespace IS3.Desktop
             }
             else if (eMap.MapType == EngineeringMapType.Map3D)
             {
-                IS3.Unity.Webplayer.U3DView u3dView = new IS3.Unity.Webplayer.U3DView(_prj, eMap);
+                iS3.Unity.Webplayer.U3DView u3dView = new iS3.Unity.Webplayer.U3DView(_prj, eMap);
                 LayoutDoc.Content = u3dView;
                 view = u3dView.view;
             }
@@ -680,12 +680,12 @@ namespace IS3.Desktop
             {
                 // call init() function in the loaded assembly
                 var types = from type in assembly.GetTypes()
-                            where type.IsSubclassOf(typeof(IS3.Core.Extensions))
+                            where type.IsSubclassOf(typeof(iS3.Core.Extensions))
                             select type;
                 foreach (var type in types)
                 {
                     object obj = Activator.CreateInstance(type);
-                    IS3.Core.Extensions extension = obj as IS3.Core.Extensions;
+                    iS3.Core.Extensions extension = obj as iS3.Core.Extensions;
                     if (extension == null)
                         continue;
                     string msg = extension.init();
@@ -728,12 +728,12 @@ namespace IS3.Desktop
             {
                 // call init() function in the loaded assembly
                 var types = from type in assembly.GetTypes()
-                            where type.IsSubclassOf(typeof(IS3.Core.Extensions))
+                            where type.IsSubclassOf(typeof(iS3.Core.Extensions))
                             select type;
                 foreach (var type in types)
                 {
                     object obj = Activator.CreateInstance(type);
-                    IS3.Core.Extensions extension = obj as IS3.Core.Extensions;
+                    iS3.Core.Extensions extension = obj as iS3.Core.Extensions;
                     if (extension == null)
                         continue;
                     string msg = extension.init();

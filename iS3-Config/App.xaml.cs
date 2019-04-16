@@ -44,7 +44,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using System.IO;
-using IS3.Core;
+using iS3.Core;
 
 namespace iS3.Config
 {
@@ -72,7 +72,7 @@ namespace iS3.Config
             // Load resources from ResourceDictionary.xaml
             //
             ResourceDictionary dict = (ResourceDictionary)Application.LoadComponent(
-                new Uri("/IS3.Config;Component/ResourceDictionary.xaml", System.UriKind.Relative));
+                new Uri("/iS3.Config;Component/ResourceDictionary.xaml", System.UriKind.Relative));
             this.Resources.MergedDictionaries.Add(dict);
 
             // open a background window that start the configuration
@@ -196,10 +196,10 @@ namespace iS3.Config
                 "The following files has been generated successfully.\r\n" +
                 "    {0}\\ProjectList.xml\r\n" +
                 "    {1}\\{2}.xml\r\n" +
-                "    {3}\\IS3Py\\{4}.py\r\n" +
-                "The {5} project is ready to use in iS3.";
+                "    {3}\\Data\\{4}\\{5}.py\r\n" +
+                "The {6} project is ready to use in iS3.";
 
-            string str = string.Format(format, dataPath, dataPath, projID, iS3Path, projID, projID);
+            string str = string.Format(format, dataPath, dataPath, projID, iS3Path, projID, projID, projID);
             MessageBox.Show(str, "Success", MessageBoxButton.OK);
 
             return true;

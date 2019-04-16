@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Xml.Linq;
 using System.Data;
 
-using IS3.Core.Serialization;
+using iS3.Core.Serialization;
 
-namespace IS3.Core
+namespace iS3.Core
 {
     #region Copyright Notice
     //************************  Notice  **********************************
@@ -224,7 +224,7 @@ namespace IS3.Core
             _id2Obj = new Dictionary<int, DGObject>();
             foreach (DGObject obj in _objs.Values)
             {
-                int id = obj.id;
+                int id = obj.ID;
                 _id2Obj[id] = obj;
             }
         }

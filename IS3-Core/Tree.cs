@@ -4,7 +4,7 @@ using System.Xml.Linq;
 using System.Runtime.Serialization;
 using System.Data;
 
-namespace IS3.Core
+namespace iS3.Core
 {
     #region Copyright Notice
     //************************  Notice  **********************************

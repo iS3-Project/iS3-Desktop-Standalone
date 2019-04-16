@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IS3.Monitoring
+namespace iS3.Monitoring
 {
     #region Copyright Notice
     //************************  Notice  **********************************

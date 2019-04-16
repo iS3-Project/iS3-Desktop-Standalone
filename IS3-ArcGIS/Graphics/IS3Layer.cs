@@ -9,11 +9,11 @@ using Esri.ArcGISRuntime.Layers;
 using Esri.ArcGISRuntime.Geometry;
 using Esri.ArcGISRuntime.Symbology;
 
-using IS3.Core;
-using IS3.Core.Graphics;
-using IS3.Core.Geometry;
+using iS3.Core;
+using iS3.Core.Graphics;
+using iS3.Core.Geometry;
 
-namespace IS3.ArcGIS.Graphics
+namespace iS3.ArcGIS.Graphics
 {
     #region Copyright Notice
     //************************  Notice  **********************************
@@ -77,7 +77,7 @@ namespace IS3.ArcGIS.Graphics
 
         // Summary:
         //     Gets the geometry type of the features in the layer.
-        public IS3.Core.Geometry.GeometryType geometryType { get; set; }
+        public iS3.Core.Geometry.GeometryType geometryType { get; set; }
 
         // Summary:
         //      Sync graphic with objects based on the following condition:
@@ -122,7 +122,7 @@ namespace IS3.ArcGIS.Graphics
             int count = 0;
             foreach (DGObject obj in objs)
             {
-                string name = obj.name;
+                string name = obj.Name;
                 if (graphicIndex.ContainsKey(name))
                 {
                     IGraphicCollection gc = graphicIndex[name];

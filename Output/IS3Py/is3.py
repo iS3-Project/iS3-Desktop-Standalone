@@ -16,17 +16,17 @@ from System.Windows.Media import Colors
 from System.Collections.ObjectModel import ObservableCollection
 from System.Threading.Tasks import Task
 
-# Load IS3 namespaces
-iS3Core = clr.LoadAssemblyFromFile('IS3.Core.dll')
+# Load iS3 namespaces
+iS3Core = clr.LoadAssemblyFromFile('iS3.Core.dll')
 clr.AddReference(iS3Core)
-# Import classes in IS3
-from IS3.Core import (Globals, Runtime, ErrorReport, ErrorReportTarget,
+# Import classes in iS3
+from iS3.Core import (Globals, Runtime, ErrorReport, ErrorReportTarget,
                       DGObject, DGObjects,
                       ProjectDefinition, Project,
                       EngineeringMap, EngineeringMapType, DrawShapeType,
                       IView, LayerDef, Domain, DomainType, ToolTreeItem)
-from IS3.Core.Geometry import *
-from IS3.Core.Graphics import *
+from iS3.Core.Geometry import *
+from iS3.Core.Graphics import *
 
 def output(text):
     print(text)
@@ -70,12 +70,12 @@ class MainframeWrapper():
 
 
 class ViewWrapper():
-    "Define thread safe calls to IS3View methods"
+    "Define thread safe calls to iS3View methods"
     def __init__(self, view):
         self.view = view
 
     def addLayer(self, layer):
-        "A thread safe call to -> IS3View.addLayer"
+        "A thread safe call to -> iS3View.addLayer"
         if (Globals.isThreadUnsafe()):
             func = Action[IGraphicsLayer](self.view.addLayer)
             dispatcher.Invoke(func, layer)
@@ -83,7 +83,7 @@ class ViewWrapper():
             self.view.addLayer(layer)
 
     def addLocalTiledLayer(self, file, id):
-        "A thread safe call to -> IS3View.addLocalTiledLayer"
+        "A thread safe call to -> iS3View.addLocalTiledLayer"
         if (Globals.isThreadUnsafe()):
             func = Action[str, str](self.view.addLocalTiledLayer)
             dispatcher.Invoke(func, file, id)
@@ -91,7 +91,7 @@ class ViewWrapper():
             self.view.addLocalTiledLayer(file, id)
 
     def addGdbLayer(self, layerDef, gdbFile, start = 0, maxFeatures = 0):
-        "A thread safe call to -> IS3View.addGdbLayer"
+        "A thread safe call to -> iS3View.addGdbLayer"
         if (Globals.isThreadUnsafe()):
             func = Func[LayerDef, str, int, int, Task[IGraphicsLayer]](self.view.addGdbLayer)
             layer = dispatcher.Invoke(func, layerDef, gdbFile, start, maxFeatures)
@@ -101,7 +101,7 @@ class ViewWrapper():
         return layerWrapper
 
     def addShpLayer(self, layerDef, shpFile, start = 0, maxFeatures = 0):
-        "A thread safe call to -> IS3View.addShpLayer"
+        "A thread safe call to -> iS3View.addShpLayer"
         if (Globals.isThreadUnsafe()):
             func = Func[LayerDef, str, int, int, Task[IGraphicsLayer]](self.view.addShpLayer)
             layer = dispatcher.Invoke(func, layerDef, shpFile, start, maxFeatures)
@@ -111,7 +111,7 @@ class ViewWrapper():
         return layerWrapper
 
     def selectByRect(self):
-        "A thread safe call to -> IS3View.selectByRect"
+        "A thread safe call to -> iS3View.selectByRect"
         if (Globals.isThreadUnsafe()):
             dispatcher.Invoke(self.view.selectByRect)
         else:
@@ -119,12 +119,12 @@ class ViewWrapper():
 
 
 class GraphicsLayerWrapper():
-    "Define thread safe calls to IS3GraphicsLayer methods"
+    "Define thread safe calls to iS3GraphicsLayer methods"
     def __init__(self, glayer):
         self.layer = glayer
 
     def setRenderer(self, renderer):
-        "A thread safe call to -> IS3GraphicsLayer.setRenderer"
+        "A thread safe call to -> iS3GraphicsLayer.setRenderer"
         if (Globals.isThreadUnsafe()):
             func = Action[IRenderer](self.layer.setRenderer)
             dispatcher.Invoke(func, renderer)
@@ -132,7 +132,7 @@ class GraphicsLayerWrapper():
             self.layer.setRenderer(renderer)
 
     def addGraphic(self, graphic):
-        "A thread safe call to -> IS3GraphicsLayer.addGraphic"
+        "A thread safe call to -> iS3GraphicsLayer.addGraphic"
         if (Globals.isThreadUnsafe()):
             func = Action[IGraphic](self.layer.addGraphic)
             dispatcher.Invoke(func, graphic)

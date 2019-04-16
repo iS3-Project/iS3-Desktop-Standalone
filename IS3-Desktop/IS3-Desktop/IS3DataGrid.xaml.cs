@@ -16,9 +16,9 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Collections;
 
-using IS3.Core;
+using iS3.Core;
 
-namespace IS3.Desktop
+namespace iS3.Desktop
 {
     public class ObjectValueConverter : IValueConverter
     {

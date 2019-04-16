@@ -41,7 +41,7 @@ using System.Xml.Serialization;
 using Esri.ArcGISRuntime.Symbology;
 using Esri.ArcGISRuntime.Layers;
 using Esri.ArcGISRuntime.Geometry;
-using IS3.Core;
+using iS3.Core;
 
 namespace iS3.Config
 {
@@ -217,7 +217,7 @@ namespace iS3.Config
             try
             {
                 await _pinMarkerSymbol.SetSourceAsync(
-                    new Uri("pack://application:,,,/IS3.Config;component/Images/pin_red.png"));
+                    new Uri("pack://application:,,,/iS3.Config;component/Images/pin_red.png"));
             }
             catch (Exception ex)
             {

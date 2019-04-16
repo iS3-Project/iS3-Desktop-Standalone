@@ -4,9 +4,9 @@ using System.Xml.Linq;
 using System.IO;
 using System.Data;
 
-using IS3.Core.Serialization;
+using iS3.Core.Serialization;
 
-namespace IS3.Core
+namespace iS3.Core
 {
     #region Copyright Notice
     //************************  Notice  **********************************
@@ -37,8 +37,8 @@ namespace IS3.Core
     //      (1) Project is in the core of the MVC design pattern.
     //          It is the model, so it knows nothing about the controller
     //          (IMainframe) and the view (IView).
-    //      (2) The Project class is one of the core rooms for IS3, there is
-    //          only one active project in IS3.
+    //      (2) The Project class is one of the core rooms for iS3, there is
+    //          only one active project in iS3.
     //      (3) Project data is typically loaded from a database.
     //      (4) PrejectDefinition gives the information such as where the
     //          database is located, how many domains it has, etc.
@@ -250,7 +250,7 @@ namespace IS3.Core
         public static Project load(string definitionFile)
         {
             Project prj = new Project();
-            IS3.Core.Globals.project = prj;
+            iS3.Core.Globals.project = prj;
 
             // Load project definition first
             // 
@@ -296,7 +296,7 @@ namespace IS3.Core
         // (1) The IsSelected property is dynamically injected into
         //     DataTable when object data is read from database.
         //     See ReadRawData() function in the 
-        //     IS3.Core.Serialization.DbDataLoader class for more information.
+        //     iS3.Core.Serialization.DbDataLoader class for more information.
         // (2) The DataTable is used to display object data in
         //     the datagrid (class IS3DataGrid). When IsSelected property
         //     is set to true, it will be displayed as selected state 

@@ -7,8 +7,8 @@
     <ProjectGuid>{9D38C271-EB97-46D0-862E-8DD70D3F13D1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>IS3.Unity.Webplayer</RootNamespace>
-    <AssemblyName>IS3.Unity.Webplayer</AssemblyName>
+    <RootNamespace>iS3.Unity.Webplayer</RootNamespace>
+    <AssemblyName>iS3.Unity.Webplayer</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -81,9 +81,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\IS3-Core\IS3-Core.csproj">
+    <ProjectReference Include="..\IS3-Core\iS3-Core.csproj">
       <Project>{4b8b162c-3658-4fcc-ab41-c0c85a7db281}</Project>
-      <Name>IS3-Core</Name>
+      <Name>iS3-Core</Name>
       <Private>False</Private>
     </ProjectReference>
   </ItemGroup>

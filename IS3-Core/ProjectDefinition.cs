@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System.Xml.Linq;
 using System.Windows.Markup;
 
-namespace IS3.Core
+namespace iS3.Core
 {
     #region Copyright Notice
     //************************  Notice  **********************************
@@ -181,8 +181,8 @@ namespace IS3.Core
 
         public static ProjectDefinition Load(XElement root)
         {
-            XNamespace is3 = "clr-namespace:IS3.Core;assembly=IS3.Core";
-            XElement node = root.Element(is3 + "ProjectDefinition");
+            XNamespace iS3 = "clr-namespace:iS3.Core;assembly=iS3.Core";
+            XElement node = root.Element(iS3 + "ProjectDefinition");
             object obj = null;
             if (node != null)
                 obj = XamlReader.Parse(node.ToString());

@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-using IS3.Core;
+using iS3.Core;
 using System.Collections.Specialized;
 using System.Configuration;
 using System.Xml.Linq;
@@ -21,7 +21,7 @@ using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Threading;
 
-namespace IS3.Desktop
+namespace iS3.Desktop
 {
     /// <summary>
     /// UserLoginPage.xaml 的交互逻辑

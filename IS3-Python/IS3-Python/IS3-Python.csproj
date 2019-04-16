@@ -7,8 +7,8 @@
     <ProjectGuid>{E6F7F4AD-0E87-45D7-BD80-D66C99379692}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>IS3.Python</RootNamespace>
-    <AssemblyName>IS3.Python</AssemblyName>
+    <RootNamespace>iS3.Python</RootNamespace>
+    <AssemblyName>iS3.Python</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
