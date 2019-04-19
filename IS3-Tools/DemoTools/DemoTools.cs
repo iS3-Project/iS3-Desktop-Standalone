@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-using IS3.Core;
+using iS3.Core;
 
 namespace DemoTools
 {
