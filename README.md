@@ -10,6 +10,8 @@ In addition, as a special exception, that plugins developed for iS3, are allowed
 
 These rights are included in the file LGPL_EXCEPTION.txt in this package.
 
+Compared to iS3 V1.0, iS3 V1.1 fixs the bug that requires to re-assign assembly references to open the software after downloading and adds tools example of iS3DemoTest.
+
 The open source code can be downloaded from [iS3 project](https://github.com/iS3-Project/iS3). If you have any question, contact mail: <lixiaojun@tongji.edu.cn>, <linxdcn@gmail.com> please.
 
 Finally, thanks AlphaSierraPapa and Joe Moorhouse for their open source code referred by iS3 in iS3-Python. Thanks Esri for Arcgis Runtime for Developer which provides gis runtime for iS3.
