@@ -1,0 +1,33 @@
+﻿<Project>
+  <is3:ProjectDefinition xmlns="http://schemas.microsoft.com/client/2007"
+                        xmlns:is3="clr-namespace:IS3.Core;assembly=IS3.Core"
+                        xmlns:g="clr-namespace:IS3.Core.Graphics;assembly=IS3.Core"
+                        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                        ID="iS3DemoTest"
+                        ProjectTitle="iS3测试Demo"
+                        LocalDatabaseName="iS3DemoTest.mdb"
+                        DefaultMapID="BaseMap">
+  </is3:ProjectDefinition>
+<Domain Name="Monitoring" Type="Monitoring">
+    <ObjsDefinition>
+      <MonPoint Name="AllMonPoint" 
+      	        TableNameSQL="Mon_Test,Mon_TestData"  
+      	        HasGeometry="true"      GISLayerName="MonPoint"
+                Has3D="true"  Layer3DName="iS3Project/监测点/监测点"/>
+    </ObjsDefinition>
+    <TreeDefinition>
+      <Root>
+        <Monitoring DisplayName="监测记录">
+          <MonPoint DisplayName="监测点"
+                    RefDomainName="Monitoring"
+                    RefObjsName="AllMonPoint"/>
+        </Monitoring>
+      </Root>
+    </TreeDefinition>
+  </Domain> 
+
+</Project>
+
+
+
+
