@@ -169,7 +169,7 @@ namespace iS3.Config
             projDef.ProjectTitle = projID;
             projDef.LocalFilePath = projPath + "\\" + projID;
             projDef.LocalTilePath = projPath + "\\" + "TPKs";
-            projDef.LocalDatabaseName = projPath + "\\" + projID + "\\" + projID + ".mdb";
+            projDef.LocalDatabaseName =  projID + ".mdb";
 
             return projDef;
         }
