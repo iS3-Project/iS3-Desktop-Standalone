@@ -139,6 +139,7 @@ namespace iS3.Config
 
                     projDef.LocalFilePath = AppDomain.CurrentDomain.BaseDirectory + @"Data\" + projID;
                     projDef.LocalTilePath = AppDomain.CurrentDomain.BaseDirectory + @"Data\TPKs";
+                    projDef.LocalDatabaseName = projID + ".mdb";
 
                     //if (projDef.LocalFilePath == null || projDef.LocalFilePath.Length == 0)
                     //    projDef.LocalFilePath = projPath + "\\" + projID;
@@ -168,7 +169,7 @@ namespace iS3.Config
             projDef.ProjectTitle = projID;
             projDef.LocalFilePath = projPath + "\\" + projID;
             projDef.LocalTilePath = projPath + "\\" + "TPKs";
-            projDef.LocalDatabaseName = projPath + "\\" + projID + "\\" + projID + ".MDB";
+            projDef.LocalDatabaseName = projPath + "\\" + projID + "\\" + projID + ".mdb";
 
             return projDef;
         }

@@ -92,7 +92,7 @@ namespace iS3.Config
             if (result == System.Windows.Forms.DialogResult.OK)
             {
                 _projDef.LocalDatabaseName = dialog.SafeFileName;
-
+                
                 // refresh UI
                 GeneralGrd.DataContext = null;
                 GeneralGrd.DataContext = _projDef;

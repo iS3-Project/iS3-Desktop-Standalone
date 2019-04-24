@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:iS3.Config"
         mc:Ignorable="d"
-        Title="iS3 Config v0.1" Height="450" Width="800">
+        Title="iS3 Config V1.1" Height="450" Width="800">
     <Grid>
         <Button Content="iS3 Location..." HorizontalAlignment="Left" Margin="37,111,0,0" VerticalAlignment="Top" Width="200" Height="44" FontSize="18" Click="iS3LocBtn_Click"/>
         <Button Content="my Data Location..." HorizontalAlignment="Left" Margin="37,177,0,0" VerticalAlignment="Top" Width="200" Height="44" FontSize="18" Click="myDatBtn_Click"/>
