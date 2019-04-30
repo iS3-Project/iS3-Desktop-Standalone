@@ -1,13 +1,13 @@
 ﻿<Project>
-  <is3:ProjectDefinition xmlns="http://schemas.microsoft.com/client/2007"
-                        xmlns:is3="clr-namespace:IS3.Core;assembly=IS3.Core"
-                        xmlns:g="clr-namespace:IS3.Core.Graphics;assembly=IS3.Core"
+  <iS3:ProjectDefinition xmlns="http://schemas.microsoft.com/client/2007"
+                        xmlns:iS3="clr-namespace:iS3.Core;assembly=iS3.Core"
+                        xmlns:g="clr-namespace:iS3.Core.Graphics;assembly=iS3.Core"
                         xmlns:sys="clr-namespace:System;assembly=mscorlib"
                         ID="iS3DemoTest"
-                        ProjectTitle="iS3测试Demo"
+                        ProjectTitle="iS3DemoTest"
                         LocalDatabaseName="iS3DemoTest.mdb"
                         DefaultMapID="BaseMap">
-  </is3:ProjectDefinition>
+  </iS3:ProjectDefinition>
 <Domain Name="Monitoring" Type="Monitoring">
     <ObjsDefinition>
       <MonPoint Name="AllMonPoint" 
