@@ -74,6 +74,14 @@
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>..\..\Output\libs\Interop.UnityWebPlayerAXLib.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Windows.Shell">
+      <HintPath>..\..\Output\libs\Microsoft.Windows.Shell.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RibbonControlsLibrary">
+      <HintPath>..\..\Output\libs\RibbonControlsLibrary.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Windows.Forms" />
@@ -157,6 +165,9 @@
       <DependentUpon>ProjectListPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="IS3Tree.cs" />
+    <Compile Include="RibbonMenu.xaml.cs">
+      <DependentUpon>RibbonMenu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ToolsPanel.xaml.cs">
       <DependentUpon>ToolsPanel.xaml</DependentUpon>
     </Compile>
@@ -229,6 +240,10 @@
     <Page Include="ProjectListPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="RibbonMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Styles\MenuStyle.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -487,6 +502,12 @@
       <Name>iS3-Unity-Webplayer</Name>
       <Private>False</Private>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\SmallIcon.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LargeIcon.JPG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

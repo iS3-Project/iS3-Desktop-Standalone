@@ -146,5 +146,12 @@ namespace iS3.Core
         { 
             return null; 
         }
+
+        // Summary:
+        //     Get treeItems of the tool, called immediately after loaded.
+        public virtual IEnumerable<iS3MenuItem> menuItems()
+        {
+            return null;
+        }
     }
 }

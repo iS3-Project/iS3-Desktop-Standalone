@@ -31,7 +31,7 @@ namespace DemoTools
         //基本信息
         public override string name() { return "iS3.DemoTools"; }
         public override string provider() { return "Tongji iS3 team"; }
-        public override string version() { return "1.0"; }
+        public override string version() { return "1.2"; }
 
         //分析工具列表
         List<ToolTreeItem> items;
@@ -40,6 +40,11 @@ namespace DemoTools
             return items;
         }
 
+        List<iS3MenuItem> menus;
+        public override IEnumerable<iS3MenuItem> menuItems()
+        {
+            return menus;
+        }
         //新建分析工具窗口
         DemoWindow demoWindow;
         public void callDemoWindow()
@@ -65,6 +70,17 @@ namespace DemoTools
 
             ToolTreeItem item = new ToolTreeItem("Demo|Basic", "DemoTest", callDemoWindow);
             items.Add(item);
+
+
+            menus = new List<iS3MenuItem>();
+            iS3MenuItem mItem00 = new iS3MenuItem("Analysis|Value of the borehole", "Analyze Value", true, "TBM.png", new DFunc(CalMenu00));
+            menus.Add(mItem00);
+
+        }
+
+        public void CalMenu00()
+        {
+            callDemoWindow();
         }
     }
 }

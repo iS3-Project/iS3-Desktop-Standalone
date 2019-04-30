@@ -58,7 +58,9 @@
     <Compile Include="Domain.cs" />
     <Compile Include="EMap.cs" />
     <Compile Include="ErrorReport.cs" />
+    <Compile Include="ExtensionManager.cs" />
     <Compile Include="Extensions.cs" />
+    <Compile Include="ExteralControls.cs" />
     <Compile Include="Geometry\Geometry.cs" />
     <Compile Include="Geometry\GeometryAlgorithms.cs" />
     <Compile Include="Geometry\GeometryEngineInterface.cs" />
@@ -67,7 +69,9 @@
     <Compile Include="Graphics\RendererDef.cs" />
     <Compile Include="Graphics\RendererInterface.cs" />
     <Compile Include="Graphics\SymbolDef.cs" />
+    <Compile Include="IBaseView.cs" />
     <Compile Include="LayerDef.cs" />
+    <Compile Include="RibbonMenu.cs" />
     <Compile Include="Shape\ShapeObject.cs" />
     <Compile Include="Globals.cs" />
     <Compile Include="Graphics\GraphicInterface.cs" />

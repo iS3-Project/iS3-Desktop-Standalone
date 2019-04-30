@@ -649,6 +649,8 @@ namespace iS3.Desktop
         //     Load extensions which are located in the bin\extensions\ directory.
         public void loadExtensions()
         {
+            ExtensionManager.GetInstance(this).LoadExtension();
+
             var allAssemblies = AppDomain.CurrentDomain.GetAssemblies();
             Assembly exeAssembly = Assembly.GetExecutingAssembly();
             string exeLocation = exeAssembly.Location;
@@ -699,6 +701,19 @@ namespace iS3.Desktop
         //     Load tools which are located in the bin\tools\ directory.
         public void loadToolboxes()
         {
+            #region NewAddCode
+            Tuple<List<ToolTreeItem>, List<iS3MenuItem>> list = ExtensionManager.GetInstance(this).loadToolboxes();
+            foreach (ToolTreeItem item in list.Item1)
+            {
+                ToolsPanel.toolboxesTree.add(item);
+            }
+            foreach (iS3MenuItem item in list.Item2)
+            {
+                ribbonMenuPanel.menuRibbon.AddiS3MenuItem(item);
+            }
+            ribbonMenuPanel.ShowMenu();
+#endregion
+
             var allAssemblies = AppDomain.CurrentDomain.GetAssemblies();
             Assembly exeAssembly = Assembly.GetExecutingAssembly();
             string exeLocation = exeAssembly.Location;

@@ -1,0 +1,26 @@
+﻿<UserControl x:Class="iS3.Desktop.RibbonMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:iS3.Desktop"
+             xmlns:ribbon="http://schemas.microsoft.com/winfx/2006/xaml/presentation/ribbon"
+             mc:Ignorable="d">
+    <Grid>
+        <ribbon:Ribbon x:Name="RibbonHolder" >
+            <ribbon:Ribbon.ApplicationMenu>
+                <ribbon:RibbonApplicationMenu SmallImageSource="Images\SmallIcon.jpg">
+                    <ribbon:RibbonApplicationMenuItem Header="iS3 Introduction"
+                                                      x:Name="MenuItem2"
+                                                      ImageSource="Images\LargeIcon.jpg" MouseEnter="IntroductionME" />
+                    <ribbon:RibbonApplicationMenuItem Header="Contact us"
+                                                      x:Name="MenuItem3"
+                                                      ImageSource="Images\LargeIcon.jpg" MouseEnter="ContentME"/>
+                    <ribbon:RibbonApplicationMenu.AuxiliaryPaneContent>
+                        <ribbon:RibbonContentPresenter    x:Name="contentCP" />
+                    </ribbon:RibbonApplicationMenu.AuxiliaryPaneContent>
+                </ribbon:RibbonApplicationMenu>
+            </ribbon:Ribbon.ApplicationMenu>
+        </ribbon:Ribbon>
+    </Grid>
+</UserControl>
